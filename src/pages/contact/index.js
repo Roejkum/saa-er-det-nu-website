@@ -1,36 +1,67 @@
 import React from "react";
-import { navigate } from "gatsby-link";
 import Layout from '../../components/Layout/Layout'
+import addToMailchimp from 'gatsby-plugin-mailchimp';
 
-function encode(data) {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-}
+// function encode(data) {
+//   return Object.keys(data)
+//     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+//     .join("&");
+// }
 
 export default class Index extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { isValidated: false };
+    this.state = { 
+      isValidated: false, 
+      form: {
+        listFields: {
+  }
+      }
+    };
   }
 
   handleChange = e => {
-    this.setState({ [e.target.name]: e.target.value });
+    const currentFormData = this.state.form;
+
+    if(e.target.name === 'email') {
+      this.setState({
+        form: {
+          ...currentFormData,
+          [e.target.name]: e.target.value 
+        }
+      });
+    }
+
+    if(e.target.name !== 'email') {
+      const currentlistFields = this.state.form.listFields;
+      this.setState({
+        form: {
+          ...currentFormData,
+          listFields: {
+            ...currentlistFields,
+            [e.target.name]: e.target.value 
+          }
+          
+        }
+      });
+    }
   };
 
   handleSubmit = e => {
     e.preventDefault();
-    const form = e.target;
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": form.getAttribute("name"),
-        ...this.state
-      })
+    addToMailchimp(this.state.form.email, this.state.form.listFields)
+    // listFields are optional if you are only capturing the email address.
+    .then(data => {
+      // I recommend setting data to React state
+      // but you can do whatever you want (including ignoring this `then()` altogether)
+      console.log('data: ', data);
     })
-      .then(() => navigate(form.getAttribute("action")))
-      .catch(error => alert(error));
+    // .catch(() => {
+    //   // unnecessary because Mailchimp only ever
+    //   // returns a 200 status code
+    //   // see below for how to handle errors
+    // })
+    console.log('submitted');
   };
 
   render() {
@@ -44,8 +75,6 @@ export default class Index extends React.Component {
           name="contact"
           method="post"
           action="/contact/thanks/"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
           onSubmit={this.handleSubmit}
         >
           {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
