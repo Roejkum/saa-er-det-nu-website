@@ -31,23 +31,23 @@ const Navbar = class extends React.Component {
   
   <nav role="navigation" aria-label="main-navigation">
     <div className="container wrap"> 
-      <div class="row start-xs middle-xs nav-inner">
-        <div class="col">
+      <div className="row start-xs middle-xs nav-inner">
+        <div className="col">
           <Link to="/" className="navbar-item" title="Logo">
             Så er det nu!
           </Link>
         </div>
-        <div class="col">
+        <div className="col">
           <Link className="navbar-item" to="/about">
             About
           </Link>
         </div>
-        <div class="col">
+        <div className="col">
           <Link className="navbar-item" to="/products">
             Products
           </Link>
         </div>
-        <div class="col">
+        <div className="col">
         <Link className="navbar-item" to="/contact">
           Contact
         </Link>

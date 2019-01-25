@@ -1,0 +1,9 @@
+a {
+    color: $green-dark;
+    text-decoration: none;
+
+    &:hover, &:focus, &:active  {
+        color: $green-dark;
+        opacity: 0.8;
+    }
+}
