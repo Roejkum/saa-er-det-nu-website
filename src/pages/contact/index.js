@@ -15,15 +15,17 @@ export default class Index extends React.Component {
       isValidated: false, 
       form: {
         listFields: {
-  }
-      }
+        }
+      },
+      re: /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     };
   }
 
   handleChange = e => {
-    const currentFormData = this.state.form;
+    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     if(e.target.name === 'email') {
+      const currentFormData = this.state.form;
       this.setState({
         form: {
           ...currentFormData,
@@ -32,30 +34,47 @@ export default class Index extends React.Component {
       });
     }
 
-    if(e.target.name !== 'email') {
-      const currentlistFields = this.state.form.listFields;
-      this.setState({
-        form: {
-          ...currentFormData,
+    if(e.target.name === 'name') {
+      const input = e.target.value;
+      console.log('input: ', input);
+      const currentListFields = this.state.form.listFields;
+      const newListFields = {
+        ...currentListFields,
+        [e.target.name]: input,
+        poop: 'poop'
+      }
+      this.setState(() => {
+        return {form: {
           listFields: {
-            ...currentlistFields,
-            [e.target.name]: e.target.value 
+            ...newListFields
           }
-          
-        }
+        }};
       });
     }
 
-    if(!e.target.value) {
+    if(!e.target.value && e.target.name !== 'email') {
       e.target.className = 'invalid input';
     }
-    if(e.target.value) {
+    if(e.target.name === 'email' && !re.test(e.target.value)) {
+      e.target.className = 'invalid input';
+    }
+    if(e.target.name === 'email' && re.test(e.target.value)) {
       e.target.className = 'valid input';
     }
+    if(e.target.value && e.target.name !== 'email') {
+      e.target.className = 'valid input';
+    }
+
+    //global validation
+    
+    console.log(this.state.form);
   };
+
 
   handleSubmit = e => {
     e.preventDefault();
+
+    if(this.state.form.email)
     addToMailchimp(this.state.form.email, this.state.form.listFields)
     // listFields are optional if you are only capturing the email address.
     .then(data => {
@@ -72,6 +91,11 @@ export default class Index extends React.Component {
   };
 
   render() {
+
+    if(this.state.re.test(this.state.form.email) && this.state.form.listFields.name) {
+      console.log('formularen er udfyldt og mailen er korrekt');
+    }
+
     return (
       <Layout>
         <section className="section">
@@ -93,15 +117,17 @@ export default class Index extends React.Component {
             </label>
           </div>
           <div className="field">
-            <label className="label" htmlFor={"name"} hidden>Navn</label>
+            <label className="label" htmlFor={"name"} hidden>navn</label>
             <div className="control">
-              <input className="input" type={"text"} name={"Navn"} onChange={this.handleChange} id={"name"} placeholder="Navn" required={true} />
+              <input className="input" type={"text"} name={"name"} onChange={this.handleChange} onFocus={this.handleChange} id={"name"} placeholder="navn" required={true} />
+              <p>Fejl i indtastning</p>
             </div>
           </div>
           <div className="field">
             <label className="label" htmlFor={"email"} hidden>Email</label>
               <div className="control">
-                <input className="input" type={"email"} name={"email"} onChange={this.handleChange} id={"email"} placeholder="Email" required={true} />
+                <input className="input" type={"email"} name={"email"} onChange={this.handleChange} onFocus={this.handleChange} id={"email"} placeholder="Email" required={true} />
+                <p>Fejl i indtastning</p>
               </div>
           </div>
           <div className="field">
