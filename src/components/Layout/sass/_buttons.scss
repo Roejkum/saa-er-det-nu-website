@@ -1,0 +1,16 @@
+button, .btn {
+    border: 0px;
+    box-shadow: none;
+    background-color: $green-light;
+    padding: 0.5rem 1rem;
+    color: $black;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+}
+button:hover, .btn:hover {
+    background-color: darken($green-light, 20);
+}

@@ -1,0 +1,38 @@
+input:-internal-autofill-previewed, input:-internal-autofill-selected, textarea:-internal-autofill-previewed, textarea:-internal-autofill-selected, select:-internal-autofill-previewed, select:-internal-autofill-selected {
+    background-color: transparent !important;
+    color: inherit !important;
+}
+
+input, textarea, select, input:focus, textarea:focus, select:focus {
+    border: 0;
+    border-radius: 0;
+    border-bottom: 2px solid $grey-light;
+    transition: border-color 0.4s ease;
+    display: block;
+    width: 100%;
+    outline: none;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    background-color: transparent !important;
+    padding: 0.5rem 0.25rem;
+}
+input:focus, textarea:focus, select:focus, input.valid, textarea.valid, select.valid {
+    border-color: $green-light;
+}
+input.invalid, textarea.invalid, select.invalid {
+    border-color: $red;
+}
+
+textarea, textarea:focus {
+	border-top: 1px solid $grey-light;
+}
+.field {
+    margin-bottom: 2rem;
+}
+label {
+	color: $black;
+	font-weight: bold;
+}
