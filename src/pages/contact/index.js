@@ -45,6 +45,13 @@ export default class Index extends React.Component {
         }
       });
     }
+
+    if(!e.target.value) {
+      e.target.className = 'invalid input';
+    }
+    if(e.target.value) {
+      e.target.className = 'valid input';
+    }
   };
 
   handleSubmit = e => {
@@ -86,22 +93,16 @@ export default class Index extends React.Component {
             </label>
           </div>
           <div className="field">
-            <label className="label" htmlFor={"name"} >Your name</label>
+            <label className="label" htmlFor={"name"} hidden>Navn</label>
             <div className="control">
-              <input className="input" type={"text"} name={"name"} onChange={this.handleChange} id={"name"} required={true} />
+              <input className="input" type={"text"} name={"Navn"} onChange={this.handleChange} id={"name"} placeholder="Navn" required={true} />
             </div>
           </div>
           <div className="field">
-            <label className="label" htmlFor={"email"}>Email</label>
+            <label className="label" htmlFor={"email"} hidden>Email</label>
               <div className="control">
-                <input className="input" type={"email"} name={"email"} onChange={this.handleChange} id={"email"} required={true} />
+                <input className="input" type={"email"} name={"email"} onChange={this.handleChange} id={"email"} placeholder="Email" required={true} />
               </div>
-          </div>
-          <div className="field">
-            <label className="label" htmlFor={"message"}>Message</label>
-            <div className="control">
-              <textarea className="textarea" name={"message"} onChange={this.handleChange} id={"message"} required={true} />
-            </div>
           </div>
           <div className="field">
             <button className="button is-link" type="submit">Send</button>
