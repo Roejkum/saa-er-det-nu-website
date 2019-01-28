@@ -37,6 +37,11 @@ input.invalid, textarea.invalid, select.invalid {
         -o-transform: translateY(0);
 }
 }
+.error {
+    color: $red;
+    animation: fade-in 0.4s ease;
+    -webkit-animation: fade-in 0.4s ease;
+}
 .control p {
     opacity: 0;
     overflow: hidden;
