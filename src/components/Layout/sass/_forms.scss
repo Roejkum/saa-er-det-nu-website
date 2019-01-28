@@ -24,13 +24,41 @@ input:focus, textarea:focus, select:focus, input.valid, textarea.valid, select.v
 }
 input.invalid, textarea.invalid, select.invalid {
     border-color: $red;
-}
 
+    & + p {
+        content: 'Fejl i indtastning';
+        opacity: 1;
+        color: $red;
+        visibility: visible;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+}
+}
+.error {
+    color: $red;
+    animation: fade-in 0.4s ease;
+    -webkit-animation: fade-in 0.4s ease;
+}
+.control p {
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transform: translateY(-1rem);
+    -webkit-transform: translateY(-1rem);
+    -moz-transform: translateY(-1rem);
+    -ms-transform: translateY(-1rem);
+    -o-transform: translateY(-1rem);
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+}
 textarea, textarea:focus {
 	border-top: 1px solid $grey-light;
-}
-.field {
-    margin-bottom: 2rem;
 }
 label {
 	color: $black;
