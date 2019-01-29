@@ -4,9 +4,20 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout/Layout'
 
 export default class IndexPage extends React.Component {
+
+  componentDidMount() {
+    async function loadFunction() {
+      let response = await fetch('/.netlify/functions/getSubscriberAmount', {});
+      let body = await response.body;
+      console.log(body);
+    }
+    loadFunction();
+
+  }
+
   render() {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+    const { data } = this.props;
+    const { edges: posts } = data.allMarkdownRemark;
 
     return (
       <Layout>
