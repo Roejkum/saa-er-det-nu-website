@@ -1,8 +1,9 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+// import PropTypes from 'prop-types'
+// import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout/Layout'
 import BarCount from '../components/BarCount/BarCount';
+import ContactForm from '../components/ContactForm/ContactForm';
 
 export default class IndexPage extends React.Component {
   state = {
@@ -17,48 +18,33 @@ export default class IndexPage extends React.Component {
         return response.json();
       })
       .then((data) => {
-        console.log(JSON.stringify(data.msg));
-        this.setState({totalSigners: JSON.stringify(data.msg)})
+        // console.log(JSON.stringify(data.msg));
+        this.setState({totalSigners: data.msg})
       })
       .catch((error) => console.log(error));
   }
 
   render() {
-    const { data } = this.props;
-    const { edges: posts } = data.allMarkdownRemark;
-
+    
     return (
       <Layout>
         <section className="section">
           <div className="container">
             <div className="content">
               <h1 className="has-text-weight-bold is-size-2">Så er det nu gutter 2!</h1>
-              <BarCount amount={this.state.totalSigners} totalAmount="10"/>
             </div>
-            {posts
-              .map(({ node: post }) => (
-                <div
-                  className="content"
-                  style={{ border: '1px solid #333', padding: '2em 4em' }}
-                  key={post.id}
-                >
-                  <p>
-                    <Link className="has-text-primary" to={post.fields.slug}>
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <small>{post.frontmatter.date}</small>
-                  </p>
-                  <p>
-                    {post.excerpt}
-                    <br />
-                    <br />
-                    <Link className="button is-small" to={post.fields.slug}>
-                      Keep Reading →
-                    </Link>
-                  </p>
-                </div>
-              ))}
+          </div>
+        </section>
+        <section className="section">
+          <div className="container-fluid white-box">
+            <div className="row">
+              <div className="col-xs-12">
+                <h2>Skriv under nu!</h2>
+                <p>Vi skal snart til valg og det er nu vi skal vise politikerne at tiden til små skridt og tomme løfter er ovre. Vi vil se omgående handling fra første år af en ny regerings levetid. </p>
+                <BarCount amount={this.state.totalSigners} totalAmount="10"/>
+                <ContactForm/>
+              </div>
+            </div>
           </div>
         </section>
       </Layout>
@@ -66,34 +52,34 @@ export default class IndexPage extends React.Component {
   }
 }
 
-IndexPage.propTypes = {
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
-    }),
-  }),
-}
+// IndexPage.propTypes = {
+//   data: PropTypes.shape({
+//     allMarkdownRemark: PropTypes.shape({
+//       edges: PropTypes.array,
+//     }),
+//   }),
+// }
 
-export const pageQuery = graphql`
-  query IndexQuery {
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] },
-      filter: { frontmatter: { templateKey: { eq: "blog-post" } }}
-    ) {
-      edges {
-        node {
-          excerpt(pruneLength: 400)
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            templateKey
-            date(formatString: "MMMM DD, YYYY")
-          }
-        }
-      }
-    }
-  }
-`
+// export const pageQuery = graphql`
+//   query IndexQuery {
+//     allMarkdownRemark(
+//       sort: { order: DESC, fields: [frontmatter___date] },
+//       filter: { frontmatter: { templateKey: { eq: "blog-post" } }}
+//     ) {
+//       edges {
+//         node {
+//           excerpt(pruneLength: 400)
+//           id
+//           fields {
+//             slug
+//           }
+//           frontmatter {
+//             title
+//             templateKey
+//             date(formatString: "MMMM DD, YYYY")
+//           }
+//         }
+//       }
+//     }
+//   }
+// `

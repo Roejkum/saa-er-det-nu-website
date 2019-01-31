@@ -1,3 +1,5 @@
+@import '../Layout/sass/variables';
+
 .barcountWrapper {
     padding-top: 1.5rem;
     position: relative;
@@ -19,6 +21,14 @@
         &:last-of-type {
             right: 0;
         }
+        &.errorMessage {
+            transform: none;
+            -webkit-transform: none;
+            -moz-transform: none;
+            -ms-transform: none;
+            -o-transform: none;
+            color: $red;
+        }
     }
 
     .scalingSvgContainer {
@@ -26,7 +36,7 @@
         height: 0; 
         width: 100%; 
         padding: 0;
-        padding-bottom: 0.8rem; 
+        padding-bottom: 1rem; 
         margin-bottom: 2rem;
     
         .scalingSvg {
