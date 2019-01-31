@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout/Layout'
+import BarCount from '../components/BarCount/BarCount';
 
 export default class IndexPage extends React.Component {
   state = {
@@ -25,7 +26,6 @@ export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
-    const signers = this.state.totalSigners;
 
     return (
       <Layout>
@@ -33,7 +33,7 @@ export default class IndexPage extends React.Component {
           <div className="container">
             <div className="content">
               <h1 className="has-text-weight-bold is-size-2">Så er det nu gutter 2!</h1>
-              <h2>{signers} har tilmeldt sig!</h2>
+              <BarCount amount={this.state.totalSigners} totalAmount="10"/>
             </div>
             {posts
               .map(({ node: post }) => (
