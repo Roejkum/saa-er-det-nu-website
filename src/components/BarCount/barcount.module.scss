@@ -1,0 +1,54 @@
+.barcountWrapper {
+    padding-top: 1.5rem;
+    position: relative;
+
+    p {
+        position: absolute;
+        margin: 0;
+        top: 0;
+
+        &:first-of-type {
+            transform: translateX(-100%);
+            animation: barcount-fade 1.6s 0s;
+            -webkit-animation: barcount-fade 1.6s 0s;
+            -webkit-transform: translateX(-100%);
+            -moz-transform: translateX(-100%);
+            -ms-transform: translateX(-100%);
+            -o-transform: translateX(-100%);
+        }
+        &:last-of-type {
+            right: 0;
+        }
+    }
+
+    .scalingSvgContainer {
+        position: relative; 
+        height: 0; 
+        width: 100%; 
+        padding: 0;
+        padding-bottom: 2%; 
+        margin-bottom: 2rem;
+    
+        .scalingSvg {
+            position: absolute; 
+            height: 100%; 
+            width: 100%; 
+            left: 0; 
+            top: 0;
+
+            rect {
+                transition: all 1s ease;
+                -webkit-transition: all 1s ease;
+                -moz-transition: all 1s ease;
+                -ms-transition: all 1s ease;
+                -o-transition: all 1s ease;
+            }
+        }
+    }
+}
+
+@keyframes barcount-fade {
+    0% {opacity: 0;}
+    75% { opacity: 0;}
+    100% {opacity: 1;}
+}
