@@ -28,7 +28,7 @@ exports.handler = function signUp(event, context, callback) {
         callback(null, {
           statusCode: 500,
           body: JSON.stringify({
-            msg: `Kunne ikke hente data.`,
+            msg: 'Kunne ikke hente data.',
           }),
         });
     });   
