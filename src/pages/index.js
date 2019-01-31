@@ -4,20 +4,28 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout/Layout'
 
 export default class IndexPage extends React.Component {
+  state = {
+    totalSigners: null
+  }
 
   componentDidMount() {
-    async function loadFunction() {
-      let response = await fetch('/.netlify/functions/getSubscriberAmount', {});
-      let body = await response.body;
-      console.log(body);
-    }
-    loadFunction();
-
+      fetch('/.netlify/functions/getSubscriberAmount', {
+        method: 'POST'
+      })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        console.log(JSON.stringify(data.msg));
+        this.setState({totalSigners: JSON.stringify(data.msg)})
+      })
+      .catch((error) => console.log(error));
   }
 
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
+    const signers = this.state.totalSigners;
 
     return (
       <Layout>
@@ -25,6 +33,7 @@ export default class IndexPage extends React.Component {
           <div className="container">
             <div className="content">
               <h1 className="has-text-weight-bold is-size-2">Så er det nu gutter 2!</h1>
+              <h2>{signers} har tilmeldt sig!</h2>
             </div>
             {posts
               .map(({ node: post }) => (
