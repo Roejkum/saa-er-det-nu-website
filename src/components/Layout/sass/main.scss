@@ -6,3 +6,25 @@
 @import './text';
 @import './forms';
 @import './buttons';
+
+.section-signup {
+    background-color: #92BCBC;
+    background-image: linear-gradient(to right, #3A8277, #92BCBC);
+    position: relative;
+    height: 100vh;
+}
+
+.grass {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.content {
+    padding-top: 15%;
+    padding-right: 5%;
+    padding-left: 5%;
+    align-items: center;
+    justify-content: center
+
+}

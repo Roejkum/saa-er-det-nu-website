@@ -1,9 +1,9 @@
 import React from 'react'
-// import PropTypes from 'prop-types'
-// import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout/Layout'
 import BarCount from '../components/BarCount/BarCount';
 import ContactForm from '../components/ContactForm/ContactForm';
+import logo from "../../static/img/Logo_2.svg"
+import graes from "../../static/img/Graes.svg"
 
 export default class IndexPage extends React.Component {
   state = {
@@ -25,18 +25,27 @@ export default class IndexPage extends React.Component {
   }
 
   render() {
-    
+
     return (
       <Layout>
-        <section className="section">
+        <section className="section section-signup">
           <div className="container">
             <div className="content">
               <h1 className="has-text-weight-bold is-size-2">Så er det nu gutter 2!</h1>
             </div>
           </div>
-        </section>
-        <section className="section">
-          <div className="container-fluid white-box">
+              <div className="row">
+
+                {/* tekst */}
+                <div className="col-md-7 col-md-offset-1 col-xs-12 last-md">
+                  <img src={logo} alt="Logo" />
+                  <h1 className="has-text-weight-bold is-size-2 white-text">Kan vi få 100.000 underskrifter på at gøre <span className="bold-text">valget grønt?</span></h1>
+                  <h1 className="white-text">{signers} Har underskrevet</h1>
+                </div>
+
+                {/* Signupform */}
+                <div className="col-md-4 col-xs-12">
+                <div className="container-fluid white-box">
             <div className="row">
               <div className="col-xs-12">
                 <h2>Skriv under nu!</h2>
@@ -45,41 +54,17 @@ export default class IndexPage extends React.Component {
                 <ContactForm/>
               </div>
             </div>
-          </div>
+            </div>
+                </div>
+
+              </div>
+            
+          
+          <img src={graes} alt="grass" className="grass" />
+          
         </section>
+        
       </Layout>
     )
   }
 }
-
-// IndexPage.propTypes = {
-//   data: PropTypes.shape({
-//     allMarkdownRemark: PropTypes.shape({
-//       edges: PropTypes.array,
-//     }),
-//   }),
-// }
-
-// export const pageQuery = graphql`
-//   query IndexQuery {
-//     allMarkdownRemark(
-//       sort: { order: DESC, fields: [frontmatter___date] },
-//       filter: { frontmatter: { templateKey: { eq: "blog-post" } }}
-//     ) {
-//       edges {
-//         node {
-//           excerpt(pruneLength: 400)
-//           id
-//           fields {
-//             slug
-//           }
-//           frontmatter {
-//             title
-//             templateKey
-//             date(formatString: "MMMM DD, YYYY")
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
