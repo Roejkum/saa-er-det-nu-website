@@ -30,22 +30,17 @@ export default class IndexPage extends React.Component {
       <Layout>
         <section className="section section-signup">
           <div className="container">
-            <div className="content">
-              <h1 className="has-text-weight-bold is-size-2">Så er det nu gutter 2!</h1>
-            </div>
-          </div>
-              <div className="row">
-
-                {/* tekst */}
-                <div className="col-md-7 col-md-offset-1 col-xs-12 last-md">
-                  <img src={logo} alt="Logo" />
-                  <h1 className="has-text-weight-bold is-size-2 white-text">Kan vi få 100.000 underskrifter på at gøre <span className="bold-text">valget grønt?</span></h1>
-                  <h1 className="white-text">{signers} Har underskrevet</h1>
-                </div>
+            <div className="row">
+              {/* tekst */}
+              <div className="col-md-7 col-md-offset-1 col-xs-12 last-md">
+                <img src={logo} alt="Logo" />
+                <h1 className="has-text-weight-bold is-size-2 white-text">Kan vi få 100.000 underskrifter på at gøre <span className="bold-text">valget grønt?</span></h1>
+                <h1 className="white-text">{this.state.totalSigners} Har underskrevet</h1>
+              </div>
 
                 {/* Signupform */}
                 <div className="col-md-4 col-xs-12">
-                <div className="container-fluid white-box">
+                  <div className="container-fluid white-box">
             <div className="row">
               <div className="col-xs-12">
                 <h2>Skriv under nu!</h2>
@@ -59,7 +54,7 @@ export default class IndexPage extends React.Component {
 
               </div>
             
-          
+              </div>
           <img src={graes} alt="grass" className="grass" />
           
         </section>
