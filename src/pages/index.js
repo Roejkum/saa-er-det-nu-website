@@ -40,7 +40,7 @@ export default class IndexPage extends React.Component {
 
                 {/* Signupform */}
                 <div className="col-sm-5 col-xs-12">
-                  <div className="container-fluid white-box">
+                  <div className="container-fluid white-box fade-in">
             <div className="row">
               <div className="col-xs-12">
                 <h2>Skriv under nu!</h2>
