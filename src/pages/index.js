@@ -29,17 +29,17 @@ export default class IndexPage extends React.Component {
     return (
       <Layout>
         <section className="section section-signup">
-          <div className="container">
+          <div className="container-fluid wrap">
             <div className="row">
               {/* tekst */}
-              <div className="col-md-7 col-md-offset-1 col-xs-12 last-md">
+              <div className="col-sm-7 col-md-6 col-md-offset-1 col-xs-12 last-sm">
                 <img src={logo} alt="Logo" />
-                <h1 className="has-text-weight-bold is-size-2 white-text">Kan vi få 100.000 underskrifter på at gøre <span className="bold-text">valget grønt?</span></h1>
-                <h1 className="white-text">{this.state.totalSigners} Har underskrevet</h1>
+                <h1 className="white-text text-center-xs">Kan vi få 100.000 underskrifter på at gøre <span className="bold-text">valget grønt?</span></h1>
+                <p className="white-text text-center-xs">Hvis du også synes at klima og natur skal øverst på dagsordenen til det kommende folketingsvalg, så skriv under og vær med til at råbe politikerne op!</p>
               </div>
 
                 {/* Signupform */}
-                <div className="col-md-4 col-xs-12">
+                <div className="col-sm-5 col-xs-12">
                   <div className="container-fluid white-box">
             <div className="row">
               <div className="col-xs-12">

@@ -1,24 +1,34 @@
-@import 'flexboxgrid-sass';
-
 $flexboxgrid-grid-columns: 12;
-$flexboxgrid-gutter-width: 1rem;
+$flexboxgrid-gutter-width: 20rem;
 $flexboxgrid-outer-margin: 1rem;
 
-// $flexboxgrid-breakpoints:
-//   sm 48rem,
-//   md 64rem,
-//   lg 80rem,
-//   xlg 90rem,
-//   newbreakpoint 120rem
+$flexboxgrid-breakpoints:
+  xsm 20rem,
+  sm 48rem,
+  md 64rem,
+  lg 80rem,
+  xlg 90rem;
+
+
+@import 'flexboxgrid-sass';
+
+
+
 
 .wrap {
     box-sizing: border-box;
-    max-width: 1200px;
+    max-width: 75rem;
     margin: 0 auto;
 }
 .container, .container-fluid {
     margin-right: auto;
     margin-left: auto;
+}
+@media screen and (max-width: 48rem) {
+    .container {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
 }
 .flex {
     display: flex;

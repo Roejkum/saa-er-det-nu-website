@@ -2,7 +2,7 @@ button, .btn {
     border: 0px;
     width:100%;
     box-shadow: none;
-    background-color: $green-dark;
+    background-color: $signal;
     padding: 1rem 1.5rem;
     color: $white;
     font-weight: bold;
@@ -25,5 +25,5 @@ button, .btn {
     }
 }
 button:hover, .btn:hover {
-    background-color: lighten($green-dark, 10);
+    background-color: lighten($signal, 10);
 }
