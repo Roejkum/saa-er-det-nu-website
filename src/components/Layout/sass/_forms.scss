@@ -64,6 +64,11 @@ input.invalid, textarea.invalid, select.invalid {
     -ms-transition: all 1s ease;
     -o-transition: all 1s ease;
 
+    &.error-msg {
+        margin-top: 0.2rem;
+        font-size: 0.8rem;
+    }
+
     &.description {
         opacity: 1;
         visibility: visible;

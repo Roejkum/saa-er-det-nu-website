@@ -122,14 +122,14 @@ class ContactForm extends Component {
                       <label className="label" htmlFor={"FNAME"} hidden>Fornavn</label>
                         <div className="control">
                           <input className="input" type={"text"} name={"FNAME"} onChange={this.handleChange} onFocus={this.handleChange} id={"name"} placeholder="Navn" required={true} />
-                          <p>Fejl i indtastning</p>
+                          <p className="error-msg">Fejl i indtastning</p>
                         </div>
                       </div>
                     <div className="field col-xs-12">
                       <label className="label" htmlFor={"email"} hidden>Email</label>
                         <div className="control">
                           <input className="input" type={"email"} name={"email"} onChange={this.handleChange} onFocus={this.handleChange} id={"email"} placeholder="Email" required={true} />
-                          <p>Fejl i indtastning</p>
+                          <p className="error-msg">Fejl i indtastning</p>
                         </div>
                       </div>
                       <div className="field col-xs-12">
