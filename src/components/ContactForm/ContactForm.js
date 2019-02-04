@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
 import addToMailchimp from 'gatsby-plugin-mailchimp';
+import { Link } from 'gatsby';
 
 class ContactForm extends Component {  
     state = { 
         isValidated: false, 
         emailValidated: false,
         nameValidated: false,
+        termsValidated: false,
         errorMsg: '',
         form: {
             email: '',
             listFields: {
                 FNAME: '',
-                LNAME: ''        
+                LNAME: '',
+                signup: false,
+                newsletter: false   
             }
         },
       };  
@@ -22,24 +26,28 @@ class ContactForm extends Component {
       }
     
       handleChange = e => {
-        if(e.target.name === 'email' && this.validateEmail(e.target.value)) {
+        if(e.target.name === 'email') {
+          const emailValidated = this.validateEmail(e.target.value);
           const currentFormData = this.state.form;
           const nameValidated = this.state.nameValidated;
+          const termsValidated = this.state.termsValidated;
           this.setState({
             form: {
               ...currentFormData,
               [e.target.name]: e.target.value 
             },
-            emailValidated: true,
-            isValidated: nameValidated
+            emailValidated: (emailValidated ? true : false),
+            isValidated: (termsValidated && nameValidated && emailValidated ? true : false)
           });
-          e.target.className = 'valid input';
+          e.target.className = (emailValidated ? 'valid input' : 'invalid input');
         }
     
-        if(e.target.value && e.target.name !== 'email') {
+        if(e.target.name === 'FNAME') {
+          const nameValid = e.target.value ? true : false;
           const currentForm = this.state.form;
           const currentListFields = this.state.form.listFields;
           const emailValidated = this.state.emailValidated;
+          const termsValidated = this.state.termsValidated;
           const newForm = {
             ...currentForm,
             listFields: {
@@ -51,26 +59,59 @@ class ContactForm extends Component {
             return {form: {
               ...newForm
             },
-            isValidated: emailValidated,
-            nameValidated: true
+            isValidated: (emailValidated && termsValidated && e.target.value ? true : false),
+            nameValidated: nameValid
           };
           });
-          e.target.className = 'valid input';
+          e.target.className = (nameValid ? 'valid input' : 'invalid input');
         }
-    
-        if(!e.target.value && e.target.name !== 'email') {
-          e.target.className = 'invalid input';
-          this.setState({
-            isValidated: false
+
+        if(e.target.name === 'signup') {
+          const checked = e.target.checked;
+          const currentForm = this.state.form;
+          const currentListFields = this.state.form.listFields;
+          const emailValidated = this.state.emailValidated;
+          const nameValidated = this.state.nameValidated;
+          const newForm = {
+            ...currentForm,
+            listFields: {
+              ...currentListFields,
+              [e.target.name]: (checked ? 'Ja' : 'Nej')
+            }
+          };
+
+          this.setState(() => {
+            return {form: {
+              ...newForm
+            },
+            isValidated: (emailValidated && nameValidated && checked ? true : false),
+            termsValidated: (checked ? true : false)
+          };
           });
+
+          e.target.className = e.target.checked ? 'valid input' : 'invalid input';
         }
-        if(e.target.name === 'email' && !this.validateEmail(e.target.value)) {
-          e.target.className = 'invalid input';
-          this.setState({
-            isValidated: false,
-            emailValidated: false
-          })
+
+        if(e.target.name === 'newsletter') {
+          const currentForm = this.state.form;
+          const currentListFields = this.state.form.listFields;
+          const newForm = {
+            ...currentForm,
+            listFields: {
+              ...currentListFields,
+              [e.target.name]: (e.target.checked ? 'Ja' : 'Nej')
+            }
+          };
+
+          this.setState(() => {
+            return {form: {
+              ...newForm
+            }
+          };
+          });
+          e.target.className = (e.target.checked ? 'valid input' : '');
         }
+
       };
       
       handleSubmit = e => {
@@ -88,6 +129,10 @@ class ContactForm extends Component {
           this.setState({errorMsg: 'Der er fejl i din indtastning. Gennemgå venligst formularen og prøv igen.'})
         }
       };
+
+      componentDidUpdate() {
+        console.log(this.state);
+      }
     
       render() {
     
@@ -133,34 +178,19 @@ class ContactForm extends Component {
                         </div>
                       </div>
                       <div className="field col-xs-12">
-                        <label className="label" htmlFor={"newsletter"} hidden>Newsletter</label>
-                        <div className="control">
-                            <div className="flex align-center">
-                                <input className="input" type={"checkbox"} name={"newsletter"} onChange={this.handleChange} onFocus={this.handleChange} id={"newsletter"} required={false} />
-                                <p className="description">Ja, jeg vil gerne holdes opdateret med mails af og til om sagen</p>
-                            </div>
-
-                        </div>
-                      </div>
-                      <div className="field col-xs-12">
-                        <label className="label" htmlFor={"signup"} hidden>Newsletter</label>
-                        <div className="control">
-                            <div className="flex align-center">
-                                <input className="input" type={"checkbox"} name={"signup"} onChange={this.handleChange} onFocus={this.handleChange} id={"signup"} required={true} />
-                                <p className="description">Ja, jeg er med i kampen og vil gerne være med til at løfte sagen!</p>
-                            </div>
-
-                        </div>
-                      </div>
-                      <div className="field col-xs-12">
-                        <label className="label" htmlFor={"privacy"} hidden>Privatlivspolitik</label>
-                        <div className="control">
-                            <div className="flex align-center">
-                                <input className="input" type={"checkbox"} name={"privacy"} onChange={this.handleChange} onFocus={this.handleChange} id={"privacy"} required={true} />
-                                <p className="description">Jeg bekræfter at …</p>
-                            </div>
-
-                        </div>
+                        <label className="label checkbox" htmlFor={"newsletter"}>
+                            <input className="input" type={"checkbox"} name={"newsletter"} onChange={this.handleChange} id={"newsletter"} required={false} />
+                            <span className="checkmark"></span>
+                            <p>Ja, jeg vil gerne holdes opdateret med mails af og til om sagen</p>
+                        </label>
+                        <label className="label checkbox" htmlFor={"signup"}>
+                          <input className="input" type={"checkbox"} name={"signup"} value={this.state.termsValidated} onChange={this.handleChange} id={"signup"} required={true} />
+                          <span className="checkmark"></span>
+                          <p>
+                            Ja, jeg er med i kampen og vil gerne være med til at løfte sagen! Jeg har desuden læst og accepterer <Link to="/privatlivspolitik" title="Logo">privatlivspolitikken</Link> <span className="required">*</span>
+                          </p>
+                        </label>
+                  
                       </div>
                       <div className="field col-xs-12 mt">
                         <button className="button is-link" type="submit" disabled={!this.state.isValidated}>SKRIV UNDER</button>

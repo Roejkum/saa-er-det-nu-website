@@ -7,12 +7,12 @@ body {
     font-family: 'Quicksand', sans-serif, 'Roboto', sans-serif;
 }
 a {
-    color: $green-dark;
-    text-decoration: none;
+    color: $signal;
+    text-decoration: underline;
+    transition: all 0.4s ease;
 
     &:hover, &:focus, &:active  {
-        color: $green-dark;
-        opacity: 0.8;
+        color: darken($signal, 20);
     }
 }
 
