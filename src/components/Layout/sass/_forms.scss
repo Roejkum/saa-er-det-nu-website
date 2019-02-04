@@ -53,6 +53,7 @@ input.invalid, textarea.invalid, select.invalid {
     overflow: hidden;
     visibility: hidden;
     margin-bottom: 0;
+    margin-top: 0;
     transform: translateY(-1rem);
     -webkit-transform: translateY(-1rem);
     -moz-transform: translateY(-1rem);
@@ -96,4 +97,5 @@ label {
     box-shadow: 0 5px 30px #0000003b;
     z-index: 100;
     position: relative;
+    animation: fade-in 0.6s ease;
 }
