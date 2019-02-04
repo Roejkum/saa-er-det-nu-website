@@ -1,0 +1,77 @@
+.trees {
+    position: absolute;
+    bottom: 2vw;
+    right: 1.5rem;
+    width: 20rem;
+    height: 20rem;
+    transform-origin: 50% 50%;
+
+    // .tree {
+    //     position: absolute;
+    // }
+    img {
+        transform-origin: 50% 100%;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .treeOne {
+        width: 20%;
+        right: 80%;
+        animation: bounce-up-1 0.2s ease;
+    }
+    .treeTwo {
+        width: 40%;
+        right: 60%;
+        animation: bounce-up-2 0.3s ease;
+    }
+    .treeThree {
+        width: 20%;
+        right: 60%;
+        animation: bounce-up-3 0.4s ease;
+    }
+    .treeFour {
+        width: 30%;
+        right: 40%;
+        animation: bounce-up-4 0.5s ease;
+    }
+    .treeFive {
+        width: 50%;
+        right: 15%;
+        animation: bounce-up-5 0.6s ease;
+    }
+    .treeSix {
+        width: 40%;
+        right: 0;
+        animation: bounce-up-6 0.7s ease;
+    }
+}
+@keyframes bounce-up-1 {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+@keyframes bounce-up-2 {
+    0% {transform: scale(0)}
+    10% {transform: scale(0)}
+    100% {transform: scale(1)}
+}
+@keyframes bounce-up-3 {
+    0% {transform: scale(0)}
+    20% {transform: scale(0)}
+    100% {transform: scale(1)}
+}
+@keyframes bounce-up-4 {
+    0% {transform: scale(0)}
+    30% {transform: scale(0)}
+    100% {transform: scale(1)}
+}
+@keyframes bounce-up-5 {
+    0% {transform: scale(0)}
+    40% {transform: scale(0)}
+    100% {transform: scale(1)}
+}
+@keyframes bounce-up-6 {
+    0% {transform: scale(0)}
+    50% {transform: scale(0)}
+    100% {transform: scale(1)}
+}
