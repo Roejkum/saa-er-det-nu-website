@@ -2,7 +2,6 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from "gatsby"
 
-// import Navbar from '../../components/Navbar'
 import './sass/main.scss'
 
 const TemplateWrapper = ({ children }) => (
