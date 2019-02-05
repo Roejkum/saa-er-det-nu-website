@@ -13,6 +13,32 @@
     position: relative;
     padding: 6rem 0;
 }
+.stillere-sektion {
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 100%;
+        left: 0;
+        background: linear-gradient(to top, transparent, $green-dark);
+        height: 50%;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        background: linear-gradient(to top, $white, transparent);
+        height: 50%;
+    }
+}
+.text-section {
+    padding: 10rem 0;
+}
+section {
+    position: relative;
+}
 
 .grass {
     width: 100%;

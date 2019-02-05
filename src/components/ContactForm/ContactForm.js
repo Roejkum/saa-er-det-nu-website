@@ -134,7 +134,7 @@ class ContactForm extends Component {
               console.log(data.msg);
             } else if(data.result === 'error' && data.msg.includes('too many recent signup requests')) {
               this.setState({
-                errorMsg: 'MSG For mange forsøg. Prøv igen senere.',
+                errorMsg: 'For mange forsøg. Prøv igen senere.',
                 submitError: true,
                 loading: false
               });

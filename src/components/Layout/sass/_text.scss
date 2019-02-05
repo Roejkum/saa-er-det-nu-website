@@ -1,5 +1,5 @@
 
-@import url(http://fonts.googleapis.com/css?family=Quicksand:400,700);
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,700);
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,700);
 
 
@@ -16,20 +16,33 @@ a {
     }
 }
 
-h1 {
+h1, .h1 {
     font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     color: $black;
+    font-size: 3rem;
 }
-h2 {
-    color: $green-dark;
+h2, .h2 {
+    font-size: 2.2rem;
+    font-weight: normal;
 }
-
+h3, .h3 {
+    font-size: 1.5rem;
+}
+.signers {
+    font-size: 5rem;
+    font-weight: bold;
+    margin: 0;
+    margin-top: 2rem;
+}
 p {
     font-family: "Roboto", sans-serif;
     color: $black;
     line-height: 1.4;
     font-weight: 300;
+}
+.text-center {
+    text-align: center;
 }
 @media screen and (max-width: 767px) {
     .text-center-xs {

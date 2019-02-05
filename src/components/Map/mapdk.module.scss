@@ -1,0 +1,69 @@
+.cls1 {
+    fill: #4e6839;
+    stroke: #ffff;
+    stroke-width: 0.5px;
+  }
+
+.cls2, .cls3, .cls4 {
+    fill: #ffcd2a;
+    position: absolute;
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+  text {
+    opacity: 0;
+  }
+
+  .visible text {
+    opacity: 1;
+    animation: fadein-small 0.8s ease-in-out;
+
+  }
+  .mapContainer {
+    position: block;
+  }
+
+  .visible .cls3 {
+    opacity: 0.58;
+    animation: fadein-medium 2s ease-in-out;
+  }
+
+  .visible .cls4 {
+    opacity: 0.35;
+    animation: fadein-large 1s ease-in-out;
+  }
+
+  .visible .cls2 {
+    opacity: 1;
+     animation: fadein-small 0.8s ease-in-out;
+  }
+
+
+  @keyframes fadein-small {
+          0% {
+            opacity: 0;
+          }
+          100% {
+              opacity: 1;
+          }
+}
+
+@keyframes fadein-medium {
+    0% {
+      opacity: 0;
+    }
+    100% {
+        opacity: 0.58;
+       
+    }
+}
+
+@keyframes fadein-large {
+    0% {
+      opacity: 0;
+    }
+    100% {
+        opacity: 0.35;
+    } 
+}
+
