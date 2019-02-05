@@ -24,8 +24,8 @@ $flexboxgrid-breakpoints:
     margin-left: auto;
 }
 @media screen and (min-width: 48rem) {
-    .pl-5-sm {
-        padding-left: 5rem;
+    .pl-sm {
+        padding-left: 3vw;
     }
 }
 @media screen and (max-width: 48rem) {
