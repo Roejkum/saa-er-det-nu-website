@@ -3,7 +3,9 @@ import Layout from '../components/Layout/Layout'
 import BarCount from '../components/BarCount/BarCount';
 import ContactForm from '../components/ContactForm/ContactForm';
 import logo from "../../static/img/Logo_2.svg"
-import graes from "../../static/img/Graes.svg"
+import grass from "../../static/img/grassnew.svg"
+import MapDk from '../components/Map/MapDk';
+
 
 export default class IndexPage extends React.Component {
   state = {
@@ -31,6 +33,7 @@ export default class IndexPage extends React.Component {
         <section className="section section-signup">
           <div className="container-fluid wrap">
             <div className="row">
+
               {/* tekst */}
               <div className="col-sm-7 col-md-6 col-md-offset-1 col-xs-12 last-sm">
                 <img src={logo} alt="Logo" />
@@ -55,8 +58,21 @@ export default class IndexPage extends React.Component {
               </div>
             
               </div>
-          <img src={graes} alt="grass" className="grass" />
-          
+          <img src={grass} alt="grass" className="grass" />
+        </section>
+
+        {/* Map section */}
+        <section className="map-section">
+          <div className="container-fluid wrap">
+            <div className="row">
+              <div className="col-sm-7 col-md-6 col-md-offset-1 col-xs-12 last-sm">
+              <p>Vi skal snart til valg og det er nu vi skal vise politikerne at tiden til små skridt og tomme løfter er ovre. Vi vil se omgående handling fra første år af en ny regerings levetid. </p>
+              </div>
+              <div className="col-sm-5 col-xs-12">
+              <MapDk /> 
+              </div>
+            </div>
+          </div>
         </section>
         
       </Layout>
