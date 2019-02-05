@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './mapdk.module.scss';
 
-const MapDk = () => {
+const MapDk = ( props ) => {
     return (
-    <div className="map-container">
+    <div className={ props.visible ? [styles.mapContainer, styles.visible].join(' ') : styles.mapContainer }>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 661.66 792.63">
     <title>Danmark</title>
     <g id="Lag_2" data-name="Lag 2">

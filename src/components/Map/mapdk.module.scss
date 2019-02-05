@@ -7,21 +7,37 @@
 .cls2, .cls3, .cls4 {
     fill: #ffcd2a;
     position: absolute;
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+  text {
+    opacity: 0;
   }
 
-  .cls3 {
+  .visible text {
+    opacity: 1;
+    animation: fadein-small 0.8s ease-in-out;
+
+  }
+  .mapContainer {
+    position: block;
+  }
+
+  .visible .cls3 {
     opacity: 0.58;
     animation: fadein-medium 2s ease-in-out;
   }
 
-  .cls4 {
+  .visible .cls4 {
     opacity: 0.35;
     animation: fadein-large 1s ease-in-out;
   }
 
-.cls2 {
-     animation: fadein-small 0.3s ease-in-out;
+  .visible .cls2 {
+    opacity: 1;
+     animation: fadein-small 0.8s ease-in-out;
   }
+
 
   @keyframes fadein-small {
           0% {
