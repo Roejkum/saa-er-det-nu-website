@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout/Layout'
 import { Link } from 'gatsby'
-import graes from "../../static/img/Graes.svg";
+import grass from "../../static/img/grassnew.svg";
 import SunSvg from '../components/SunSvg/SunSvg';
 import Trees from '../components/Trees/Trees';
 
@@ -20,7 +20,7 @@ const NotFoundPage = () => (
     </div>
     </div>
     </div>
-    <img src={graes} alt="grass" className="grass" />
+    <img src={grass} alt="grass" className="grass" />
     </section>
   </Layout>
 )

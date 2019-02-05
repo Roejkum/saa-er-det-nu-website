@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../components/Layout/Layout';
 import BarCount from '../components/BarCount/BarCount';
 import ContactForm from '../components/ContactForm/ContactForm';
-import grass from "../../static/img/grassnew.svg"
+import grass from "../../static/img/grassnew.svg";
 import MapDk from '../components/Map/MapDk';
 import logo from "../../static/img/logo.svg";
 import SunSvg from '../components/SunSvg/SunSvg';
