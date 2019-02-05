@@ -17,10 +17,16 @@ input, textarea, select, input:focus, textarea:focus, select:focus {
     -ms-transition: all 1s ease;
     -o-transition: all 1s ease;
     background-color: transparent !important;
-    padding: 0.5rem 0.25rem;
+    padding: 0.5rem 0;
+    box-sizing: border-box;
+}
+input[type="checkbox"] {
+    width: auto;
+    display: inline-block;
+    margin-right: 1rem;
 }
 input:focus, textarea:focus, select:focus, input.valid, textarea.valid, select.valid {
-    border-color: $green-light;
+    border-color: $green;
 }
 input.invalid, textarea.invalid, select.invalid {
     border-color: $red;
@@ -46,6 +52,8 @@ input.invalid, textarea.invalid, select.invalid {
     opacity: 0;
     overflow: hidden;
     visibility: hidden;
+    margin-bottom: 0;
+    margin-top: 0;
     transform: translateY(-1rem);
     -webkit-transform: translateY(-1rem);
     -moz-transform: translateY(-1rem);
@@ -56,6 +64,23 @@ input.invalid, textarea.invalid, select.invalid {
     -moz-transition: all 1s ease;
     -ms-transition: all 1s ease;
     -o-transition: all 1s ease;
+
+    &.error-msg {
+        margin-top: 0.2rem;
+        font-size: 0.8rem;
+    }
+
+    &.description {
+        opacity: 1;
+        visibility: visible;
+        display: inline-block;
+        margin: 0.5rem 0;
+        transform:none;
+        -webkit-transform:none;
+        -moz-transform:none;
+        -ms-transform:none;
+        -o-transform:none;
+}
 }
 textarea, textarea:focus {
 	border-top: 1px solid $grey-light;
@@ -63,4 +88,159 @@ textarea, textarea:focus {
 label {
 	color: $black;
 	font-weight: bold;
+}
+.white-box {
+    padding-top: 2rem;
+    padding-bottom: 2.5rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 5px 30px #0000003b;
+    z-index: 100;
+    position: relative;
+    animation: fade-in 0.6s ease;
+    margin: 0 -1.5rem;
+
+    @media screen and (min-width: 48rem) {
+        margin: 0;
+    }
+}
+.required {
+    color: $red;
+    font-weight: bold;
+}
+
+/* The checkbox */
+.checkbox {
+    display: block;
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 0.375rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    /* Hide the browser's default checkbox */
+    & input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+
+        &:checked ~ .checkmark {
+            background-color: $signal;
+        }
+        &.invalid ~ .checkmark {
+            border-color: $red;
+        }
+
+        /* Show the checkmark when checked */
+        &:checked ~ .checkmark:after {
+            display: block;
+        }
+    }
+     /* On mouse-over, add a grey background color */
+    &:hover input ~ .checkmark {
+        background-color: darken($signal, 10);
+        border-color: darken($signal, 10);
+      }
+
+    /* Create a custom checkbox */
+    .checkmark {
+        position: absolute;
+        top: 0.375rem;
+        left: 0;
+        height: 1rem;
+        width: 1rem;
+        border: 2px solid $signal;
+        border-radius: 5px;
+        transition: all 0.4s ease;
+
+        /* Create the checkmark/indicator (hidden when not checked) */
+        &:after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 0.25rem;
+            top: 0.05rem;
+            width: 0.25rem;
+            height: 0.5rem;
+            border: solid $white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+          }
+    }
+}
+
+  /* Submit button visual feedback */
+
+  button[type="submit"] {
+      position: relative;
+    & svg {
+        width: 0;
+        height: 0;
+        fill: white;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.4s ease;
+      }
+   
+    &.loading {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        margin: auto;
+        border: 3px solid $grey-light;
+        font-size:0;
+        border-left-color:$green;
+        animation: rotating 2s 0.25s linear infinite;
+        padding: 0;
+        background: transparent;    
+    
+      & span {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+    &.submitted {
+        background: $green;
+      & svg {
+        height: 40px;
+        width: 40px;
+      }
+      & span {
+        display:block;
+        opacity: 0;
+        visibility: hidden;
+      }
+      & .checkmark{
+      transform-origin: 50% 50%;
+        stroke: white;
+        stroke-width: 5px;
+      stroke-dasharray: 48;
+      stroke-dashoffset: 48;
+      animation: stroke .3s cubic-bezier(0.650, 0.000, 0.450, 1.000) .1s forwards;
+    }
+    }
+
+    @keyframes stroke {
+      100% {
+        stroke-dashoffset: 0;
+      }
+    }
+    
+    @keyframes rotating {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
 }

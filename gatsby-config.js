@@ -1,4 +1,18 @@
+require('dotenv').config();
+var proxy = require("http-proxy-middleware");
+
 module.exports = {
+  developMiddleware: app => {
+    app.use(
+      "/.netlify/functions/",
+      proxy({
+        target: "http://localhost:9000",
+        pathRewrite: {
+          "/.netlify/functions/": "",
+        },
+      })
+    )
+  },
   siteMetadata: {
     title: 'Så er det nu',
     description: 'Gør folketingsvalget 2019 grønt!',

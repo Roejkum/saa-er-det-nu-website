@@ -1,90 +1,73 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
-import Layout from '../components/Layout/Layout'
+import React from 'react';
+import Layout from '../components/Layout/Layout';
+import BarCount from '../components/BarCount/BarCount';
+import ContactForm from '../components/ContactForm/ContactForm';
+import logo from "../../static/img/logo.svg";
+import graes from "../../static/img/Graes.svg";
+import SunSvg from '../components/SunSvg/SunSvg';
+import Trees from '../components/Trees/Trees';
+import Fade from 'react-reveal/Fade';
 
 export default class IndexPage extends React.Component {
+  state = {
+    totalSigners: null
+  }
 
   componentDidMount() {
-    async function loadFunction() {
-      let response = await fetch('/.netlify/functions/getSubscriberAmount', {});
-      let body = await response.body;
-      console.log(body);
-    }
-    loadFunction();
-
+      fetch('/.netlify/functions/getSubscriberAmount', {
+        method: 'POST'
+      })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        // console.log(JSON.stringify(data.msg));
+        this.setState({totalSigners: data.msg})
+      })
+      .catch((error) => console.log(error));
   }
 
   render() {
-    const { data } = this.props;
-    const { edges: posts } = data.allMarkdownRemark;
 
     return (
       <Layout>
-        <section className="section">
-          <div className="container">
-            <div className="content">
-              <h1 className="has-text-weight-bold is-size-2">Så er det nu gutter 2!</h1>
+        <section className="section section-signup">
+        <SunSvg/>
+        <Trees/>
+          <div className="container-fluid wrap">
+            <div className="row">
+              {/* tekst */}
+              <Fade >
+              <div className="col-sm-7 col-md-6 col-xs-12 last-sm pl-sm">
+                <img src={logo} alt="Logo" className="logo"/>
+                <h1>Kan vi få 100.000 underskrifter på at gøre <span className="bold-text">valget grønt?</span></h1>
+                <BarCount amount={this.state.totalSigners} totalAmount="50"/>
+                <p>Hvis du også synes at klima og natur skal øverst på dagsordenen til det kommende folketingsvalg, så skriv under og vær med til at råbe politikerne op!</p>
+              </div>
+              </Fade>
+
+                {/* Signupform */}
+                <div className="col-sm-5 col-xs-12">
+                  <div className="container-fluid white-box fade-in">
+            <div className="row">
+              <div className="col-xs-12">
+                <h2>Skriv under nu!</h2>
+                <p>Vi skal snart til valg og det er nu vi skal vise politikerne at tiden til små skridt og tomme løfter er ovre. Vi vil se omgående handling fra første år af en ny regerings levetid. </p>
+                
+                <ContactForm/>
+              </div>
             </div>
-            {posts
-              .map(({ node: post }) => (
-                <div
-                  className="content"
-                  style={{ border: '1px solid #333', padding: '2em 4em' }}
-                  key={post.id}
-                >
-                  <p>
-                    <Link className="has-text-primary" to={post.fields.slug}>
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <small>{post.frontmatter.date}</small>
-                  </p>
-                  <p>
-                    {post.excerpt}
-                    <br />
-                    <br />
-                    <Link className="button is-small" to={post.fields.slug}>
-                      Keep Reading →
-                    </Link>
-                  </p>
+            </div>
                 </div>
-              ))}
-          </div>
+
+              </div>
+            
+              </div>
+          <img src={graes} alt="grass" className="grass" />
+          
         </section>
+        
       </Layout>
     )
   }
 }
-
-IndexPage.propTypes = {
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
-    }),
-  }),
-}
-
-export const pageQuery = graphql`
-  query IndexQuery {
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] },
-      filter: { frontmatter: { templateKey: { eq: "blog-post" } }}
-    ) {
-      edges {
-        node {
-          excerpt(pruneLength: 400)
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            templateKey
-            date(formatString: "MMMM DD, YYYY")
-          }
-        }
-      }
-    }
-  }
-`

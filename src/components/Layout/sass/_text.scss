@@ -1,12 +1,48 @@
+
+@import url(http://fonts.googleapis.com/css?family=Quicksand:400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,700);
+
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Quicksand', sans-serif, 'Roboto', sans-serif;
 }
 a {
-    color: $green-dark;
-    text-decoration: none;
+    color: $signal;
+    text-decoration: underline;
+    transition: all 0.4s ease;
 
     &:hover, &:focus, &:active  {
-        color: $green-dark;
-        opacity: 0.8;
+        color: darken($signal, 20);
     }
 }
+
+h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    color: $black;
+}
+h2 {
+    color: $green-dark;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    color: $black;
+    line-height: 1.4;
+    font-weight: 300;
+}
+@media screen and (max-width: 767px) {
+    .text-center-xs {
+        text-align: center;
+    }
+}
+
+
+.white-text {
+    color: $white;
+}
+
+.bold-text {
+    font-weight: 700;
+}
+
