@@ -219,7 +219,7 @@ class ContactForm extends Component {
                         </label>
                       </div>
                       <div className="field col-xs-12 mt">
-                        <button className={this.state.loading && !this.state.submitted ? 'loading' : this.state.submitError ? 'submit-error' : this.state.submitted ? 'submitted' : ''} type="submit" disabled={!this.state.isValidated}>
+                        <button className={this.state.loading && !this.state.submitted ? 'loading' : this.state.submitError ? 'submit-error' : this.state.submitted ? 'submitted' : ''} type="submit" disabled={!this.state.isValidated || this.state.submitted}>
                           <span>SKRIV UNDER</span>
                           <svg className="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><path className="checkmark" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
                         </button>
