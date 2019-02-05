@@ -98,6 +98,11 @@ label {
     z-index: 100;
     position: relative;
     animation: fade-in 0.6s ease;
+    margin: 0 -1.5rem;
+
+    @media screen and (min-width: 48rem) {
+        margin: 0;
+    }
 }
 .required {
     color: $red;
