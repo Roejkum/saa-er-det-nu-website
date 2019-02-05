@@ -39,7 +39,7 @@ export default class IndexPage extends React.Component {
               <div className="col-sm-7 col-md-6 col-xs-12 last-sm pl-5-sm">
                 <img src={logo} alt="Logo" className="logo"/>
                 <h1>Kan vi få 100.000 underskrifter på at gøre <span className="bold-text">valget grønt?</span></h1>
-                <BarCount amount={this.state.totalSigners} totalAmount="10"/>
+                <BarCount amount={this.state.totalSigners} totalAmount="50"/>
                 <p>Hvis du også synes at klima og natur skal øverst på dagsordenen til det kommende folketingsvalg, så skriv under og vær med til at råbe politikerne op!</p>
               </div>
 

@@ -4,6 +4,9 @@ import { Link } from 'gatsby';
 
 class ContactForm extends Component {  
     state = { 
+        loading: false,
+        submitted: false,
+        submitError: false,
         isValidated: false, 
         emailValidated: false,
         nameValidated: false,
@@ -59,7 +62,7 @@ class ContactForm extends Component {
             return {form: {
               ...newForm
             },
-            isValidated: (emailValidated && termsValidated && e.target.value ? true : false),
+            isValidated: (emailValidated && termsValidated && nameValid ? true : false),
             nameValidated: nameValid
           };
           });
@@ -116,15 +119,39 @@ class ContactForm extends Component {
       
       handleSubmit = e => {
         e.preventDefault();
-    
+        this.setState({
+          loading: true
+        })
         if(this.state.isValidated) {
           addToMailchimp(this.state.form.email, this.state.form.listFields)
             .then(data => {
-            if(data.result === 'error') {
-              this.setState({errorMsg: 'Der skete en fejl. Tjek din internetforbindelse og prøv igen.'})
+            if(data.result === 'error' && data.msg.includes('is already subscribed')) {
+              this.setState({
+                errorMsg: 'Du har allerede skrevet under.',
+                submitError: true,
+                loading: false
+              });
+              console.log(data.msg);
+            } else if(data.result === 'error' && data.msg.includes('too many recent signup requests')) {
+              this.setState({
+                errorMsg: 'MSG For mange forsøg. Prøv igen senere.',
+                submitError: true,
+                loading: false
+              });
+              console.log(data.msg);
+            } else if(data.result !== 'error') {
+              this.setState({
+                loading: false,
+                submitError: false,
+                submitted: true,
+                errorMsg: ''
+              });
+              console.log(data.msg);
+              console.log('submitted');
+              console.log(this.state.errorMsg);
             }
           })
-          console.log('submitted');
+          
         } else {
           this.setState({errorMsg: 'Der er fejl i din indtastning. Gennemgå venligst formularen og prøv igen.'})
         }
@@ -136,10 +163,10 @@ class ContactForm extends Component {
     
       render() {
     
-        const errorMsg = null;
+        let errorMsg;
     
         if(this.state.errorMsg) {
-          this.errorMsg = (
+          errorMsg = (
             <p className="error">{this.state.errorMsg}</p>
           );
         }
@@ -178,11 +205,6 @@ class ContactForm extends Component {
                         </div>
                       </div>
                       <div className="field col-xs-12">
-                        <label className="label checkbox" htmlFor={"newsletter"}>
-                            <input className="input" type={"checkbox"} name={"newsletter"} onChange={this.handleChange} id={"newsletter"} required={false} />
-                            <span className="checkmark"></span>
-                            <p>Ja, jeg vil gerne holdes opdateret med mails af og til om sagen</p>
-                        </label>
                         <label className="label checkbox" htmlFor={"signup"}>
                           <input className="input" type={"checkbox"} name={"signup"} value={this.state.termsValidated} onChange={this.handleChange} id={"signup"} required={true} />
                           <span className="checkmark"></span>
@@ -190,12 +212,18 @@ class ContactForm extends Component {
                             Ja, jeg er med i kampen og vil gerne være med til at løfte sagen! Jeg har desuden læst og accepterer <Link to="/privatlivspolitik" title="Logo">privatlivspolitikken</Link> <span className="required">*</span>
                           </p>
                         </label>
-                  
+                        <label className="label checkbox" htmlFor={"newsletter"}>
+                            <input className="input" type={"checkbox"} name={"newsletter"} onChange={this.handleChange} id={"newsletter"} required={false} />
+                            <span className="checkmark"></span>
+                            <p>Ja, jeg vil gerne holdes opdateret med mails af og til om sagen</p>
+                        </label>
                       </div>
                       <div className="field col-xs-12 mt">
-                        <button className="button is-link" type="submit" disabled={!this.state.isValidated}>SKRIV UNDER</button>
+                        <button className={this.state.loading && !this.state.submitted ? 'loading' : this.state.submitError ? 'submit-error' : this.state.submitted ? 'submitted' : ''} type="submit" disabled={!this.state.isValidated}>
+                          <span>SKRIV UNDER</span>
+                          <svg className="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><path className="checkmark" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+                        </button>
                         {errorMsg}
-                        {this.errorMsg}
                       </div>
                   </div>
                 </form>

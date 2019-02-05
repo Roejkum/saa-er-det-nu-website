@@ -169,5 +169,73 @@ label {
             transform: rotate(45deg);
           }
     }
-        
+}
+
+  /* Submit button visual feedback */
+
+  button[type="submit"] {
+      position: relative;
+    & svg {
+        width: 0;
+        height: 0;
+        fill: white;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.4s ease;
+      }
+   
+    &.loading {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        margin: auto;
+        border: 3px solid $grey-light;
+        font-size:0;
+        border-left-color:$green;
+        animation: rotating 2s 0.25s linear infinite;
+        padding: 0;
+        background: transparent;    
+    
+      & span {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+    &.submitted {
+        background: $green;
+      & svg {
+        height: 40px;
+        width: 40px;
+      }
+      & span {
+        display:block;
+        opacity: 0;
+        visibility: hidden;
+      }
+      & .checkmark{
+      transform-origin: 50% 50%;
+        stroke: white;
+        stroke-width: 5px;
+      stroke-dasharray: 48;
+      stroke-dashoffset: 48;
+      animation: stroke .3s cubic-bezier(0.650, 0.000, 0.450, 1.000) .1s forwards;
+    }
+    }
+
+    @keyframes stroke {
+      100% {
+        stroke-dashoffset: 0;
+      }
+    }
+    
+    @keyframes rotating {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
 }
