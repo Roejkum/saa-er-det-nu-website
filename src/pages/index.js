@@ -116,7 +116,7 @@ export default class IndexPage extends React.Component {
         <section className="text-section">
           <div className="container-fluid wrap">
             <div className="row">
-              <div className="col-sm-10 col-sm-offset-2 col-md-8 col-md-offset-2 col-xs-12">
+              <div className="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-xs-12">
               <h2 className="fadeIn text-center">Så er det nu: gør valget grønt
 </h2>
               <p className="fadeIn text-center"><span className="bold-text">Vi skal</span> her og nu iværksætte den nødvendige omstilling af vores samfund, for at undgå at den globale opvarmning overstiger 1,5 grader. </p>
