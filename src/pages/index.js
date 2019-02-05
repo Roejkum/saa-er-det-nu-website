@@ -7,11 +7,13 @@ import MapDk from '../components/Map/MapDk';
 import logo from "../../static/img/logo.svg";
 import SunSvg from '../components/SunSvg/SunSvg';
 import Trees from '../components/Trees/Trees';
-import Fade from 'react-reveal/Fade';
+import ScrollReveal from 'scrollreveal';
 
 export default class IndexPage extends React.Component {
   state = {
-    totalSigners: null
+    totalSigners: null,
+    mapVisible: false
+
   }
 
   componentDidMount() {
@@ -26,6 +28,16 @@ export default class IndexPage extends React.Component {
         this.setState({totalSigners: data.msg})
       })
       .catch((error) => console.log(error));
+
+      ScrollReveal().reveal('.fadeIn', { delay: 300, distance: '-2rem', duration: 1000 });
+      
+      const animate = () => {
+        this.setState({
+          mapVisible: true
+        });
+      }
+
+      ScrollReveal().reveal('.map', { afterReveal: animate, delay: 300, distance: '-2rem', duration: 1000 });
   }
 
   render() {
@@ -39,14 +51,12 @@ export default class IndexPage extends React.Component {
             <div className="row">
 
               {/* tekst */}
-              <Fade >
               <div className="col-sm-7 col-md-6 col-xs-12 last-sm pl-sm">
                 <img src={logo} alt="Logo" className="logo"/>
                 <h1>Kan vi få 100.000 underskrifter på at gøre <span className="bold-text">valget grønt?</span></h1>
                 <BarCount amount={this.state.totalSigners} totalAmount="50"/>
                 <p>Hvis du også synes at klima og natur skal øverst på dagsordenen til det kommende folketingsvalg, så skriv under og vær med til at råbe politikerne op!</p>
               </div>
-              </Fade>
 
                 {/* Signupform */}
                 <div className="col-sm-5 col-xs-12">
@@ -71,12 +81,13 @@ export default class IndexPage extends React.Component {
         {/* Map section */}
         <section className="map-section">
           <div className="container-fluid wrap">
-            <div className="row">
+            <div className="row middle-sm">
               <div className="col-sm-7 col-md-6 col-md-offset-1 col-xs-12 last-sm">
-              <p>Vi skal snart til valg og det er nu vi skal vise politikerne at tiden til små skridt og tomme løfter er ovre. Vi vil se omgående handling fra første år af en ny regerings levetid. </p>
+              <h2 className="fadeIn">Lorem ipsumoverskrift</h2>
+              <p className="fadeIn">Vi skal snart til valg og det er nu vi skal vise politikerne at tiden til små skridt og tomme løfter er ovre. Vi vil se omgående handling fra første år af en ny regerings levetid. </p>
               </div>
-              <div className="col-sm-5 col-xs-12">
-              <MapDk /> 
+              <div className="col-sm-5 col-xs-12 map">
+              <MapDk visible={this.state.mapVisible} /> 
               </div>
             </div>
           </div>
