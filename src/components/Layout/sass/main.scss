@@ -9,7 +9,7 @@
 
 .section-signup {
     background-color: #92BCBC;
-    background-image: linear-gradient(to right, #3A8277, #92BCBC);
+    background-image: linear-gradient(to top right, #b8dbf3, $white);
     position: relative;
     padding: 6rem 0;
 }
@@ -26,5 +26,8 @@
     padding-left: 5%;
     align-items: center;
     justify-content: center
-
+}
+.logo {
+    width: 300px;
+    max-width: 100%;
 }

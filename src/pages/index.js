@@ -1,11 +1,13 @@
-import React from 'react'
-import Layout from '../components/Layout/Layout'
+import React from 'react';
+import Layout from '../components/Layout/Layout';
 import BarCount from '../components/BarCount/BarCount';
 import ContactForm from '../components/ContactForm/ContactForm';
-import logo from "../../static/img/Logo_2.svg"
 import grass from "../../static/img/grassnew.svg"
 import MapDk from '../components/Map/MapDk';
-
+import logo from "../../static/img/logo.svg";
+import SunSvg from '../components/SunSvg/SunSvg';
+import Trees from '../components/Trees/Trees';
+import Fade from 'react-reveal/Fade';
 
 export default class IndexPage extends React.Component {
   state = {
@@ -31,15 +33,20 @@ export default class IndexPage extends React.Component {
     return (
       <Layout>
         <section className="section section-signup">
+        <SunSvg/>
+        <Trees/>
           <div className="container-fluid wrap">
             <div className="row">
 
               {/* tekst */}
-              <div className="col-sm-7 col-md-6 col-md-offset-1 col-xs-12 last-sm">
-                <img src={logo} alt="Logo" />
-                <h1 className="white-text text-center-xs">Kan vi få 100.000 underskrifter på at gøre <span className="bold-text">valget grønt?</span></h1>
-                <p className="white-text text-center-xs">Hvis du også synes at klima og natur skal øverst på dagsordenen til det kommende folketingsvalg, så skriv under og vær med til at råbe politikerne op!</p>
+              <Fade >
+              <div className="col-sm-7 col-md-6 col-xs-12 last-sm pl-sm">
+                <img src={logo} alt="Logo" className="logo"/>
+                <h1>Kan vi få 100.000 underskrifter på at gøre <span className="bold-text">valget grønt?</span></h1>
+                <BarCount amount={this.state.totalSigners} totalAmount="50"/>
+                <p>Hvis du også synes at klima og natur skal øverst på dagsordenen til det kommende folketingsvalg, så skriv under og vær med til at råbe politikerne op!</p>
               </div>
+              </Fade>
 
                 {/* Signupform */}
                 <div className="col-sm-5 col-xs-12">
@@ -48,7 +55,7 @@ export default class IndexPage extends React.Component {
               <div className="col-xs-12">
                 <h2>Skriv under nu!</h2>
                 <p>Vi skal snart til valg og det er nu vi skal vise politikerne at tiden til små skridt og tomme løfter er ovre. Vi vil se omgående handling fra første år af en ny regerings levetid. </p>
-                <BarCount amount={this.state.totalSigners} totalAmount="10"/>
+                
                 <ContactForm/>
               </div>
             </div>

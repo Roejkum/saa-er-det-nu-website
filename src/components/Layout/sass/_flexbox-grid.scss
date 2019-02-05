@@ -3,7 +3,6 @@ $flexboxgrid-gutter-width: 20rem;
 $flexboxgrid-outer-margin: 1rem;
 
 $flexboxgrid-breakpoints:
-  xsm 20rem,
   sm 48rem,
   md 64rem,
   lg 80rem,
@@ -23,6 +22,11 @@ $flexboxgrid-breakpoints:
 .container, .container-fluid {
     margin-right: auto;
     margin-left: auto;
+}
+@media screen and (min-width: 48rem) {
+    .pl-sm {
+        padding-left: 3vw;
+    }
 }
 @media screen and (max-width: 48rem) {
     .container {

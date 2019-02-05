@@ -1,0 +1,26 @@
+.sol {
+    position: absolute;
+    top: 1.8rem;
+    right: 1.5rem;
+    width: 3.5rem;
+    animation: rotate 10s infinite linear;
+    transform-origin: 50% 50%;
+}
+.skies {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    width: 4rem;
+    z-index: 200;
+    animation: skies-movement 15s infinite linear;
+    transform-origin: 50% 50%;
+}
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+@keyframes skies-movement {
+    0% {transform: translateX(0);}
+    50% {transform: translateX(-2rem);}
+    100% {transform: translateX(0);}
+}

@@ -1,5 +1,6 @@
 button, .btn {
     border: 0px;
+    border-radius: 0.3rem;
     width:100%;
     box-shadow: none;
     background-color: $signal;
@@ -7,11 +8,7 @@ button, .btn {
     color: $white;
     font-weight: bold;
     cursor: pointer;
-    transition: all 0.4s ease;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -ms-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
+    transition: all 0.2s ease;
     display: block;
     text-transform: uppercase;
     font-size: 1.2em;
@@ -21,9 +18,13 @@ button, .btn {
 
         &:hover {
             background-color: $grey-light;
+            transform: scale(1);
+            box-shadow: none;
         }
     }
 }
 button:hover, .btn:hover {
-    background-color: lighten($signal, 10);
+    background-color: darken($signal, 10);
+    transform: scale(1.02);
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
 }
