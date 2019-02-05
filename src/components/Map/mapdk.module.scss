@@ -1,0 +1,53 @@
+.cls1 {
+    fill: #4e6839;
+    stroke: #ffff;
+    stroke-width: 0.5px;
+  }
+
+.cls2, .cls3, .cls4 {
+    fill: #ffcd2a;
+    position: absolute;
+  }
+
+  .cls3 {
+    opacity: 0.58;
+    animation: fadein-medium 2s ease-in-out;
+  }
+
+  .cls4 {
+    opacity: 0.35;
+    animation: fadein-large 1s ease-in-out;
+  }
+
+.cls2 {
+     animation: fadein-small 0.3s ease-in-out;
+  }
+
+  @keyframes fadein-small {
+          0% {
+            opacity: 0;
+          }
+          100% {
+              opacity: 1;
+          }
+}
+
+@keyframes fadein-medium {
+    0% {
+      opacity: 0;
+    }
+    100% {
+        opacity: 0.58;
+       
+    }
+}
+
+@keyframes fadein-large {
+    0% {
+      opacity: 0;
+    }
+    100% {
+        opacity: 0.35;
+    } 
+}
+

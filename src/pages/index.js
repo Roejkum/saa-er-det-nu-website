@@ -2,8 +2,9 @@ import React from 'react';
 import Layout from '../components/Layout/Layout';
 import BarCount from '../components/BarCount/BarCount';
 import ContactForm from '../components/ContactForm/ContactForm';
+import grass from "../../static/img/grassnew.svg"
+import MapDk from '../components/Map/MapDk';
 import logo from "../../static/img/logo.svg";
-import graes from "../../static/img/Graes.svg";
 import SunSvg from '../components/SunSvg/SunSvg';
 import Trees from '../components/Trees/Trees';
 import Fade from 'react-reveal/Fade';
@@ -36,6 +37,7 @@ export default class IndexPage extends React.Component {
         <Trees/>
           <div className="container-fluid wrap">
             <div className="row">
+
               {/* tekst */}
               <Fade >
               <div className="col-sm-7 col-md-6 col-xs-12 last-sm pl-sm">
@@ -63,8 +65,21 @@ export default class IndexPage extends React.Component {
               </div>
             
               </div>
-          <img src={graes} alt="grass" className="grass" />
-          
+          <img src={grass} alt="grass" className="grass" />
+        </section>
+
+        {/* Map section */}
+        <section className="map-section">
+          <div className="container-fluid wrap">
+            <div className="row">
+              <div className="col-sm-7 col-md-6 col-md-offset-1 col-xs-12 last-sm">
+              <p>Vi skal snart til valg og det er nu vi skal vise politikerne at tiden til små skridt og tomme løfter er ovre. Vi vil se omgående handling fra første år af en ny regerings levetid. </p>
+              </div>
+              <div className="col-sm-5 col-xs-12">
+              <MapDk /> 
+              </div>
+            </div>
+          </div>
         </section>
         
       </Layout>
