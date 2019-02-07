@@ -31,7 +31,7 @@ export default class IndexPage extends React.Component {
       
       import('scrollreveal').then(({ default: ScrollReveal }) => {
         
-        ScrollReveal().reveal('.fadeIn', { delay: 300, distance: '-2rem', duration: 1000 });
+        ScrollReveal().reveal('.fadeIn', { delay: 300, distance: '-2rem', duration: 1000, interval: 200 });
       
       const animate = () => {
         this.setState({
