@@ -99,6 +99,7 @@ label {
     position: relative;
     animation: fade-in 0.6s ease;
     margin: 0 -1.5rem;
+    transition: height 0.4s ease;
 
     @media screen and (min-width: 48rem) {
         margin: 0;
