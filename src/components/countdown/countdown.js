@@ -10,7 +10,6 @@ class Countdown extends Component {
         const countDownDate = new Date("Feb 19, 2019 12:00:00").getTime();
 
         const updateTime = () => {
-            const self = this;
             // Get todays date and time
             const now = new Date().getTime();
             // Find the distance between now and the count down date
@@ -26,22 +25,18 @@ class Countdown extends Component {
             const newCounter = days + 'd ' + hours + 't '
             + minutes + 'm ' + seconds + 's ';
 
-            self.setState({ counter: newCounter });
+            this.setState({ counter: newCounter });
         }
         updateTime();
 
         // Update the count down every 1 second
-        this.timer = setInterval(() => {
+        setInterval(() => {
             updateTime();
 
         }, 1000);
 
     }
 
-    componentWillUnmount() {
-        clearInterval(this.timer);
-
-    }
 
     render() {
         const counter = this.state.counter;
