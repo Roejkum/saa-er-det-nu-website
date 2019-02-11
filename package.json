@@ -43,7 +43,7 @@
   "scripts": {
     "start": "npm run develop",
     "clean": "rimraf .cache public",
-    "build": "npm run clean && gatsby build && netlify-lambda build src/functions",
+    "build": "npm run clean && gatsby build",
     "develop": "npm run clean && gatsby develop && netlify-lambda serve src/functions",
     "start:lambda": "netlify-lambda serve src/functions",
     "serve": "gatsby serve",
