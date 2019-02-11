@@ -2,17 +2,6 @@ require('dotenv').config();
 var proxy = require("http-proxy-middleware");
 
 module.exports = {
-  developMiddleware: app => {
-    app.use(
-      "/.netlify/functions/",
-      proxy({
-        target: "http://localhost:9000",
-        pathRewrite: {
-          "/.netlify/functions/": "",
-        },
-      })
-    )
-  },
   siteMetadata: {
     title: 'Så er det nu',
     description: 'Gør folketingsvalget 2019 grønt!',
@@ -20,12 +9,6 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
-    {
-      resolve: 'gatsby-plugin-mailchimp',
-      options: {
-        endpoint: 'https://mamacph.us18.list-manage.com/subscribe/post?u=f7e13d5a9dfc950c013072181&amp;id=6aa8a91bc2',
-      },
-    },
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
