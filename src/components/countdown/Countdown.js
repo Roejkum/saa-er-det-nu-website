@@ -1,16 +1,15 @@
-import React from 'react'
+import React from 'react';
 
-export default class Countdown extends React.Component {
+export default class Countdown extends React.Component{
     state = {
         counter: ''
     }
 
-    componentWillMount() {
+    componentDidMount() {
         // Set the date we're counting down to
         const countDownDate = new Date("Feb 19, 2019 12:00:00").getTime();
 
         const updateTime = () => {
-            const self = this;
             // Get todays date and time
             const now = new Date().getTime();
             // Find the distance between now and the count down date
@@ -23,37 +22,33 @@ export default class Countdown extends React.Component {
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
             // Display the result in the element with id="demo"
-            const newCounter = (days + "d " + hours + "t "
-            + minutes + "m " + seconds + "s ");
+            const newCounter = days + 'd ' + hours + 't '
+            + minutes + 'm ' + seconds + 's ';
 
-            self.setState({ counter: newCounter });
+            this.setState({ counter: newCounter });
         }
         updateTime();
 
         // Update the count down every 1 second
-        const timer = setInterval(() => {
+        setInterval(() => {
             updateTime();
 
         }, 1000);
+
     }
 
-    componentWillUnmount() {
-        clearInterval(this.timer);
-    }
 
     render() {
         const counter = this.state.counter;
-        let countEl;
+        let countElement = '';
 
         if( counter ) {
-            countEl = <h3 className="yellow-text fade-in">{this.state.counter}</h3>;
-        } else {
-            countEl = '';
+            countElement = <h3 className="yellow-text fade-in"> { this.state.counter } </h3>;
         }
     
         return (
             <>
-            {countEl}
+            { countElement }
             </>
         );
     }

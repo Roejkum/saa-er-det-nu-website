@@ -4,7 +4,7 @@ import grass from "../../static/img/grassnew.svg";
 import logo from "../../static/img/logo.svg";
 import SunSvg from '../components/SunSvg/SunSvg';
 import Trees from '../components/Trees/Trees';
-import Countdown from '../components/countdown/countdown';
+import Countdown from '../components/countdown/Countdown';
 
 export default class IndexPage extends React.Component {
   state = {
