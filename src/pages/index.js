@@ -69,7 +69,7 @@ export default class IndexPage extends React.Component {
                   <div className="container-fluid white-box fade-in">
             <div className="row">
               <div className="col-xs-12">
-                <h3>Skriv under nu!</h3>
+                <h3>COUNTDOWN!!!!!!</h3>
                 <p>Vi skal snart til valg og det er nu vi skal vise politikerne at tiden til små skridt og tomme løfter er ovre. Vi vil se omgående handling fra første år af en ny regerings levetid. </p>
                 
                 <ContactForm/>
