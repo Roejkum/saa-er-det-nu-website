@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Countdown extends Component {
+export default class Countdown extends React.Component{
     state = {
         counter: ''
     }
@@ -53,5 +53,3 @@ class Countdown extends Component {
         );
     }
 }
-
-export default Countdown;
