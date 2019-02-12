@@ -46,7 +46,7 @@ export default class IndexPage extends React.Component {
                         <p>Vi er en lille, men hurtigt voksende 
                         gruppe af bekymrede borgere, der knokler 
                       for at blive klar til lancering af vores 
-                        initiativ snart. Du kan kontakte os på <a href="mailto: info@såerdet.nu" className="bold-text unstyled-text">info@såerdet.nu</a>
+                        initiativ snart. Har du lyst til at hjælpe os? Så kan du skrive til os på <a href="mailto: info@såerdet.nu" className="bold-text unstyled-text">info@såerdet.nu</a>
                       <br /><br /> - Vi håber du vil være med!<br /></p>
                       </div>
                      </div>
