@@ -38,13 +38,15 @@ export default class IndexPage extends React.Component {
                 {/* Signupform */}
                   <div className="container-fluid fade-in">
                     <div className="row">
-                      <div className="col-xs-12">
+                      <div className="col-xs-12 col-sm-8 col-sm-offset-2 ">
                         <h1 className="h2">Her kan du være med fra
                         <span className="bold-text"> d. 19/2 2019.</span></h1> 
                         <p>Underskriv om:</p>
                         <Countdown />
-                        <p>Med venlig hilsen<br />
-                        Borgerinitiativet ‘Så er det nu: Gør valget grønt’</p>
+                        <p>Vi er en lille, men hurtigt voksende 
+                        gruppe af bekymrede borgere, der knokler 
+                        for at blive klar til lancering af vores 
+                        initiativ snart. <br /><br /> - Vi håber du vil være med!<br /></p>
                       </div>
                      </div>
                     </div>
@@ -56,3 +58,4 @@ export default class IndexPage extends React.Component {
     )
   }
 }
+
