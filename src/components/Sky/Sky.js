@@ -9,9 +9,9 @@ const Sky = () => {
 
     return (
         <>
-        <img src={sky3} alt="sky1" className={[styles.grass, styles.grass2].join(' ')} data-depth="0.1"/>
-        <img src={sky2} alt="sky2" className={[styles.grass, styles.grass3].join(' ')} data-depth="0.2"/>
-        <img src={sky1} alt="sky3" className={[styles.grass, styles.grass4].join(' ')} data-depth="0.3"/>
+        <img src={sky3} alt="sky1" className={[styles.sky, styles.sky2].join(' ')} data-depth="0.1"/>
+        <img src={sky2} alt="sky2" className={[styles.sky, styles.sky3].join(' ')} data-depth="0.2"/>
+        <img src={sky1} alt="sky3" className={[styles.sky, styles.sky4].join(' ')} data-depth="0.3"/>
         </>
     );
 }
