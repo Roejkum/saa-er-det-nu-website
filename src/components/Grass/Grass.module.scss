@@ -1,6 +1,6 @@
 .grass {
     position: absolute;
-    bottom: 0;
+    
     top: auto !important;
     z-index: 100;
     
@@ -9,7 +9,7 @@
    z-index: 200; 
    width: 120%;
    left: -10% !important;
-
+   bottom: 0;
    
     filter: drop-shadow( 0 -5px 20px rgba(0, 0, 0, 0.5));
 
@@ -18,6 +18,7 @@
     z-index: 100;
     width: 70%;
     left: 0;
+    bottom: -2rem;
     filter: drop-shadow( 0 -5px 20px rgba(0, 0, 0, 0.5));
  }
  .grass3 {
@@ -25,10 +26,12 @@
     filter: drop-shadow( 0 -5px 20px rgba(0, 0, 0, 0.5));
     width: 120%;
    left: -10% !important;
+   bottom: -2rem;
  }
  .grass4 {
     z-index: 80; 
     filter: drop-shadow( 0 -5px 20px rgba(0, 0, 0, 0.3));
     width: 120%;
    left: -10% !important;
+   bottom: -2rem;
  }
