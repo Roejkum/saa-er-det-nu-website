@@ -8,7 +8,6 @@ import MapDk from '../components/Map/MapDk';
 import logo from "../../static/img/logo.svg";
 import SunSvg from '../components/SunSvg/SunSvg';
 import Trees from '../components/Trees/Trees';
-import Parallax from 'parallax-js'
 
 export default class IndexPage extends React.Component {
   state = {
@@ -41,10 +40,12 @@ export default class IndexPage extends React.Component {
       }
 
       ScrollReveal().reveal('.map', { afterReveal: animate, delay: 300, distance: '-2rem', duration: 1000 });
-      })
-      
-      const scene = document.getElementById('scene');
-      const parallaxInstance = new Parallax(scene);
+      });
+
+      import('parallax-js').then(({ default: Parallax }) => {
+        const scene = document.getElementById('scene');
+        const parallaxInstance = new Parallax(scene);
+      });
     
   }
 
