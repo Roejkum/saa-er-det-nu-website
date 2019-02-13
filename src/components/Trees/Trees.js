@@ -5,7 +5,7 @@ import Tree from '../../../static/img/tree.svg';
 const Trees = () => {
 
     return (
-       <div className={styles.trees}>
+       <div className={styles.trees} data-depth="0.05">
         <img src={Tree} className={[styles.treeOne, styles.tree].join(' ')} alt="Tree"/>
         <img src={Tree} className={styles.treeTwo} alt="Tree"/>
         <img src={Tree} className={styles.treeThree} alt="Tree"/>
