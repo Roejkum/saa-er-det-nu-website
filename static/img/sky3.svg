@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1366" height="764.118" viewBox="0 0 1366 764.118">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.115" y1="0.769" x2="1.149" y2="-0.143" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#b8dbf3"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_44" data-name="Group 44" transform="translate(0 162)">
+    <g id="Group_43" data-name="Group 43" transform="translate(0 -164.138)">
+      <path id="Path_551" data-name="Path 551" d="M0,0H1366V764.118H0Z" transform="translate(0 2.138)" fill="url(#linear-gradient)"/>
+      <g id="Group_39" data-name="Group 39" transform="matrix(0.978, 0.208, -0.208, 0.978, 1015.665, 74.264)">
+        <path id="Path_552" data-name="Path 552" d="M62.466,0c34.5,0,62.466,23.518,62.466,52.529s-27.967,52.529-62.466,52.529S0,81.539,0,52.529,27.967,0,62.466,0Z" transform="translate(0.196 24.838)" fill="#92a0b7"/>
+        <ellipse id="Ellipse_15" data-name="Ellipse 15" cx="62.466" cy="52.529" rx="62.466" ry="52.529" transform="translate(0 16.8)" fill="#d6d6d6"/>
+        <ellipse id="Ellipse_16" data-name="Ellipse 16" cx="59.627" cy="51.109" rx="59.627" ry="51.109" transform="translate(39.745 0)" fill="#d6d6d6"/>
+        <ellipse id="Ellipse_23" data-name="Ellipse 23" cx="62.465" cy="49.198" rx="62.465" ry="49.198" transform="translate(70.78 32.316)" fill="#8295b2"/>
+        <ellipse id="Ellipse_18" data-name="Ellipse 18" cx="62.465" cy="49.198" rx="62.465" ry="49.198" transform="translate(76.855 23.599)" fill="#d6d6d6"/>
+        <ellipse id="Ellipse_22" data-name="Ellipse 22" cx="52.536" cy="47.641" rx="52.536" ry="47.641" transform="translate(32.317 37.845)" fill="#a2adbe"/>
+        <ellipse id="Ellipse_19" data-name="Ellipse 19" cx="55.574" cy="49.16" rx="55.574" ry="49.16" transform="translate(28.899 26.835)" fill="#d6d6d6"/>
+      </g>
+    </g>
+  </g>
+</svg>

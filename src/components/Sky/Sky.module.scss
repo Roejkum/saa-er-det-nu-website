@@ -1,0 +1,33 @@
+.grass {
+    position: absolute;
+    
+    top: auto !important;
+    z-index: 100;
+    
+}
+.grass1 {
+   z-index: 1; 
+   width: 110%;
+   bottom: 0;
+    filter: drop-shadow( 0 -5px 10px rgba(0, 0, 0, 0.1));
+
+}
+.grass2 {
+    z-index: 2;
+    width: 110%;
+    left: 0;
+    filter: drop-shadow( 0 -5px 10px rgba(0, 0, 0, 0.2));
+ }
+ .grass3 {
+    z-index: 3; 
+    filter: drop-shadow( 0 -5px 10px rgba(0, 0, 0, 0.3));
+    width: 110%;
+    bottom: 0;
+ }
+ .grass4 {
+    z-index: 4; 
+    filter: drop-shadow( 0 -5px 10px rgba(0, 0, 0, 0.4));
+    width: 110%;
+    bottom: 0;
+
+ }

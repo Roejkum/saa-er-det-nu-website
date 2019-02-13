@@ -8,6 +8,7 @@ import MapDk from '../components/Map/MapDk';
 import logo from "../../static/img/logo.svg";
 import SunSvg from '../components/SunSvg/SunSvg';
 import Trees from '../components/Trees/Trees';
+import Sky from '../components/Sky/Sky';
 
 export default class IndexPage extends React.Component {
   state = {
@@ -55,7 +56,9 @@ export default class IndexPage extends React.Component {
       <Layout>
         <section className="section section-signup">
         <div id="scene">
+
           <SunSvg/>
+          <Sky/>
           <Grass/>
           <Trees/>
         </div>

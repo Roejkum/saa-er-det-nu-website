@@ -1,0 +1,35 @@
+<svg id="Group_42" data-name="Group 42" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1366" height="770.863" viewBox="0 0 1366 770.863">
+  <defs>
+    <linearGradient id="linear-gradient" x1="-0.095" y1="1" x2="1.116" y2="-0.098" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#b8dbf3"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <filter id="Ellipse_21" x="1069.225" y="27.563" width="188.98" height="188.981" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="Path_550" data-name="Path 550" d="M0,0H1366V732.083l-233.272,12.8-483.633,25.98,40.3-92.747s394.178,3.248,467.87-61.6c74.2-59.548-19.408-129.64,24.684-236.744,143.961-332.291-606.964-188.568-700.18-234.316-138.631-68.037-176.592-28.452-260.66,10.389C111.854,215.263,177.4,295.96,191.292,481.728c9.656,144.233,446.545,205.316,498.1,196.388l-40.3,92.747L0,732.083Z" fill="url(#linear-gradient)"/>
+  <g id="Group_40" data-name="Group 40" transform="matrix(0.995, 0.105, -0.105, 0.995, -53.826, -160.574)">
+    <path id="Path_552" data-name="Path 552" d="M36.847,0C57.2,0,73.694,13.872,73.694,30.985S57.2,61.97,36.847,61.97,0,48.1,0,30.985,16.5,0,36.847,0Z" transform="translate(1080.93 106.234)" fill="#92a0b7"/>
+    <ellipse id="Ellipse_15" data-name="Ellipse 15" cx="36.847" cy="32.883" rx="36.847" ry="32.883" transform="translate(1080.814 97.696)" fill="#d6d6d6"/>
+    <ellipse id="Ellipse_16" data-name="Ellipse 16" cx="35.172" cy="30.148" rx="35.172" ry="30.148" transform="translate(1117.093 87.786)" fill="#d6d6d6"/>
+    <ellipse id="Ellipse_23" data-name="Ellipse 23" cx="36.846" cy="29.02" rx="36.846" ry="29.02" transform="translate(1149.217 110.644)" fill="#8295b2"/>
+    <ellipse id="Ellipse_18" data-name="Ellipse 18" cx="36.846" cy="29.02" rx="36.846" ry="29.02" transform="translate(1152.801 105.503)" fill="#d6d6d6"/>
+    <ellipse id="Ellipse_22" data-name="Ellipse 22" cx="30.99" cy="28.102" rx="30.99" ry="28.102" transform="translate(1147.701 95.158) rotate(48)" fill="#a2adbe"/>
+    <ellipse id="Ellipse_19" data-name="Ellipse 19" cx="32.782" cy="28.998" rx="32.782" ry="28.998" transform="translate(1145.219 82.696) rotate(48)" fill="#d6d6d6"/>
+  </g>
+  <g id="Group_41" data-name="Group 41">
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Ellipse_21)">
+      <circle id="Ellipse_21-2" data-name="Ellipse 21" cx="27.372" cy="27.372" r="27.372" transform="matrix(-0.95, 0.31, -0.31, -0.95, 1198.2, 136.63)" fill="#fde270"/>
+    </g>
+    <line id="Line_4" data-name="Line 4" x2="5.298" y2="5.298" transform="matrix(-0.951, 0.309, -0.309, -0.951, 1205.405, 144.5)" fill="none" stroke="#fde270" stroke-width="3"/>
+    <line id="Line_5" data-name="Line 5" y2="7.064" transform="matrix(-0.951, 0.309, -0.309, -0.951, 1174.544, 163.812)" fill="none" stroke="#fde270" stroke-width="3"/>
+    <line id="Line_6" data-name="Line 6" x1="5.298" y2="5.298" transform="matrix(-0.951, 0.309, -0.309, -0.951, 1148.302, 163.054)" fill="none" stroke="#fde270" stroke-width="3"/>
+    <line id="Line_8" data-name="Line 8" x1="5.298" y1="5.298" transform="matrix(-0.951, 0.309, -0.309, -0.951, 1128.657, 102.592)" fill="none" stroke="#fde270" stroke-width="3"/>
+    <line id="Line_7" data-name="Line 7" x1="7.064" transform="matrix(-0.951, 0.309, -0.309, -0.951, 1123.407, 132.15)" fill="none" stroke="#fde270" stroke-width="3"/>
+  </g>
+</svg>
