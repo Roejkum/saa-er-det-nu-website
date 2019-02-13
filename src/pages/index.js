@@ -42,10 +42,10 @@ export default class IndexPage extends React.Component {
       ScrollReveal().reveal('.map', { afterReveal: animate, delay: 300, distance: '-2rem', duration: 1000 });
       });
 
-      import('parallax-js').then(({ default: Parallax }) => {
+      const Parallax = require('parallax-js')
         const scene = document.getElementById('scene');
         const parallaxInstance = new Parallax(scene);
-      });
+      
     
   }
 
