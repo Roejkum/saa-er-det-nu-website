@@ -40,12 +40,6 @@ section {
     position: relative;
 }
 
-.grass {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-}
-
 .content {
     padding-top: 15%;
     padding-right: 5%;
@@ -56,4 +50,14 @@ section {
 .logo {
     width: 300px;
     max-width: 100%;
+}
+
+#scene {
+    position: absolute !important;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }

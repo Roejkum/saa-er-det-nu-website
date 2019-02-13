@@ -2,12 +2,13 @@ import React from 'react';
 import Layout from '../components/Layout/Layout';
 import BarCount from '../components/BarCount/BarCount';
 import ContactForm from '../components/ContactForm/ContactForm';
-import grass from "../../static/img/grassnew.svg";
+import Grass from '../components/Grass/Grass'
 import mosaik from "../../static/img//mosaik.jpg";
 import MapDk from '../components/Map/MapDk';
 import logo from "../../static/img/logo.svg";
 import SunSvg from '../components/SunSvg/SunSvg';
 import Trees from '../components/Trees/Trees';
+import Parallax from 'parallax-js'
 
 export default class IndexPage extends React.Component {
   state = {
@@ -42,7 +43,8 @@ export default class IndexPage extends React.Component {
       ScrollReveal().reveal('.map', { afterReveal: animate, delay: 300, distance: '-2rem', duration: 1000 });
       })
       
-      
+      const scene = document.getElementById('scene');
+      const parallaxInstance = new Parallax(scene);
     
   }
 
@@ -51,8 +53,11 @@ export default class IndexPage extends React.Component {
     return (
       <Layout>
         <section className="section section-signup">
-        <SunSvg/>
-        <Trees/>
+        <div id="scene">
+          <SunSvg/>
+          <Grass/>
+          <Trees/>
+        </div>
           <div className="container-fluid wrap">
             <div className="row">
 
@@ -81,7 +86,7 @@ export default class IndexPage extends React.Component {
               </div>
             
               </div>
-          <img src={grass} alt="grass" className="grass" />
+              
         </section>
 
         <section className="stillere-sektion">
