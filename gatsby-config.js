@@ -29,11 +29,11 @@ module.exports = {
         short_name: `Så er det nu`,
         start_url: `/`,
         background_color: `#4E6839`,
-        theme_color: `#e7ae10`,
+        theme_color: `#d89f01`,
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: `standalone`,
-        icon: `src/static/img/Logo.png`, // This path is relative to the root of the site.
+        icon: `src/img/Logo.png`, // This path is relative to the root of the site.
         include_favicon: true, // Include favicon
       },
     },
