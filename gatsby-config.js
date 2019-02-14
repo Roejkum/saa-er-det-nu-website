@@ -15,11 +15,13 @@ module.exports = {
   },
   siteMetadata: {
     title: 'Så er det nu',
-    description: 'Gør folketingsvalget 2019 grønt!',
+    description: 'Hvis du også synes at klima og natur skal øverst på dagsordenen til det kommende folketingsvalg, så skriv under og vær med til at råbe politikerne op!',
+    siteUrl: `https://såerdet.nu`
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
+    `gatsby-plugin-sitemap`,
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
