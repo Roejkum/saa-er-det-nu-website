@@ -23,6 +23,22 @@ module.exports = {
     'gatsby-plugin-sass',
     `gatsby-plugin-sitemap`,
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Så er det nu`,
+        short_name: `Så er det nu`,
+        start_url: `/`,
+        background_color: `#4E6839`,
+        theme_color: `#e7ae10`,
+        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
+        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        display: `standalone`,
+        icon: `src/static/img/Logo.png`, // This path is relative to the root of the site.
+        include_favicon: true, // Include favicon
+      },
+    },
+    `gatsby-plugin-offline`,
+    {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
         endpoint: 'https://mamacph.us18.list-manage.com/subscribe/post?u=f7e13d5a9dfc950c013072181&amp;id=6aa8a91bc2',
