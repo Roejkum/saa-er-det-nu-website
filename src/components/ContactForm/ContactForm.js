@@ -192,20 +192,20 @@ class ContactForm extends Component {
                   <div className="row">
                     <div className="field col-xs-12">
                         <div className="control">
-                        <label className="label" htmlFor={"FNAME"} hidden>Fornavn</label>
+                          <label className="label" htmlFor={"name"} hidden>Fornavn</label>
                           <input className="input" type={"text"} name={"FNAME"} onChange={this.handleChange} onFocus={this.handleChange} id={"name"} placeholder="Navn" required={true} />
                           <p className="error-msg">Fejl i indtastning</p>
                         </div>
                       </div>
                     <div className="field col-xs-12">
                         <div className="control">
-                        <label className="label" htmlFor={"email"} hidden>Email</label>
+                          <label className="label" htmlFor={"email"} hidden>Email</label>
                           <input className="input" type={"email"} name={"email"} onChange={this.handleChange} onFocus={this.handleChange} id={"email"} placeholder="Email" required={true} />
                           <p className="error-msg">Fejl i indtastning</p>
                         </div>
                       </div>
                       <div className="field col-xs-12">
-                        <label className="label checkbox" htmlFor={"signup"}>
+                          <label className="label checkbox" htmlFor={"signup"}>
                           <input className="input" type={"checkbox"} name={"signup"} value={this.state.termsValidated} onChange={this.handleChange} id={"signup"} required={true} />
                           <span className="checkmark"></span>
                           <p>
