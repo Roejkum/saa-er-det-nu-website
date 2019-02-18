@@ -15,13 +15,9 @@
         -o-transition: all 0.8s ease;
 
         &:first-of-type {
-            transform: translateX(-100%);
+            // transform: translateX(-100%);
             animation: barcount-fade 1.2s 0s;
             -webkit-animation: barcount-fade 1.2s 0s;
-            -webkit-transform: translateX(-100%);
-            -moz-transform: translateX(-100%);
-            -ms-transform: translateX(-100%);
-            -o-transform: translateX(-100%);
 }
         &:last-of-type {
             right: 0;
