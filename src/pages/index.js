@@ -143,7 +143,8 @@ export default class IndexPage extends React.Component {
           <div className="container-fluid wrap">
             <div className="row">
               <div className="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-xs-12">
-              <p className="fadeIn text-center">Kontakt os på <br/><a className="bold-text" href="mailto:info@saaerdet.nu">mailto:info@saaerdet.nu</a></p>
+              <p className="fadeIn text-center">Kontakt os på <br/><a className="bold-text" href="mailto:info@saaerdet.nu">info@saaerdet.nu</a></p>
+              <p className="fadeIn text-center"><Link className="bold-text" to="/om-os">Om os</Link></p>
               <p className="fadeIn text-center"><Link className="bold-text" to="/persondatapolitik">Persondatapolitik</Link></p>
               <p className="fadeIn text-center"><Link className="bold-text" to="/cookie-politik">Cookie-politik</Link></p>
               </div>
