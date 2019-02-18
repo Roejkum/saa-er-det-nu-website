@@ -21,7 +21,9 @@ const PrivacyPolicy = () => (
 
                   <h3>Kort om “Så er det nu”</h3>
                   <p><Link to="/">www.saaerdet.nu</Link> ejes og drives af Foreningen ‘Så er det nu’, som er hjemhørende i Københavns Kommune.</p>
+                  <p>c/o Rune Baastrup, Hyrdevangen 63, 2400 Kbh Nv</p>
                   <p>Foreningens formål er præge samfundet til at sikre en hurtig og retfærdig omstilling, så produktion, transport og forbrug sker i fuld overensstemmelse med klima og naturgrundlag. Det prøver vi at opnå ved involverende og oplysende aktiviteter, der øger det folkeligt engagement i spørgsmålet.</p>
+                  
 
                   <h3>Kontakt angående “Så er det nu”’s behandling af dine data</h3>
                   <p>Hvis du har spørgsmål til vores behandling af dine oplysninger, er du altid velkommen til at kontakte os ved at skrive til <a href="mailto:info@saaerdet.nu">info@saaerdet.nu</a></p>
