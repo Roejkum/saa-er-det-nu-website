@@ -209,7 +209,7 @@ class ContactForm extends Component {
                           <input className="input" type={"checkbox"} name={"signup"} value={this.state.termsValidated} onChange={this.handleChange} id={"signup"} required={true} />
                           <span className="checkmark"></span>
                           <p>
-                            Ja, jeg er med i kampen og vil gerne være med til at løfte sagen! Jeg har desuden læst og accepterer <Link to="/privatlivspolitik" title="Logo">privatlivspolitikken</Link> <span className="required">*</span>
+                            Ja, jeg er med i kampen og vil gerne være med til at løfte sagen! Jeg har desuden læst og accepterer <Link to="/persondatapolitik" title="Logo">persondatapolitikken</Link> <span className="required">*</span>
                           </p>
                         </label>
                         <label className="label checkbox" htmlFor={"newsletter"}>

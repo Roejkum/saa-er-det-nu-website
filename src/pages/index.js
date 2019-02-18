@@ -21,6 +21,7 @@ export default class IndexPage extends React.Component {
         method: 'POST'
       })
       .then((response) => {
+        console.log(response);
         return response.json();
       })
       .then((data) => {
