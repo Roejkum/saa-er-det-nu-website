@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from "gatsby";
 
-import './sass/main.scss'
-import CookieConsent from '../cookieConsent/cookieConsent';
+import './sass/main.scss';
+import CookieConsent from '../CookieConsent/CookieConsent';
 
 class TemplateWrapper extends Component {
   state = {
