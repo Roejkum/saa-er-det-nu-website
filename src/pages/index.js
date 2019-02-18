@@ -66,9 +66,12 @@ export default class IndexPage extends React.Component {
               {/* tekst */}
               <div className="col-sm-7 col-md-6 col-xs-12 last-sm pl-sm">
                 <img src={logo} alt="Logo" className="logo"/>
-                <h1 className="h2">Kan vi få 100.000 underskrifter på at gøre <span className="bold-text">valget grønt?</span></h1>
-                <BarCount amount={this.state.totalSigners} totalAmount="50"/>
-                <p>Hvis du også synes at klima og natur skal øverst på dagsordenen til det kommende folketingsvalg, så skriv under og vær med til at råbe politikerne op!</p>
+                <h1>Gør valget <span className="bold-text">grønt!</span></h1>
+                <BarCount amount={this.state.totalSigners} totalAmount="10000"/>
+                <p>De politiske partier skal love at gøre Danmark grønt. De skal love at stoppe ødelæggelsen af vores natur og klima. Nu. Vi vil ikke høre mere snak, vi vil se ægte handling.</p>
+                <p>
+                Det kræver, at vi samler os nu og hæver stemmen. Vil du være med?
+                </p>
               </div>
 
                 {/* Signupform */}
@@ -76,8 +79,9 @@ export default class IndexPage extends React.Component {
                   <div className="container-fluid white-box fade-in">
             <div className="row">
               <div className="col-xs-12">
-                <h3>Skriv under nu!</h3>
-                <p>Vi skal snart til valg og det er nu vi skal vise politikerne at tiden til små skridt og tomme løfter er ovre. Vi vil se omgående handling fra første år af en ny regerings levetid. </p>
+                <h2>Sammen kan vi skabe historie</h2>
+                <h4>Hvis vi er nok borgere, der går sammen, kan vi presse partierne til at love at gøre Danmark grønt igen. Skriv under og spred ordet, så er vi igang!</h4>
+                <p>Jeg er med!</p>
                 
                 <ContactForm/>
               </div>
@@ -126,13 +130,12 @@ export default class IndexPage extends React.Component {
               <div className="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-xs-12">
               <h2 className="fadeIn text-center">Så er det nu: gør valget grønt
 </h2>
-              <p className="fadeIn text-center"><span className="bold-text">Vi skal</span> her og nu iværksætte den nødvendige omstilling af vores samfund, for at undgå at den globale opvarmning overstiger 1,5 grader. </p>
-              <p className="fadeIn text-center"><span className="bold-text">Vi skal</span> sikre at vores produktion og forbrug sker i fuld balance med naturgrundlag, klima og dyreliv. Danmark skal med eksemplets magt vise verden, at det er muligt at finde de nye løsninger, der gør, at vi kan lykkes som menneskehed.</p>
-              <p className="fadeIn text-center"><span className="bold-text">Vi skal</span> beskytte vores vand - både vores drikkevand og verdenshavene. Og vi skal bevare et stabilt klima og varieret dyre- og planteliv. Vi skal sørge for, at de næste generationer også kan nyde den summende humlebi, den sky hare og havørnens brede vingefang.</p>
-              <p className="fadeIn text-center"><span className="bold-text">Næste valgperiode er helt afgørende.</span> Det er nu vi skal sætte fart i en retfærdig omstilling af Danmark. Derfor har vi stiftet ‘så er det nu’ bevægelsen. For at gøre den grønne omstilling til valgkampens vigtigste tema og for at sikre, at vi får et folketing, der allerede i næste valgperiode kan levere på følgende 3 mål:</p>
-              <p className="fadeIn text-center">- Sænke det danske CO2 fodaftryk med 1 ton per dansker om året</p>
-              <p className="fadeIn text-center">- Sikre at natur udgør mindst en femtedel af Danmarks samlede areal</p>
-              <p className="fadeIn text-center">- Beskytte vores drikkevand, folkesundhed og miljø ved at påbegynde en total udfasning af sprøjtegifte</p>
+              <p className="fadeIn text-center"><span className="bold-text">Vi skal</span> være mange. Del kampagnen på sociale medier og skriv direkte til folk du kender</p>
+              <p className="fadeIn text-center"><span className="bold-text">Vi skal</span> være synlige. Skab opmærksomhed hvor du bor, arbejder eller uddanner dig.</p>
+              <p className="fadeIn text-center"><span className="bold-text">Vi skal</span>  lægge pres. Vi henvender os til politikerne og beder dem gøre Danmark grønt - online og til valgmøder.</p>
+
+              <p className="fadeIn text-center"><span className="bold-text">Ved at vi... ??</span> (har du en ide til, hvordan vi sammen kan gøre valget grønt? Så snart du har skrevet under, så skyd dine ideer afsted til os!)</p>
+  
               
           
 
