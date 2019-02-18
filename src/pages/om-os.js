@@ -1,8 +1,9 @@
 import React from 'react';
 import Layout from '../components/Layout/Layout';
 import SunSvg from '../components/SunSvg/SunSvg';
+import { Link } from 'gatsby';
 
-const cookiePolicy = () => (
+const omOs = () => (
 
   <Layout>
     <section className="section section-signup fullHeight">
@@ -76,4 +77,4 @@ const cookiePolicy = () => (
   </Layout>
 );
 
-export default cookiePolicy;
+export default omOs;
