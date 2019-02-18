@@ -13,6 +13,7 @@
     position: relative;
     padding: 6rem 0;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .fullHeight {
@@ -36,6 +37,12 @@
         left: 0;
         background: linear-gradient(to top, $white, transparent);
         height: 50%;
+    }
+}
+@media screen and (max-width: 767px) {
+    .center-xs {
+        margin: auto;
+        display: block;
     }
 }
 .text-section {

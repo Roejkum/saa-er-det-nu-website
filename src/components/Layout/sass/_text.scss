@@ -40,6 +40,10 @@ p {
     color: $black;
     line-height: 1.4;
     font-weight: 300;
+
+    &.large {
+        font-size: 1.2em;
+    }
 }
 .text-center {
     text-align: center;

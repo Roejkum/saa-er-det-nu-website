@@ -65,11 +65,11 @@ export default class IndexPage extends React.Component {
 
               {/* tekst */}
               <div className="col-sm-7 col-md-6 col-xs-12 last-sm pl-sm">
-                <img src={logo} alt="Logo" className="logo"/>
-                <h1>Gør valget <span className="bold-text">grønt!</span></h1>
+                <img src={logo} alt="Logo" className="logo center-xs"/>
+                <h1 className="text-center-xs">Gør valget <span className="bold-text">grønt!</span></h1>
                 <BarCount amount={this.state.totalSigners} totalAmount="10000"/>
-                <p>De politiske partier skal love at gøre Danmark grønt. De skal love at stoppe ødelæggelsen af vores natur og klima. Nu. Vi vil ikke høre mere snak, vi vil se ægte handling.</p>
-                <p>
+                <p className="text-center-xs">De politiske partier skal love at gøre Danmark grønt. De skal love at stoppe ødelæggelsen af vores natur og klima. Nu. Vi vil ikke høre mere snak, vi vil se ægte handling.</p>
+                <p className="text-center-xs">
                 Det kræver, at vi samler os nu og hæver stemmen. Vil du være med?
                 </p>
               </div>
@@ -80,8 +80,7 @@ export default class IndexPage extends React.Component {
             <div className="row">
               <div className="col-xs-12">
                 <h2>Sammen kan vi skabe historie</h2>
-                <h4>Hvis vi er nok borgere, der går sammen, kan vi presse partierne til at love at gøre Danmark grønt igen. Skriv under og spred ordet, så er vi igang!</h4>
-                <p>Jeg er med!</p>
+                <p className="large">Hvis vi er nok borgere, der går sammen, kan vi presse partierne til at love at gøre Danmark grønt igen. Skriv under og spred ordet, så er vi igang!</p>
                 
                 <ContactForm/>
               </div>
