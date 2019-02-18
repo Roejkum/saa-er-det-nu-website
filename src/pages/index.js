@@ -65,7 +65,7 @@ export default class IndexPage extends React.Component {
             <div className="row">
 
               {/* tekst */}
-              <div className="col-sm-7 col-md-6 col-xs-12 last-sm pl-sm">
+              <div className="col-sm-6 col-md-6 col-xs-12 last-sm pl-sm">
                 <img src={logo} alt="Logo" className="logo center-xs"/>
                 <h1 className="text-center-xs">Gør valget <span className="bold-text">grønt!</span></h1>
                 <BarCount amount={this.state.totalSigners} totalAmount="10000"/>
@@ -76,7 +76,7 @@ export default class IndexPage extends React.Component {
               </div>
 
                 {/* Signupform */}
-                <div className="col-sm-5 col-xs-12">
+                <div className="col-sm-6 col-xs-12">
                   <div className="container-fluid white-box fade-in">
             <div className="row">
               <div className="col-xs-12">
