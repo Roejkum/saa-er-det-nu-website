@@ -14,6 +14,14 @@
     padding: 6rem 0;
     box-sizing: border-box;
     overflow: hidden;
+
+    @media screen and (max-width: 75rem) {
+        padding-bottom: 10rem;
+    }
+
+    @media screen and (max-width: 48rem) {
+        padding-bottom: 15rem;
+    }
 }
 
 .fullHeight {
@@ -28,6 +36,10 @@
         left: 0;
         background: linear-gradient(to top, transparent, $green-dark);
         height: 50%;
+        @media screen and (max-width: 48rem) {
+            height: 100%;
+        }
+        
     }
     &::after {
         content: '';
@@ -37,6 +49,9 @@
         left: 0;
         background: linear-gradient(to top, $white, transparent);
         height: 50%;
+        @media screen and (max-width: 48rem) {
+            height: 30%;
+        }
     }
 }
 @media screen and (max-width: 767px) {
