@@ -12,6 +12,11 @@
     background-image: linear-gradient(to top right, #b8dbf3, $white);
     position: relative;
     padding: 6rem 0;
+    box-sizing: border-box;
+}
+
+.fullHeight {
+    min-height: 100vh;
 }
 .stillere-sektion {
     &::before {
