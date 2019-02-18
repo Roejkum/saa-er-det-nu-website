@@ -12,6 +12,20 @@
     background-image: linear-gradient(to top right, #b8dbf3, $white);
     position: relative;
     padding: 6rem 0;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    @media screen and (max-width: 75rem) {
+        padding-bottom: 10rem;
+    }
+
+    @media screen and (max-width: 48rem) {
+        padding-bottom: 15rem;
+    }
+}
+
+.fullHeight {
+    min-height: 100vh;
 }
 .stillere-sektion {
     &::before {
@@ -22,6 +36,10 @@
         left: 0;
         background: linear-gradient(to top, transparent, $green-dark);
         height: 50%;
+        @media screen and (max-width: 48rem) {
+            height: 100%;
+        }
+        
     }
     &::after {
         content: '';
@@ -31,6 +49,15 @@
         left: 0;
         background: linear-gradient(to top, $white, transparent);
         height: 50%;
+        @media screen and (max-width: 48rem) {
+            height: 30%;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .center-xs {
+        margin: auto;
+        display: block;
     }
 }
 .text-section {
@@ -39,13 +66,32 @@
 section {
     position: relative;
 }
-
-.grass {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
+.table-wrapper {
+    overflow: scroll;
 }
+table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    overflow: scroll;
+    overflow-x: scroll;
 
+    tr {
+        width: auto;
+    }
+    th {
+        padding: 1rem;
+        text-align: left;
+        background-color: $signal;
+        color: $black;
+    }
+    td {
+        padding: 0.5rem 1rem;
+    }
+    tr:nth-child(odd) {
+        background-color: rgb(204, 204, 204);
+    }
+}
 .content {
     padding-top: 15%;
     padding-right: 5%;
@@ -56,4 +102,14 @@ section {
 .logo {
     width: 300px;
     max-width: 100%;
+}
+
+#scene {
+    position: absolute !important;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }

@@ -12,7 +12,7 @@ exports.handler = function signUp(event, context, callback) {
 
     axios({
         method: 'get',
-        url: 'https://us18.api.mailchimp.com/3.0/lists/6aa8a91bc2/members?count=1',
+        url: 'https://us20.api.mailchimp.com/3.0/lists/733e6bf5da/members?count=1',
         auth: {
             username: mcUsername,
             password: mcPassword
