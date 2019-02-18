@@ -12,6 +12,12 @@
     justify-content: flex-end;
     align-items: center;
 
+    @media screen and (max-width: 48rem) {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 2rem 0;
+    }
+
     button {
         width: auto;
         margin: 1rem;
