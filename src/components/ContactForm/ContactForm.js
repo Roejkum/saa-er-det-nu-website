@@ -10,15 +10,12 @@ class ContactForm extends Component {
         isValidated: false, 
         emailValidated: false,
         nameValidated: false,
+        zipValidated: false,
         termsValidated: false,
         errorMsg: '',
         form: {
             email: '',
             listFields: {
-                FNAME: '',
-                LNAME: '',
-                signup: false,
-                newsletter: false   
             }
         },
       };  
@@ -27,12 +24,17 @@ class ContactForm extends Component {
         const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(email);
       }
+      validateZip = zip => {
+        const re = /^[0-9]{4}$/;
+        return re.test(zip);
+      }
     
       handleChange = e => {
         if(e.target.name === 'email') {
           const emailValidated = this.validateEmail(e.target.value);
           const currentFormData = this.state.form;
           const nameValidated = this.state.nameValidated;
+          const zipValidated = this.state.zipValidated;
           const termsValidated = this.state.termsValidated;
           this.setState({
             form: {
@@ -40,7 +42,7 @@ class ContactForm extends Component {
               [e.target.name]: e.target.value 
             },
             emailValidated: (emailValidated ? true : false),
-            isValidated: (termsValidated && nameValidated && emailValidated ? true : false)
+            isValidated: (termsValidated && nameValidated && emailValidated && zipValidated ? true : false)
           });
           e.target.className = (emailValidated ? 'valid input' : 'invalid input');
         }
@@ -50,6 +52,7 @@ class ContactForm extends Component {
           const currentForm = this.state.form;
           const currentListFields = this.state.form.listFields;
           const emailValidated = this.state.emailValidated;
+          const zipValidated = this.state.zipValidated;
           const termsValidated = this.state.termsValidated;
           const newForm = {
             ...currentForm,
@@ -62,12 +65,39 @@ class ContactForm extends Component {
             return {form: {
               ...newForm
             },
-            isValidated: (emailValidated && termsValidated && nameValid ? true : false),
+            isValidated: (emailValidated && termsValidated && nameValid && zipValidated ? true : false),
             nameValidated: nameValid
           };
           });
           e.target.className = (nameValid ? 'valid input' : 'invalid input');
         }
+        if(e.target.name === 'ZIP') {
+
+          const zipValid = this.validateZip(e.target.value);
+          const currentForm = this.state.form;
+          const currentListFields = this.state.form.listFields;
+          const emailValidated = this.state.emailValidated;
+          const termsValidated = this.state.termsValidated;
+          const nameValidated = this.state.nameValidated;
+          const newForm = {
+            ...currentForm,
+            listFields: {
+              ...currentListFields,
+              [e.target.name]: e.target.value
+            }
+          };
+          this.setState(() => {
+            return {form: {
+              ...newForm
+            },
+            isValidated: (emailValidated && termsValidated && nameValidated && zipValid ? true : false),
+            zipValidated: zipValid
+          };
+          });
+          e.target.className = (zipValid ? 'valid input' : 'invalid input');
+        }
+
+      
 
         if(e.target.name === 'signup') {
           const checked = e.target.checked;
@@ -75,6 +105,7 @@ class ContactForm extends Component {
           const currentListFields = this.state.form.listFields;
           const emailValidated = this.state.emailValidated;
           const nameValidated = this.state.nameValidated;
+          const zipValidated = this.state.zipValidated;
           const newForm = {
             ...currentForm,
             listFields: {
@@ -84,18 +115,15 @@ class ContactForm extends Component {
           };
 
           this.setState(() => {
-            return {form: {
-              ...newForm
-            },
-            isValidated: (emailValidated && nameValidated && checked ? true : false),
-            termsValidated: (checked ? true : false)
+            return {isValidated: (emailValidated && nameValidated && checked && zipValidated ? true : false),
+                    termsValidated: (checked ? true : false)
           };
           });
 
           e.target.className = e.target.checked ? 'valid input' : 'invalid input';
         }
 
-        if(e.target.name === 'newsletter') {
+        if(e.target.name === 'NEWS') {
           const currentForm = this.state.form;
           const currentListFields = this.state.form.listFields;
           const newForm = {
@@ -131,14 +159,14 @@ class ContactForm extends Component {
                 submitError: true,
                 loading: false
               });
-              console.log(data.msg);
+              // console.log(data.msg);
             } else if(data.result === 'error' && data.msg.includes('too many recent signup requests')) {
               this.setState({
                 errorMsg: 'For mange forsøg. Prøv igen senere.',
                 submitError: true,
                 loading: false
               });
-              console.log(data.msg);
+              // console.log(data.msg);
             } else if(data.result !== 'error') {
               this.setState({
                 loading: false,
@@ -146,9 +174,9 @@ class ContactForm extends Component {
                 submitted: true,
                 errorMsg: ''
               });
-              console.log(data.msg);
-              console.log('submitted');
-              console.log(this.state.errorMsg);
+              // console.log(data.msg);
+              // console.log('submitted');
+              // console.log(this.state.errorMsg);
             }
           })
           
@@ -192,7 +220,7 @@ class ContactForm extends Component {
                   <div className="row">
                     <div className="field col-xs-12">
                         <div className="control">
-                          <label className="label" htmlFor={"name"} hidden>Fornavn</label>
+                          <label className="label" htmlFor={"name"} hidden>Navn</label>
                           <input className="input" type={"text"} name={"FNAME"} onChange={this.handleChange} onFocus={this.handleChange} id={"name"} placeholder="Navn" required={true} />
                           <p className="error-msg">Fejl i indtastning</p>
                         </div>
@@ -205,17 +233,29 @@ class ContactForm extends Component {
                         </div>
                       </div>
                       <div className="field col-xs-12">
+                        <div className="control">
+                          <label className="label" htmlFor={"ZIP"} hidden>postnummer</label>
+                          <input className="input" type={"text"} name={"ZIP"} pattern="[0-9]{4}" onChange={this.handleChange} onFocus={this.handleChange} id={"ZIP"} placeholder="Postnummer" required={true} />
+                          <p className="error-msg">Fejl i indtastning</p>
+                        </div>
+                      </div>
+                      <div className="field col-xs-12">
                           <label className="label checkbox" htmlFor={"signup"}>
                           <input className="input" type={"checkbox"} name={"signup"} value={this.state.termsValidated} onChange={this.handleChange} id={"signup"} required={true} />
                           <span className="checkmark"></span>
                           <p>
-                            Ja, jeg er med i kampen og vil gerne være med til at løfte sagen! Jeg har desuden læst og accepterer <Link to="/persondatapolitik" title="Logo">persondatapolitikken</Link> <span className="required">*</span>
+                            ja, jeg er med i kampen og vil gerne være med til at løfte sagen! Jeg har desuden læst og accepterer <Link to="/persondatapolitik" title="Logo">persondatapolitikken</Link> <span className="required">*</span>
                           </p>
                         </label>
-                        <label className="label checkbox" htmlFor={"newsletter"}>
-                            <input className="input" type={"checkbox"} name={"newsletter"} onChange={this.handleChange} id={"newsletter"} required={false} />
+                        <label className="label checkbox" htmlFor={"NEWS"}>
+                            <input className="input" type={"checkbox"} name={"NEWS"} onChange={this.handleChange} id={"NEWS"} required={false} />
                             <span className="checkmark"></span>
-                            <p>Ja, jeg vil gerne holdes opdateret med mails af og til om sagen</p>
+                            <p>ja, jeg vil gerne holdes opdateret med mails om “Gør valget grønt”</p>
+                        </label>
+                        <label className="label checkbox" htmlFor={"ACTIVITIES"}>
+                            <input className="input" type={"checkbox"} name={"ACTIVITIES"} onChange={this.handleChange} id={"ACTIVITIES"} required={false} />
+                            <span className="checkmark"></span>
+                            <p>ja, jeg vil også gerne deltage i aktiviteter</p>
                         </label>
                       </div>
                       <div className="field col-xs-12 mt">
