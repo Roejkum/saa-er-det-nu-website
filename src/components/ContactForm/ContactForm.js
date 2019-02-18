@@ -240,18 +240,13 @@ class ContactForm extends Component {
                           <input className="input" type={"checkbox"} name={"signup"} value={this.state.termsValidated} onChange={this.handleChange} id={"signup"} required={true} />
                           <span className="checkmark"></span>
                           <p>
-                            ja, jeg er med i kampen og vil gerne være med til at løfte sagen! Jeg har desuden læst og accepterer <Link to="/persondatapolitik" title="Logo">persondatapolitikken</Link> <span className="required">*</span>
+                            ja, jeg bakker op og har desuden læst og accepterer <Link to="/persondatapolitik" title="Logo">persondatapolitikken</Link> <span className="required">*</span>
                           </p>
                         </label>
                         <label className="label checkbox" htmlFor={"NEWS"}>
                             <input className="input" type={"checkbox"} name={"NEWS"} onChange={this.handleChange} id={"NEWS"} required={false} />
                             <span className="checkmark"></span>
                             <p>ja, jeg vil gerne holdes opdateret med mails om “Gør valget grønt”</p>
-                        </label>
-                        <label className="label checkbox" htmlFor={"ACTIVITIES"}>
-                            <input className="input" type={"checkbox"} name={"ACTIVITIES"} onChange={this.handleChange} id={"ACTIVITIES"} required={false} />
-                            <span className="checkmark"></span>
-                            <p>ja, jeg vil også gerne deltage i aktiviteter</p>
                         </label>
                       </div>
                       <div className="field col-xs-12 mt">

@@ -11,7 +11,7 @@ class CookieConsent extends Component {
     }
 
     componentDidMount = () => {
-        const cookieAccepted = this.getCookie("acceptedCookie")
+        const cookieAccepted = this.getCookie("CookieConsent");
 
         if ( cookieAccepted ) {
             this.props.acceptAnalytics();
@@ -55,7 +55,7 @@ class CookieConsent extends Component {
     cookieAcceptanceHandler = (boolean) => {
         this.setState({ cookieAccepted: boolean, bannerVisible: false });
         if (boolean) {
-            this.setCookie('acceptedCookie', true, 30);
+            this.setCookie('CookieConsent', true, 30);
             
         }
     }
