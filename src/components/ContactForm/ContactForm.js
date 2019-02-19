@@ -16,6 +16,9 @@ class ContactForm extends Component {
         form: {
             email: '',
             listFields: {
+              ZIP: '',
+              signup: '',
+              NEWS: 'Nej'
             }
         },
       };  
@@ -153,30 +156,24 @@ class ContactForm extends Component {
         if(this.state.isValidated) {
           addToMailchimp(this.state.form.email, this.state.form.listFields)
             .then(data => {
-              if(data.result !== 'error') {
-                this.setState({
-                  loading: false,
-                  submitError: false,
-                  submitted: true,
-                  errorMsg: ''
-                });
-              } else if(data.result === 'error' && data.msg.includes('too many recent signup requests')) {
-                this.setState({
-                  errorMsg: 'For mange forsøg. Prøv igen senere.',
-                  submitError: true,
-                  loading: false
-                });
-            } else if(data.result === 'error' && data.msg.includes('is already subscribed')) {
-                this.setState({
-                  errorMsg: 'Du har allerede skrevet under.',
-                  submitError: true,
-                  loading: false
-                });
-            } else {
+            if(data.result === 'error' && data.msg.includes('is already subscribed')) {
               this.setState({
-                errorMsg: 'Der skete en fejl i forbindelsen. Prøv igen',
+                errorMsg: 'Du har allerede skrevet under.',
                 submitError: true,
                 loading: false
+              });
+            } else if(data.result === 'error' && data.msg.includes('too many recent signup requests')) {
+              this.setState({
+                errorMsg: 'For mange forsøg. Prøv igen senere.',
+                submitError: true,
+                loading: false
+              });
+            } else if(data.result !== 'error') {
+              this.setState({
+                loading: false,
+                submitError: false,
+                submitted: true,
+                errorMsg: ''
               });
             }
           })
@@ -209,67 +206,69 @@ class ContactForm extends Component {
     
     
         return (
-          <form
-            name="contact"
-            method="post"
-            action="/contact/thanks/"
-            onSubmit={this.handleSubmit}
-            >
-            {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-            <input type="hidden" name="form-name" value="contact" />
-            <div hidden>
-              <label>
-                Don’t fill this out:{" "}
-                <input name="bot-field" onChange={this.handleChange} />
-              </label>
-            </div>
-              <div className="row">
-                <div className="field col-xs-12">
-                    <div className="control">
-                      <label className="label" htmlFor={"name"} hidden>Navn</label>
-                      <input className="input" type={"text"} name={"FNAME"} onChange={this.handleChange} onBlur={this.handleChange} id={"name"} placeholder="Navn*" required={true} />
-                      <p className="error-msg">Fejl i indtastning</p>
-                    </div>
+             
+
+              <form
+                name="contact"
+                method="post"
+                action="/contact/thanks/"
+                onSubmit={this.handleSubmit}
+                >
+                {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+                <input type="hidden" name="form-name" value="contact" />
+                <div hidden>
+                  <label>
+                    Don’t fill this out:{" "}
+                    <input name="bot-field" onChange={this.handleChange} />
+                  </label>
+                </div>
+                  <div className="row">
+                    <div className="field col-xs-12">
+                        <div className="control">
+                          <label className="label" htmlFor={"name"} hidden>Navn</label>
+                          <input className="input" type={"text"} name={"FNAME"} onChange={this.handleChange} onBlur={this.handleChange} id={"name"} placeholder="Navn*" required={true} />
+                          <p className="error-msg">Fejl i indtastning</p>
+                        </div>
+                      </div>
+                    <div className="field col-xs-12">
+                        <div className="control">
+                          <label className="label" htmlFor={"email"} hidden>Email</label>
+                          <input className="input" type={"email"} name={"email"} onChange={this.handleChange} onBlur={this.handleChange} id={"email"} placeholder="Email*" required={true} />
+                          <p className="error-msg">Ugyldig Email</p>
+                        </div>
+                      </div>
+                      <div className="field col-xs-12">
+                        <div className="control">
+                          <label className="label" htmlFor={"ZIP"} hidden>postnummer</label>
+                          <input className="input" type={"text"} name={"ZIP"} pattern="[0-9]{4}" onChange={this.handleChange} onBlur={this.handleChange} id={"ZIP"} placeholder="Postnummer*" required={true} />
+                          <p className="error-msg">Ugyldigt postnummer</p>
+                        </div>
+                      </div>
+                      <div className="field col-xs-12">
+                          <label className="label checkbox" htmlFor={"signup"}>
+                          <input className="input" type={"checkbox"} name={"signup"} value={this.state.termsValidated} onChange={this.handleChange} id={"signup"} required={true} />
+                          <span className="checkmark"></span>
+                          <p>
+                            ja, jeg bakker op og har desuden læst og accepterer <Link to="/persondatapolitik" title="Logo">persondatapolitikken</Link> <span className="required">*</span>
+                          </p>
+                        </label>
+                        <label className="label checkbox" htmlFor={"NEWS"}>
+                            <input className="input" type={"checkbox"} name={"NEWS"} onChange={this.handleChange} id={"NEWS"} required={false} />
+                            <span className="checkmark"></span>
+                            <p>ja, jeg vil gerne holdes opdateret med mails om “Gør valget grønt”</p>
+                        </label>
+                      </div>
+                      <div className="field col-xs-12 mt">
+                        <button className={this.state.loading && !this.state.submitted ? 'loading' : this.state.submitError ? 'submit-error' : this.state.submitted ? 'submitted' : ''} id="signupbtn" type="submit" disabled={!this.state.isValidated || this.state.submitted}>
+                          <span>SKRIV UNDER</span>
+                          <svg className="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><path className="checkmark" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+                        </button>
+                        {validationMsg}
+                        {errorMsg}
+                      </div>
                   </div>
-                <div className="field col-xs-12">
-                    <div className="control">
-                      <label className="label" htmlFor={"email"} hidden>Email</label>
-                      <input className="input" type={"email"} name={"email"} onChange={this.handleChange} onBlur={this.handleChange} id={"email"} placeholder="Email*" required={true} />
-                      <p className="error-msg">Ugyldig Email</p>
-                    </div>
-                  </div>
-                  <div className="field col-xs-12">
-                    <div className="control">
-                      <label className="label" htmlFor={"ZIP"} hidden>postnummer</label>
-                      <input className="input" type={"text"} name={"ZIP"} pattern="[0-9]{4}" onChange={this.handleChange} onBlur={this.handleChange} id={"ZIP"} placeholder="Postnummer*" required={true} />
-                      <p className="error-msg">Ugyldigt postnummer</p>
-                    </div>
-                  </div>
-                  <div className="field col-xs-12">
-                      <label className="label checkbox" htmlFor={"signup"}>
-                      <input className="input" type={"checkbox"} name={"signup"} value={this.state.termsValidated} onChange={this.handleChange} id={"signup"} required={true} />
-                      <span className="checkmark"></span>
-                      <p>
-                        ja, jeg bakker op og har desuden læst og accepterer <Link to="/persondatapolitik" title="Logo">persondatapolitikken</Link> <span className="required">*</span>
-                      </p>
-                    </label>
-                    <label className="label checkbox" htmlFor={"NEWS"}>
-                        <input className="input" type={"checkbox"} name={"NEWS"} onChange={this.handleChange} id={"NEWS"} required={false} />
-                        <span className="checkmark"></span>
-                        <p>ja, jeg vil gerne holdes opdateret med mails om “Gør valget grønt”</p>
-                    </label>
-                  </div>
-                  <div className="field col-xs-12 mt">
-                    <button className={this.state.loading && !this.state.submitted ? 'loading' : this.state.submitError ? 'submit-error' : this.state.submitted ? 'submitted' : ''} id="signupbtn" type="submit" disabled={!this.state.isValidated || this.state.submitted}>
-                      <span>SKRIV UNDER</span>
-                      <svg className="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><path className="checkmark" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
-                    </button>
-                    {validationMsg}
-                    {errorMsg}
-                  </div>
-              </div>
-            </form>
-            );
+                </form>
+                  );
       }
 }
 
