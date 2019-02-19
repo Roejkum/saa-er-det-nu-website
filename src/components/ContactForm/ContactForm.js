@@ -223,22 +223,22 @@ class ContactForm extends Component {
                     <div className="field col-xs-12">
                         <div className="control">
                           <label className="label" htmlFor={"name"} hidden>Navn</label>
-                          <input className="input" type={"text"} name={"FNAME"} onChange={this.handleChange} onFocus={this.handleChange} id={"name"} placeholder="Navn*" required={true} />
+                          <input className="input" type={"text"} name={"FNAME"} onChange={this.handleChange} onBlur={this.handleChange} id={"name"} placeholder="Navn*" required={true} />
                           <p className="error-msg">Fejl i indtastning</p>
                         </div>
                       </div>
                     <div className="field col-xs-12">
                         <div className="control">
                           <label className="label" htmlFor={"email"} hidden>Email</label>
-                          <input className="input" type={"email"} name={"email"} onChange={this.handleChange} onFocus={this.handleChange} id={"email"} placeholder="Email*" required={true} />
-                          <p className="error-msg">Fejl i indtastning</p>
+                          <input className="input" type={"email"} name={"email"} onChange={this.handleChange} onBlur={this.handleChange} id={"email"} placeholder="Email*" required={true} />
+                          <p className="error-msg">Ugyldig Email</p>
                         </div>
                       </div>
                       <div className="field col-xs-12">
                         <div className="control">
                           <label className="label" htmlFor={"ZIP"} hidden>postnummer</label>
-                          <input className="input" type={"text"} name={"ZIP"} pattern="[0-9]{4}" onChange={this.handleChange} onFocus={this.handleChange} id={"ZIP"} placeholder="Postnummer*" required={true} />
-                          <p className="error-msg">Fejl i indtastning</p>
+                          <input className="input" type={"text"} name={"ZIP"} pattern="[0-9]{4}" onChange={this.handleChange} onBlur={this.handleChange} id={"ZIP"} placeholder="Postnummer*" required={true} />
+                          <p className="error-msg">Ugyldigt postnummer</p>
                         </div>
                       </div>
                       <div className="field col-xs-12">
