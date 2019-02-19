@@ -159,14 +159,12 @@ class ContactForm extends Component {
                 submitError: true,
                 loading: false
               });
-              // console.log(data.msg);
             } else if(data.result === 'error' && data.msg.includes('too many recent signup requests')) {
               this.setState({
                 errorMsg: 'For mange forsøg. Prøv igen senere.',
                 submitError: true,
                 loading: false
               });
-              // console.log(data.msg);
             } else if(data.result !== 'error') {
               this.setState({
                 loading: false,
@@ -174,12 +172,14 @@ class ContactForm extends Component {
                 submitted: true,
                 errorMsg: ''
               });
-              // console.log(data.msg);
-              // console.log('submitted');
-              // console.log(this.state.errorMsg);
             }
           })
-          
+          .catch(err => {
+            this.setState({
+              errorMsg: 'Fejl i din forbindelsen. Prøv igen.',
+              loading: false
+            });
+          })
         } else {
           this.setState({errorMsg: 'Der er fejl i din indtastning. Gennemgå venligst formularen og prøv igen.'})
         }
@@ -192,6 +192,12 @@ class ContactForm extends Component {
         if(this.state.errorMsg) {
           errorMsg = (
             <p className="error">{this.state.errorMsg}</p>
+          );
+        }
+        let validationMsg = <p className="validation-error">-</p>;
+        if(!this.state.isValidated) {
+          validationMsg = (
+            <p className="invalid validation-error">Udfyld venligst alle felter korrekt</p>
           );
         }
     
@@ -217,21 +223,21 @@ class ContactForm extends Component {
                     <div className="field col-xs-12">
                         <div className="control">
                           <label className="label" htmlFor={"name"} hidden>Navn</label>
-                          <input className="input" type={"text"} name={"FNAME"} onChange={this.handleChange} onFocus={this.handleChange} id={"name"} placeholder="Navn" required={true} />
+                          <input className="input" type={"text"} name={"FNAME"} onChange={this.handleChange} onFocus={this.handleChange} id={"name"} placeholder="Navn*" required={true} />
                           <p className="error-msg">Fejl i indtastning</p>
                         </div>
                       </div>
                     <div className="field col-xs-12">
                         <div className="control">
                           <label className="label" htmlFor={"email"} hidden>Email</label>
-                          <input className="input" type={"email"} name={"email"} onChange={this.handleChange} onFocus={this.handleChange} id={"email"} placeholder="Email" required={true} />
+                          <input className="input" type={"email"} name={"email"} onChange={this.handleChange} onFocus={this.handleChange} id={"email"} placeholder="Email*" required={true} />
                           <p className="error-msg">Fejl i indtastning</p>
                         </div>
                       </div>
                       <div className="field col-xs-12">
                         <div className="control">
                           <label className="label" htmlFor={"ZIP"} hidden>postnummer</label>
-                          <input className="input" type={"text"} name={"ZIP"} pattern="[0-9]{4}" onChange={this.handleChange} onFocus={this.handleChange} id={"ZIP"} placeholder="Postnummer" required={true} />
+                          <input className="input" type={"text"} name={"ZIP"} pattern="[0-9]{4}" onChange={this.handleChange} onFocus={this.handleChange} id={"ZIP"} placeholder="Postnummer*" required={true} />
                           <p className="error-msg">Fejl i indtastning</p>
                         </div>
                       </div>
@@ -254,6 +260,7 @@ class ContactForm extends Component {
                           <span>SKRIV UNDER</span>
                           <svg className="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><path className="checkmark" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
                         </button>
+                        {validationMsg}
                         {errorMsg}
                       </div>
                   </div>
