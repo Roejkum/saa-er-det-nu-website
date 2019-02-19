@@ -16,6 +16,9 @@ class ContactForm extends Component {
         form: {
             email: '',
             listFields: {
+              ZIP: '',
+              signup: '',
+              NEWS: 'Nej'
             }
         },
       };  
