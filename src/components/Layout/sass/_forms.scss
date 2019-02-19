@@ -177,7 +177,12 @@ label {
 }
 
   /* Submit button visual feedback */
-
+.validation-error {
+    opacity: 0;
+    transition: all 0.4s ease;
+    margin: 0;
+    color: $red;
+}   
   button[type="submit"] {
       position: relative;
     & svg {
@@ -242,5 +247,9 @@ label {
       to {
         transform: rotate(360deg);
       }
+    }
+
+    &:hover + .validation-error.invalid {
+        opacity: 1;
     }
 }
