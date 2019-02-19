@@ -159,14 +159,12 @@ class ContactForm extends Component {
                 submitError: true,
                 loading: false
               });
-              // console.log(data.msg);
             } else if(data.result === 'error' && data.msg.includes('too many recent signup requests')) {
               this.setState({
                 errorMsg: 'For mange forsøg. Prøv igen senere.',
                 submitError: true,
                 loading: false
               });
-              // console.log(data.msg);
             } else if(data.result !== 'error') {
               this.setState({
                 loading: false,
@@ -174,12 +172,14 @@ class ContactForm extends Component {
                 submitted: true,
                 errorMsg: ''
               });
-              // console.log(data.msg);
-              // console.log('submitted');
-              // console.log(this.state.errorMsg);
             }
           })
-          
+          .catch(err => {
+            this.setState({
+              errorMsg: 'Fejl i din forbindelsen. Prøv igen.',
+              loading: false
+            });
+          })
         } else {
           this.setState({errorMsg: 'Der er fejl i din indtastning. Gennemgå venligst formularen og prøv igen.'})
         }
