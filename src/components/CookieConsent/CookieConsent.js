@@ -69,7 +69,7 @@ class CookieConsent extends Component {
 
     render() {
         let cookieBanner = (<div className={Styles.bannerWrapper}>
-            <p>Vi bruger vores cookies til statistik, indholdsoptimering, præferencer og målrettet indhold fra os. Tredjepart kan anvende cookies til målrettet markedsføring. Ved at klikke Acceptér giver du dit samtykke. Læs mere om vores <Link to="/cookie-politik" className="white-text" >cookiepolitik</Link> og vores <Link to="/persondatapolitik" className="white-text">persondatapolitik</Link>.</p>
+            <p>Denne hjemmeside bruger cookies. Vi bruger cookies til at tilpasse vores indhold og annoncer, til at vise dig funktioner til sociale medier og til at analysere vores trafik. Vi deler også oplysninger om din brug af vores website med vores partnere inden for sociale medier og analysepartnere. Vores partnere kan kombinere disse data med andre oplysninger, du har givet dem, eller som de har indsamlet fra din brug af deres tjenester. Læs mere om vores <Link to="/cookie-politik" className="white-text" >cookiepolitik</Link> og vores <Link to="/persondatapolitik" className="white-text">persondatapolitik</Link>.</p>
             <button className={Styles.danger} onClick={() => this.cookieAcceptanceHandler(false)}>Afvis</button>
             <button className={Styles.succes} onClick={() => {
                 this.cookieAcceptanceHandler(true);
