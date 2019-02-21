@@ -68,7 +68,7 @@ export default class IndexPage extends React.Component {
               <div className="col-sm-6 col-md-7 col-xs-12 last-sm pl-sm">
                 <img src={logo} alt="Logo" className="logo center-xs"/>
                 <h1 className="text-center-xs">Gør valget <span className="bold-text">grønt!</span></h1>
-                <BarCount amount={this.state.totalSigners} totalAmount="10000"/>
+                <BarCount amount={this.state.totalSigners}/>
                 <p className="text-center-xs">De politiske partier skal love at gøre Danmark grønt. De skal love at stoppe ødelæggelsen af vores natur og klima. Nu. Vi vil ikke høre mere snak, vi vil se ægte handling.</p>
                 <p className="text-center-xs">
                 Det kræver, at vi samler os nu og hæver stemmen. Vil du være med?
