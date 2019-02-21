@@ -61,7 +61,8 @@
     }
 }
 .text-section {
-    padding: 10rem 0;
+    padding: 5rem 0;
+    background-image: linear-gradient(to top right, #b8dbf3, white);
 }
 section {
     position: relative;
@@ -112,4 +113,17 @@ table {
     bottom: 0;
     left: 0;
     right: 0;
+}
+
+.checkmark {
+    max-height: 40px;
+    margin-right: 20px;
+
+}
+
+.checkmarkbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
 }
