@@ -4,7 +4,7 @@ import BarCount from '../components/BarCount/BarCount';
 import ContactForm from '../components/ContactForm/ContactForm';
 import Grass from '../components/Grass/Grass'
 import mosaik from "../../static/img//mosaik.jpg";
-import MapDk from '../components/Map/MapDk';
+import checkmark from '../img/checkmark.svg';
 import logo from "../../static/img/logo.svg";
 import SunSvg from '../components/SunSvg/SunSvg';
 import Trees from '../components/Trees/Trees';
@@ -111,16 +111,26 @@ export default class IndexPage extends React.Component {
         <section className="map-section">
           <div className="container-fluid wrap">
             <div className="row middle-sm">
-              <div className="col-sm-7 col-md-6 col-md-offset-1 col-xs-12 last-sm">
+            <div className="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-xs-12">
               <h2 className="fadeIn">Sådan kan vi gøre valget grønt, hvis <span className="bold-text">du er med</span></h2>
-              <p className="fadeIn"><span className="bold-text">Vi skal</span> være mange. Del kampagnen på sociale medier og skriv direkte til folk du kender</p>
+                <div className="checkmarkbox">
+                 <img className="fadeIn checkmark" src={checkmark} />
+                 <p className="fadeIn"><span className="bold-text">Vi skal</span> være mange. Del kampagnen på sociale medier og skriv direkte til folk du kender</p>
+                </div>
+                <div className="checkmarkbox">
+                 <img className="fadeIn checkmark" src={checkmark} />
               <p className="fadeIn"><span className="bold-text">Vi skal</span> være synlige. Skab opmærksomhed hvor du bor, arbejder eller uddanner dig.</p>
+              </div>
+              <div className="checkmarkbox">
+                 <img className="fadeIn checkmark" src={checkmark} />
               <p className="fadeIn"><span className="bold-text">Vi skal</span>  lægge pres. Vi henvender os til politikerne og beder dem gøre Danmark grønt - online og til valgmøder.</p>
-
+              </div>
+              <div className="checkmarkbox">
+                 <img className="fadeIn checkmark" src={checkmark} />
               <p className="fadeIn"><span className="bold-text">Ved at vi... ??</span> (har du en ide til, hvordan vi sammen kan gøre valget grønt? Så snart du har skrevet under, så skyd dine ideer afsted til os!)</p>
               </div>
+              </div>
               <div className="col-sm-5 col-xs-12 map">
-              <MapDk visible={this.state.mapVisible} /> 
               </div>
             </div>
           </div>
