@@ -119,6 +119,12 @@ const cookiePolicy = () => (
                       <td>1 minut</td>
                     </tr>
                     <tr>
+                      <td>_fbp</td>
+                      <td>Facebook</td>
+                      <td>Statistik over besøgende. Bruges til at optimere og målrette vores kommunikation på facebook.</td>
+                      <td>3 måneder</td>
+                    </tr>
+                    <tr>
                       <td>CookieConsent</td>
                       <td>Så er det nu</td>
                       <td>Gemmer dine cookieindstillinger</td>

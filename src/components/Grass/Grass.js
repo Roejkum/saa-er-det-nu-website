@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Grass.module.scss';
-import grass1 from "../../../static/img/grass-1.svg";
 import grass2 from "../../../static/img/grass-2.svg";
 import grass3 from "../../../static/img/grass-3.svg";
 import grass4 from "../../../static/img/grass-4.svg";

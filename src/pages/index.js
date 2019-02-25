@@ -14,7 +14,6 @@ export default class IndexPage extends React.Component {
   state = {
     totalSigners: null,
     mapVisible: false
-
   }
 
   componentDidMount() {
@@ -22,11 +21,9 @@ export default class IndexPage extends React.Component {
         method: 'POST'
       })
       .then((response) => {
-        console.log(response);
         return response.json();
       })
       .then((data) => {
-        // console.log(JSON.stringify(data.msg));
         this.setState({totalSigners: data.msg})
       })
       .catch((error) => console.log(error));
@@ -47,8 +44,7 @@ export default class IndexPage extends React.Component {
       const Parallax = require('parallax-js')
         const scene = document.getElementById('scene');
         const parallaxInstance = new Parallax(scene);
-      
-    
+
   }
 
   render() {
@@ -114,19 +110,19 @@ export default class IndexPage extends React.Component {
             <div className="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-xs-12">
               <h2 className="fadeIn">Sådan kan vi gøre valget grønt, hvis <span className="bold-text">du er med</span></h2>
                 <div className="checkmarkbox">
-                 <img className="fadeIn checkmark" src={checkmark} />
+                 <img className="fadeIn checkmark" alt="checkmark" src={checkmark} />
                  <p className="fadeIn"><span className="bold-text">Vi skal</span> være mange. Del kampagnen på sociale medier og skriv direkte til folk du kender</p>
                 </div>
                 <div className="checkmarkbox">
-                 <img className="fadeIn checkmark" src={checkmark} />
+                 <img className="fadeIn checkmark" alt="checkmark" src={checkmark} />
               <p className="fadeIn"><span className="bold-text">Vi skal</span> være synlige. Skab opmærksomhed hvor du bor, arbejder eller uddanner dig.</p>
               </div>
               <div className="checkmarkbox">
-                 <img className="fadeIn checkmark" src={checkmark} />
+                 <img className="fadeIn checkmark" alt="checkmark" src={checkmark} />
               <p className="fadeIn"><span className="bold-text">Vi skal</span>  lægge pres. Vi henvender os til politikerne og beder dem gøre Danmark grønt - online og til valgmøder.</p>
               </div>
               <div className="checkmarkbox">
-                 <img className="fadeIn checkmark" src={checkmark} />
+                 <img className="fadeIn checkmark" alt="checkmark" src={checkmark} />
               <p className="fadeIn"><span className="bold-text">Ved at vi... ??</span> (har du en ide til, hvordan vi sammen kan gøre valget grønt? Så snart du har skrevet under, så skyd dine ideer afsted til os!)</p>
               </div>
               </div>
