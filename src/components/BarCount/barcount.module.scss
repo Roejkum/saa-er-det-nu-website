@@ -26,10 +26,6 @@
         }
         &.errorMessage {
             transform: none;
-            -webkit-transform: none;
-            -moz-transform: none;
-            -ms-transform: none;
-            -o-transform: none;
             color: $red;
         }
     }
