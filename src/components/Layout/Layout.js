@@ -11,7 +11,6 @@ class TemplateWrapper extends Component {
   }
 
   acceptAnalyticsHandler = () => {
-    console.log('clicked');
     this.setState({analyticsAccepted: true});
   }
 
