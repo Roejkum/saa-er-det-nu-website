@@ -46,6 +46,15 @@ const PrivacyPolicy = () => (
                     <li>Oplysninger om, hvilke kanaler og undergrupper du følger og deltager aktivt i, i onlinefora faciliteret af “Så er det nu” (for eksempel vores slack-gruppe).</li>
                   </ul>
 
+                  <h3>Opsummering af datapolitik</h3>
+                  <ul>
+                    <li>Vi skal bruge din e-mail for at være sikre på, at alle underskrivere er unikke.</li>
+                    <li>Vi deler ikke dine informationer med andre. Eneste undtagelse er hvis/når vi skal dokumentere antallet af underskrivere for myndighederne.</li>
+                    <li>Vi beholder dine informationer så længe de er nødvendige til at opnå foreningens formål, dog maksimalt 2 år. Og vi har  strenge regler for at sikre sikker opbevaring (se mere herunder)</li>
+                    <li>Vi skriver til dig på din e-mail adresse, hvis du har angivet at vi gerne må kontakte dig.</li>
+                    <li>Vi bruger cookies for at se om og hvordan du interagerer med “Så er det nu”’s hjemmeside, indholdet i vores nyhedsbreve og på sociale medier, inklusiv i onlinefora som Slack, hvis du vælger at deltage der.</li>
+                  </ul>
+
                   <h3>Cookiepolitik</h3>
                   <p>Du kan læse vores cookiepolitik for <a href="/cookie-politik">“Så er det nu”’s hjemmesider her</a></p>
                   <h3>Persondata behandles med følgende to formål</h3>
