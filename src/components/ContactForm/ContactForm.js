@@ -237,7 +237,7 @@ class ContactForm extends Component {
                           <label className="label" htmlFor={"email"}>
                             <span className="hidden">Email</span>
                             <input className="input" type={"email"} name={"email"} onChange={this.handleChange} onBlur={this.handleChange} id={"email"} placeholder="Email*" required={true} />
-                            <p className="error-msg">Ugyldig Email</p>
+                            <p className="error-msg">Indtast valid email</p>
                           </label>
                         </div>
                       </div>
@@ -246,7 +246,7 @@ class ContactForm extends Component {
                           <label className="label" htmlFor={"ZIP"}>
                             <span className="hidden">postnummer</span>
                             <input className="input" type={"text"} name={"ZIP"} pattern="[0-9]{4}" onChange={this.handleChange} onBlur={this.handleChange} id={"ZIP"} placeholder="Postnummer*" required={true} />
-                            <p className="error-msg">Ugyldigt postnummer</p>
+                            <p className="error-msg">Indtast 4 cifre</p>
                           </label>
                         </div>
                       </div>
