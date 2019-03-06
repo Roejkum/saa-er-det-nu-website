@@ -17,7 +17,7 @@ module.exports = {
     title: 'Så er det nu',
     description: 'Hvis du også synes at klima og natur skal øverst på dagsordenen til det kommende folketingsvalg, så skriv under og vær med til at råbe politikerne op!',
     keywords: 'Så er det nu, såerdet.nu, såerdetnu, saaerdetnu, gør valget grønt, gørvalgetgrønt, grøntvalg, grønt valg',
-    siteUrl: 'https://saaerdet.nu'
+    siteUrl: 'https://www.saaerdet.nu'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
