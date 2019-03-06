@@ -48,7 +48,9 @@ class TemplateWrapper extends Component {
   
             <meta property="og:type" content="website" />
             <meta property="og:title" content={data.site.siteMetadata.title} />
-            <meta property="og:url" content="https://saaerdet.nu" />
+            <meta property="og:description" content={data.site.siteMetadata.description} />
+            <meta property="og:url" content="https://www.saaerdet.nu" />
+            <meta property="og:locale" content="da_DK" />
             <meta property="og:image" content="/img/mosaik.jpg" />
             
             {this.state.analyticsAccepted ? (

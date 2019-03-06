@@ -14,8 +14,8 @@ module.exports = {
     )
   },
   siteMetadata: {
-    title: 'Så er det nu',
-    description: 'Hvis du også synes at klima og natur skal øverst på dagsordenen til det kommende folketingsvalg, så skriv under og vær med til at råbe politikerne op!',
+    title: 'Så er det nu - gør valget grønt',
+    description: 'Hvis du også synes, at klima og natur skal øverst på dagsordenen til det kommende folketingsvalg, så skriv under og vær med til at råbe politikerne op - gør valget gønt!',
     keywords: 'Så er det nu, såerdet.nu, såerdetnu, saaerdetnu, gør valget grønt, gørvalgetgrønt, grøntvalg, grønt valg',
     siteUrl: 'https://www.saaerdet.nu'
   },
