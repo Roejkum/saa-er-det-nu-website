@@ -4,9 +4,13 @@ import { Link } from 'gatsby'
 import grass from "../../static/img/grassnew.svg";
 import SunSvg from '../components/SunSvg/SunSvg';
 import Trees from '../components/Trees/Trees';
+import { Helmet } from 'react-helmet';
 
 const NotFoundPage = () => (
   <Layout>
+    <Helmet>
+      <title>404</title>
+    </Helmet>
   <section className="section section-signup" style={{minHeight: '100vh', padding: 0}}>
   <SunSvg/>
   <Trees/>

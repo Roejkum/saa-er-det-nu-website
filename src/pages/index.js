@@ -156,6 +156,7 @@ export default class IndexPage extends React.Component {
               </div>
               </div>
               </div>
+              <p className="fadeIn text-center"><a href="https://www.facebook.com/saaerdetnu/">Følg med på Facebook</a></p>
         </section>        
       </Layout>
     )

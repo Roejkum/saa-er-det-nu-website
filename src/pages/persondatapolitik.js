@@ -2,10 +2,14 @@ import React from 'react';
 import Layout from '../components/Layout/Layout';
 import SunSvg from '../components/SunSvg/SunSvg';
 import { Link } from 'gatsby';
+import { Helmet } from 'react-helmet';
 
 const PrivacyPolicy = () => (
 
   <Layout>
+    <Helmet>
+      <title>Persondatapolitik for “Så er det nu”</title>
+    </Helmet>
     <section className="section section-signup fullHeight">
       <SunSvg/>
       <div className="container-fluid wrap">
