@@ -23,6 +23,7 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     `gatsby-plugin-sitemap`,
+    'gatsby-plugin-robots-txt',
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
