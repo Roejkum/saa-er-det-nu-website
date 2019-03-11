@@ -9,8 +9,13 @@
     transform-origin: 50% 50%;
     z-index: 80;
 
+    @media screen and (max-width: 57.5rem) {
+        width: 10rem;
+    }
+
     @media screen and (max-width: 48rem) {
         bottom: 1vw;
+        width: 15rem;
     }
 
     // .tree {

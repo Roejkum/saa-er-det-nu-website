@@ -12,6 +12,7 @@
     background-image: linear-gradient(to top right, #b8dbf3, $white);
     position: relative;
     padding: 6rem 0;
+    padding-bottom: 10rem;
     box-sizing: border-box;
     overflow: hidden;
 
@@ -67,8 +68,23 @@
 section {
     position: relative;
 }
+.section-w-padding {
+    padding: 6rem 0;
+}
 .table-wrapper {
     overflow: scroll;
+}
+
+.logo-partners {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    img {
+        width: 10rem;
+        max-width: 100%;
+        margin: 0 2rem;
+    }
 }
 table {
     width: 100%;
