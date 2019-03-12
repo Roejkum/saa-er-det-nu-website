@@ -6,7 +6,7 @@ import Grass from '../components/Grass/Grass'
 import mosaik from "../../static/img//mosaik.jpg";
 import vSLogo from '../../static/img/Verdens-Skove-logo.png';
 import dMLogo from '../../static/img/DM-vandret.png';
-import dNLogo from '../../static/img/DN-logo_almindelig_RGB_small.jpg';
+import dNLogo from '../../static/img/DN-logo_almindelig_RGB_small.png';
 import checkmark from '../img/checkmark.svg';
 import logo from "../../static/img/logo.svg";
 import SunSvg from '../components/SunSvg/SunSvg';
@@ -54,6 +54,20 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout>
+         <section className="section section-partners hidden-xs">
+          <div className="container wrap">
+            <div className="row center-xs">
+              <div className="col-xs-12">
+                <p className="text-center no-mb small bold-text">Støttet af:</p>
+              </div>
+              <div className="col-xs-12 logo-partners">
+                <img src={vSLogo} alt="Verdens Skove logo" className="fadeIn"/>
+                <img src={dMLogo} alt="Verdens Skove logo" className="fadeIn"/>
+                <img src={dNLogo} alt="Verdens Skove logo" className="fadeIn"/>
+              </div>
+            </div>
+          </div>
+        </section>
         <section className="section section-signup">
         <div id="scene">
           <SunSvg/>
@@ -72,6 +86,12 @@ export default class IndexPage extends React.Component {
                 <p className="text-center-xs">
                 Det kræver, at vi samler os nu og hæver stemmen. Vil du være med?
                 </p>
+                <p className="text-center no-mb small bold-text hidden-xs-up">Støttet af:</p>
+              <div className="col-xs-12 logo-partners flex hidden-xs-up">
+                <img src={vSLogo} alt="Verdens Skove logo" className="fadeIn"/>
+                <img src={dMLogo} alt="Verdens Skove logo" className="fadeIn"/>
+                <img src={dNLogo} alt="Verdens Skove logo" className="fadeIn"/>
+              </div>
               </div>
 
               {/* Signupform */}
@@ -100,18 +120,6 @@ export default class IndexPage extends React.Component {
               </div>
             </div>
           </div>
-          </div>
-        </section>
-
-        <section className="section section-w-padding">
-          <div className="container wrap">
-            <div className="row center-xs">
-              <div className="col-xs-12 logo-partners">
-                <img src={vSLogo} alt="Verdens Skove logo" className="fadeIn"/>
-                <img src={dMLogo} alt="Verdens Skove logo" className="fadeIn"/>
-                <img src={dNLogo} alt="Verdens Skove logo" className="fadeIn"/>
-              </div>
-            </div>
           </div>
         </section>
 
