@@ -106,7 +106,7 @@ export default class IndexPage extends React.Component {
         <section className="section section-w-padding">
           <div className="container wrap">
             <div className="row center-xs">
-              <div className="col-xs-12 col-sm-8 col-md-6 logo-partners">
+              <div className="col-xs-12 logo-partners">
                 <img src={vSLogo} alt="Verdens Skove logo" className="fadeIn"/>
                 <img src={dMLogo} alt="Verdens Skove logo" className="fadeIn"/>
                 <img src={dNLogo} alt="Verdens Skove logo" className="fadeIn"/>
