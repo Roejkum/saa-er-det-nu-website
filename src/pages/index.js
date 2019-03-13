@@ -58,7 +58,7 @@ export default class IndexPage extends React.Component {
           <div className="container wrap">
             <div className="row center-xs">
               <div className="col-xs-12">
-                <p className="text-center no-mb small bold-text">Støttet af:</p>
+                <p className="text-center no-mb small bold-text">Samarbejdspartnere:</p>
               </div>
               <div className="col-xs-12 logo-partners">
                 <img src={dNLogo} alt="Verdens Skove logo" className="fadeIn"/>
@@ -86,7 +86,7 @@ export default class IndexPage extends React.Component {
                 <p className="text-center-xs">
                 Det kræver, at vi samler os nu og hæver stemmen. Vil du være med?
                 </p>
-                <p className="text-center no-mb small bold-text hidden-xs-up">Støttet af:</p>
+                <p className="text-center no-mb small bold-text hidden-xs-up">Samarbejdspartnere:</p>
               <div className="col-xs-12 logo-partners flex hidden-xs-up">
                 <img src={dNLogo} alt="Verdens Skove logo" className="fadeIn"/>
                 <img src={vSLogo} alt="Verdens Skove logo" className="fadeIn"/>
