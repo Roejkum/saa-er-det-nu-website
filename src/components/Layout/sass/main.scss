@@ -12,6 +12,8 @@
     background-image: linear-gradient(to top right, #b8dbf3, $white);
     position: relative;
     padding: 6rem 0;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
     box-sizing: border-box;
     overflow: hidden;
 
@@ -27,6 +29,7 @@
 .fullHeight {
     min-height: 100vh;
 }
+
 .stillere-sektion {
     &::before {
         content: '';
@@ -67,8 +70,34 @@
 section {
     position: relative;
 }
+.section-w-padding {
+    padding: 6rem 0;
+}
 .table-wrapper {
     overflow: scroll;
+}
+.section-partners {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+.logo-partners {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+    img {
+        width: 6.5rem;
+        max-width: 100%;
+        margin: 0.5rem 1rem;
+
+        @media screen and (max-width: 48rem) {
+            margin: 1rem;
+        }
+    }
 }
 table {
     width: 100%;
@@ -126,4 +155,20 @@ table {
     flex-direction: row;
     align-items: center;
 
+}
+.hidden-xs-up {
+    display: none;
+}
+
+@media screen and (max-width: 48rem) {
+    .hidden-xs {
+        display: none;
+    }
+    .hidden-xs-up {
+        display: block;
+
+        &.flex {
+            display: flex;
+        }
+    }
 }
