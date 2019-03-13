@@ -61,9 +61,9 @@ export default class IndexPage extends React.Component {
                 <p className="text-center no-mb small bold-text">Støttet af:</p>
               </div>
               <div className="col-xs-12 logo-partners">
+                <img src={dNLogo} alt="Verdens Skove logo" className="fadeIn"/>
                 <img src={vSLogo} alt="Verdens Skove logo" className="fadeIn"/>
                 <img src={dMLogo} alt="Verdens Skove logo" className="fadeIn"/>
-                <img src={dNLogo} alt="Verdens Skove logo" className="fadeIn"/>
               </div>
             </div>
           </div>
@@ -88,9 +88,9 @@ export default class IndexPage extends React.Component {
                 </p>
                 <p className="text-center no-mb small bold-text hidden-xs-up">Støttet af:</p>
               <div className="col-xs-12 logo-partners flex hidden-xs-up">
+                <img src={dNLogo} alt="Verdens Skove logo" className="fadeIn"/>
                 <img src={vSLogo} alt="Verdens Skove logo" className="fadeIn"/>
                 <img src={dMLogo} alt="Verdens Skove logo" className="fadeIn"/>
-                <img src={dNLogo} alt="Verdens Skove logo" className="fadeIn"/>
               </div>
               </div>
 
