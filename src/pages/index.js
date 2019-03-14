@@ -9,6 +9,9 @@ import dMLogo from '../../static/img/DM-vandret.png';
 import dNLogo from '../../static/img/DN-logo_almindelig_RGB_small.png';
 import checkmark from '../img/checkmark.svg';
 import logo from "../../static/img/logo.svg";
+import instagram from "../../static/img/instagram.png";
+import facebook from "../../static/img/facebook.png";
+import twitter from "../../static/img/twitter.png";
 import SunSvg from '../components/SunSvg/SunSvg';
 import Trees from '../components/Trees/Trees';
 import { Link } from 'gatsby';
@@ -123,7 +126,7 @@ export default class IndexPage extends React.Component {
           </div>
         </section>
 
-        {/* Map section */}
+        {/* checkmark section */}
         <section className="map-section">
           <div className="container-fluid wrap">
             <div className="row middle-sm">
@@ -146,12 +149,16 @@ export default class IndexPage extends React.Component {
               <p className="fadeIn"><span className="bold-text">Ved at vi... ??</span> (har du en ide til, hvordan vi sammen kan gøre valget grønt? Så snart du har skrevet under, så skyd dine ideer afsted til os!)</p>
               </div>
               </div>
-              <div className="col-sm-5 col-xs-12 map">
-              </div>
             </div>
+          </div>
+          <div className="some-icons-wrapper">
+            <a href="https://www.facebook.com/saaerdetnu/" target="_blank"><img src={facebook} className="some-icon fadeIn"/></a>
+            <a href="https://www.instagram.com/goervalgetgroent/" target="_blank"><img src={instagram} className="some-icon fadeIn"/></a>
+            <a href="https://twitter.com/saaerdetnu" target="_blank"><img src={twitter} className="some-icon fadeIn" /></a>
           </div>
         </section>
 
+         {/* Goals section */}
         <section className="text-section">
           <div className="container-fluid wrap">
             <div className="row">
@@ -176,7 +183,6 @@ export default class IndexPage extends React.Component {
               </div>
               </div>
               </div>
-              <p className="fadeIn text-center"><a href="https://www.facebook.com/saaerdetnu/">Følg med på Facebook</a></p>
         </section>        
       </Layout>
     )
