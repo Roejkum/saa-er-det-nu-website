@@ -30,43 +30,43 @@ button:hover, .btn:hover {
 }
 
 
-.can_embed {
-    input[type=submit] {
-        background-color: $signal !important;
-        margin: 2rem 0;
-    }
-    .country_wrap {
-        margin: 2rem 0;
-    }
-    .country_drop_wrap {
-        display: block;
-        border-bottom: 2px solid $grey-light;
-        border-radius: 0.3rem;
-        position: relative;
-        background-color: #f7f7f7;
+// .can_embed {
+//     input[type=submit] {
+//         background-color: $signal !important;
+//         margin: 2rem 0;
+//     }
+//     .country_wrap {
+//         margin: 2rem 0;
+//     }
+//     .country_drop_wrap {
+//         display: block;
+//         border-bottom: 2px solid $grey-light;
+//         border-radius: 0.3rem;
+//         position: relative;
+//         background-color: #f7f7f7;
 
-        &::after {
-            content: '';
-            position: absolute;
-            right: 0.5rem;
-            width: 0;
-            height: 0;
-            border-left: 0.5rem solid transparent;
-            border-right: 0.5rem solid transparent;
-            border-top: 0.5rem solid $signal;
-            top: 50%;
+//         &::after {
+//             content: '';
+//             position: absolute;
+//             right: 0.5rem;
+//             width: 0;
+//             height: 0;
+//             border-left: 0.5rem solid transparent;
+//             border-right: 0.5rem solid transparent;
+//             border-top: 0.5rem solid $signal;
+//             top: 50%;
           
-        }
-    }
-    .can_select {
-        padding: 1rem 1.5rem;
+//         }
+//     }
+//     .can_select {
+//         padding: 1rem 1.5rem;
 
-        &.required {
-            color: auto;
-            font-weight: normal;
-        }
-    }
-    .can_selectInner {
-        width: auto;
-    }
-}
+//         &.required {
+//             color: auto;
+//             font-weight: normal;
+//         }
+//     }
+//     .can_selectInner {
+//         width: auto;
+//     }
+// }
