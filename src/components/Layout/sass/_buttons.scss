@@ -37,9 +37,10 @@ button:hover, .btn:hover {
     }
     .country_drop_wrap {
         display: block;
-        padding: 1rem 1.5rem;
-        border: 2px solid $grey-light;
+        border-bottom: 2px solid $grey-light;
         border-radius: 0.3rem;
+        position: relative;
+        background-color: lighten($grey-light, 20);
 
         &::after {
             content: '';
@@ -51,7 +52,13 @@ button:hover, .btn:hover {
             border-right: 0.5rem solid transparent;
             border-top: 0.5rem solid $signal;
             top: 50%;
-            transform: translateY();
+          
         }
+    }
+    .can_select {
+        padding: 1rem 1.5rem;
+    }
+    .can_selectInner {
+        width: auto;
     }
 }
