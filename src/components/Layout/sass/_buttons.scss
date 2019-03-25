@@ -1,4 +1,4 @@
-button, .btn {
+button, .btn, input[type=submit] {
     border: 0px;
     border-radius: 0.3rem;
     width:100%;
@@ -27,4 +27,31 @@ button:hover, .btn:hover {
     background-color: darken($signal, 10);
     transform: scale(1.02);
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+.can_embed {
+    input[type=submit] {
+        background-color: $signal !important;
+        margin: 2rem 0;
+    }
+    .country_drop_wrap {
+        display: block;
+        padding: 1rem 1.5rem;
+        border: 2px solid $grey-light;
+        border-radius: 0.3rem;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0.5rem;
+            width: 0;
+            height: 0;
+            border-left: 0.5rem solid transparent;
+            border-right: 0.5rem solid transparent;
+            border-top: 0.5rem solid $signal;
+            top: 50%;
+            transform: translateY();
+        }
+    }
 }
