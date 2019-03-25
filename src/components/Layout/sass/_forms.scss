@@ -48,12 +48,15 @@ input, textarea, select, input:focus, textarea:focus, select:focus, #can_embed_f
   content: none;
 }
 #can_embed_form #can_zip_search .floatlabel-wrapper, #can_embed_form #can_zip_search #form-zip_code-submit {
-  width: 100%;
+  width: 100% !important;
   height: auto;
   margin: 1rem 0;
   float: none;
 }
-.can_select .required {
+.floatlabel-label-activ {
+  padding: 0 !important;
+}
+.can_select.required {
   color: auto !important;
 }
 input[type="checkbox"] {
