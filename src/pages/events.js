@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from '../components/Layout/Layout';
 import SunSvg from '../components/SunSvg/SunSvg';
-import { Link } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
 const events = () => (
