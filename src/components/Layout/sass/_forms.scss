@@ -9,7 +9,7 @@ input, textarea, select, input:focus, textarea:focus, select:focus, #can_embed_f
     border-bottom: 2px solid $grey-light !important;
     transition: border-color 0.4s ease;
     display: block;
-    width: 100%;
+    width: 100% !important;
     outline: none;
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
@@ -19,6 +19,7 @@ input, textarea, select, input:focus, textarea:focus, select:focus, #can_embed_f
     background-color: transparent !important;
     padding: 0.5rem 0;
     box-sizing: border-box;
+    height: auto !important;
 }
 #can_embed_form select.can_select, #can_embed_form span.can_select {
   background-color: #f6f6f6;
@@ -28,12 +29,15 @@ input, textarea, select, input:focus, textarea:focus, select:focus, #can_embed_f
   content: none;
 }
 #can_embed_form #can_zip_search .floatlabel-wrapper, #can_embed_form #can_zip_search #form-zip_code-submit {
-  width: 100%;
+  width: 100% !important;
   height: auto;
   margin: 1rem 0;
   float: none;
 }
-.can_select .required {
+.floatlabel-label-activ {
+  padding: 0 !important;
+}
+.can_select.required {
   color: auto !important;
 }
 input[type="checkbox"] {
@@ -108,7 +112,7 @@ label {
 .white-box, #can_sidebar, #action_info_inner {
     padding-top: 2rem;
     padding-bottom: 2.5rem;
-    background-color: white;
+    background-color: white !important;
     border-radius: 1rem;
     box-shadow: 0 5px 30px #0000003b;
     z-index: 100;
@@ -119,6 +123,10 @@ label {
     @media screen and (min-width: 48rem) {
         margin: 0;
     }
+}
+.action_info {
+  display: flex !important;
+  flex-direction: column !important;
 }
 .required {
     color: $red;

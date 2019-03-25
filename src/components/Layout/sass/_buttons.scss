@@ -1,17 +1,18 @@
-button, .btn, #can_embed_form #can_zip_search #form-zip_code-submit, .button.button_red {
-    border: 0;
-    border-radius: 0.3rem;
-    width:100%;
+button, .btn, #can_embed_form #can_zip_search #form-zip_code-submit, .button.button_red, .button {
+    border: 0 !important;
+    border-radius: 0.3rem !important;
+    width:100% !important;
     box-shadow: none;
-    background-color: $signal;
-    padding: 1rem 1.5rem;
-    color: $white;
-    font-weight: bold;
+    background-color: $signal !important;
+    padding: 1rem 1.5rem !important;
+    color: $white !important;
+    font-weight: bold !important;
     cursor: pointer;
     transition: all 0.2s ease;
-    display: block;
+    display: block !important;
     text-transform: uppercase;
-    font-size: 1.2em;
+    font-size: 1.2em !important;
+    height: auto !important;
 
     &:disabled {
         cursor: not-allowed;
