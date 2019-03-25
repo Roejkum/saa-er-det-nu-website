@@ -59,6 +59,20 @@ input, textarea, select, input:focus, textarea:focus, select:focus, #can_embed_f
 .can_select.required {
   color: inherit !important;
 }
+#can_embed_form select.can_select, #can_embed_form span.can_select {
+  background-color: #f6f6f6;
+  border-radius: 0.3rem;
+}
+#can_embed_form .floatlabel-wrapper .floatlabel-label:after {
+  content: none;
+}
+#can_embed_form #can_zip_search .floatlabel-wrapper, #can_embed_form #can_zip_search #form-zip_code-submit {
+  width: 100%;
+  height: auto;
+  margin: 1rem 0;
+  float: none;
+}
+
 input[type="checkbox"] {
     width: auto;
     display: inline-block;
