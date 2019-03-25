@@ -57,7 +57,7 @@ input, textarea, select, input:focus, textarea:focus, select:focus, #can_embed_f
   padding: 0 !important;
 }
 .can_select.required {
-  color: auto !important;
+  color: inherit !important;
 }
 input[type="checkbox"] {
     width: auto;
