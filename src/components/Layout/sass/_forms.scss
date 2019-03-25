@@ -3,7 +3,7 @@ input:-internal-autofill-previewed, input:-internal-autofill-selected, textarea:
     color: inherit !important;
 }
 
-input, textarea, select, input:focus, textarea:focus, select:focus {
+input, textarea, select, input:focus, textarea:focus, select:focus, #can_embed_form input[type=text], #can_embed_form input[type=password], #can_embed_form input[type=url], #can_embed_form input[type=email], #can_embed_form input[type=tel], #can_embed_form input[type=number], #can_embed_form select.can_select, #can_embed_form span.can_select {
     border: 0;
     border-radius: 0;
     border-bottom: 2px solid $grey-light;
@@ -20,6 +20,20 @@ input, textarea, select, input:focus, textarea:focus, select:focus {
     padding: 0.5rem 0;
     box-sizing: border-box;
 }
+#can_embed_form select.can_select, #can_embed_form span.can_select {
+  background-color: #f6f6f6;
+  border-radius: 0.3rem;
+}
+#can_embed_form .floatlabel-wrapper .floatlabel-label:after {
+  content: none;
+}
+#can_embed_form #can_zip_search .floatlabel-wrapper, #can_embed_form #can_zip_search #form-zip_code-submit {
+  width: 100%;
+  height: auto;
+  margin: 1rem 0;
+  float: none;
+}
+
 input[type="checkbox"] {
     width: auto;
     display: inline-block;
@@ -89,7 +103,7 @@ label {
 	color: $black;
 	font-weight: bold;
 }
-.white-box {
+.white-box, #can_sidebar {
     padding-top: 2rem;
     padding-bottom: 2.5rem;
     background-color: white;
