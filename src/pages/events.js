@@ -14,7 +14,7 @@ const events = () => (
       <SunSvg/>
       <div className="container-fluid wrap">
         <div className="row">
-          <div className="col-sm-8 col-sm-offset-2 col-xs-12">
+          <div className="col-xs-12">
             <div className="container-fluid white-box fade-in">
               <div className="row">
                 <div className="col-xs-12">
