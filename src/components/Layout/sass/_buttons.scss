@@ -18,7 +18,7 @@ button, .btn, #can_embed_form #can_zip_search #form-zip_code-submit, .button.but
         cursor: not-allowed;
 
         &:hover {
-            background-color: $grey-light;
+            background-color: $grey-light !important;
             transform: scale(1);
             box-shadow: none;
         }
