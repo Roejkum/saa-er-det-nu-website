@@ -22,11 +22,11 @@
     }
 
     button {
-        width: auto;
+        width: auto !important;
         margin: 1rem;
 
         &.danger {
-            background-color: transparent;
+            background-color: transparent !important;
 
             &:hover {
                 transform: none;
