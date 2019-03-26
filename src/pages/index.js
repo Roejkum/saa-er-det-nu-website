@@ -24,6 +24,7 @@ export default class IndexPage extends React.Component {
   }
 
   componentDidMount() {
+
       fetch('/.netlify/functions/getSubscriberAmount', {
         method: 'POST'
       })
@@ -31,9 +32,10 @@ export default class IndexPage extends React.Component {
         return response.json();
       })
       .then((data) => {
-        this.setState({totalSigners: data.msg})
+        this.setState({ totalSigners: data.msg.total_submissions + 20953})
       })
       .catch((error) => console.log(error));
+
       
       import('scrollreveal').then(({ default: ScrollReveal }) => {
         
