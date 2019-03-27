@@ -31,4 +31,3 @@ exports.handler = function signUp(event, context, callback) {
         });
     });   
   }
-  
