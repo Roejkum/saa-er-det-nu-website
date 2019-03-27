@@ -1,4 +1,6 @@
 #can-form-area-gor-valget-gront {
+    transition: height 0.4s ease;
+    
     .entry-title, .action_description, #action_info {
         display: none;
     }
