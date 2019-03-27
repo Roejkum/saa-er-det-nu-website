@@ -108,7 +108,7 @@ export default class IndexPage extends React.Component {
                     <div className="row">
                       <div className="col-xs-12">
                         <h2>Skriv under og spred ordet, så er vi igang!</h2>
-                        <ContactForm/>
+                        <link href='https://actionnetwork.org/css/style-embed-whitelabel-v3.css' rel='stylesheet' type='text/css' /><script src='https://actionnetwork.org/widgets/v3/form/gor-valget-gront?format=js&source=widget&style=full' async></script><div id='can-form-area-gor-valget-gront' style={{width: '100%'}}></div>
                       </div>
                     </div>
                   </div>
