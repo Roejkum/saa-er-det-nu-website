@@ -3,6 +3,7 @@ import React from 'react';
 const Events = () => {
     return (
     <section className="section section-signup fullHeight">
+    <h1>hello</h1>
       <div className="container-fluid wrap">
         <div className="row">
           <div className="col-xs-12">
