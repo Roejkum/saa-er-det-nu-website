@@ -104,7 +104,7 @@ export default class IndexPage extends React.Component {
 
               {/* Signupform */}
               <div className="col-sm-6 col-md-5 col-xs-12">
-                  <div className="container-fluid white-box fade-in">
+                  <div className="container-fluid white-box fadeIn">
                     <div className="row">
                       <div className="col-xs-12">
                         <h2>Skriv under og spred ordet, så er vi igang!</h2>
