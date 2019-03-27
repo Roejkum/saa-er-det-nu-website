@@ -21,7 +21,6 @@ const events = () => (
                 <div className="col-xs-12">
                 <link href='https://actionnetwork.org/css/style-embed-whitelabel-v3.css' rel='stylesheet' type='text/css' />
                 <script src='https://actionnetwork.org/widgets/v3/event_campaign/middagstest?format=js&source=widget&style=full'></script>
-
                 <div id='can-event_campaign-area-middagstest' style={{width: '100%'}}></div>
                 </div>
               </div>
