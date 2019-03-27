@@ -8,6 +8,7 @@ const events = () => (
   <Layout>
       <Helmet>
       <title>'Så er det nu: Gør valget grønt’ - events</title>
+      <script src='https://actionnetwork.org/widgets/v3/event_campaign/middagstest?format=js&source=widget&style=full'></script>
     </Helmet>
     <section className="section section-signup fullHeight">
       <SunSvg/>
