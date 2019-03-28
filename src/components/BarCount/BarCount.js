@@ -67,7 +67,7 @@ const BarCount = class extends React.Component {
         return (
             <>
             <div className={styles.barcountWrapper}>
-                <p className={this.state.amountTitle ? '' : styles.errorMessage} style={{left: this.state.percentage ? this.state.percentage + '%' : 0}}>{this.state.amountTitle ? this.state.amountTitle : 'Kunne ikke hente data' }</p>
+                <p style={{left: this.state.percentage ? this.state.percentage + '%' : 0}}>{this.state.amountTitle ? this.state.amountTitle : 'Henter data' }</p>
                 
                 
                 <div className={styles.barBackdrop}>
