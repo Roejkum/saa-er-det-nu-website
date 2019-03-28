@@ -10,6 +10,9 @@ import dNLogo from '../../static/img/DN-logo_almindelig_RGB_small.png';
 import dofLogo from '../../static/img/Dansk_ornitolog.png';
 import checkmark from '../img/checkmark.svg';
 import logo from "../../static/img/logo.svg";
+import Okoraad from "../../static/img/Okoraad.png";
+import OLFlogo from "../../static/img/OLF-logo.png";
+import POlogo from "../../static/img/PO_logo.png";
 import instagram from "../../static/img/instagram.png";
 import facebook from "../../static/img/facebook.png";
 import twitter from "../../static/img/twitter.png";
@@ -59,21 +62,6 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout>
-         <section className="section section-partners hidden-xs">
-          <div className="container wrap">
-            <div className="row center-xs">
-              <div className="col-xs-12">
-                <p className="text-center no-mb small bold-text">Samarbejdspartnere:</p>
-              </div>
-              <div className="col-xs-12 logo-partners">
-                <img src={dNLogo} alt="Danmarks Naturfredningsforening" className="fadeIn"/>
-                <img src={vSLogo} alt="Verdens Skove logo" className="fadeIn"/>
-                <img src={dMLogo} alt="Dansk Magisterforening logo" className="fadeIn"/>
-                <img src={dofLogo} alt="Dansk ornotologisk forening logo" className="fadeIn logo-small"/>
-              </div>
-            </div>
-          </div>
-        </section>
         <section className="section section-signup">
         <div id="scene">
           <SunSvg/>
@@ -92,13 +80,6 @@ export default class IndexPage extends React.Component {
                 <p className="text-center-xs">
                 Det kræver, at vi samler os nu og hæver stemmen. Vil du være med?
                 </p>
-                <p className="text-center no-mb small bold-text hidden-xs-up">Samarbejdspartnere:</p>
-              <div className="col-xs-12 logo-partners flex hidden-xs-up">
-                <img src={dNLogo} alt="Danmarks Naturfredningsforening" className="fadeIn"/>
-                <img src={vSLogo} alt="Verdens Skove logo" className="fadeIn"/>
-                <img src={dMLogo} alt="Dansk Magisterforening logo" className="fadeIn"/>
-                <img src={dofLogo} alt="Dansk ornotologisk forening logo" className="fadeIn logo-small"/>
-              </div>
               </div>
 
               {/* Signupform */}
@@ -130,8 +111,29 @@ export default class IndexPage extends React.Component {
           </div>
         </section>
 
-        {/* checkmark section */}
-        <section className="map-section">
+        {/* Logo section */}
+        <section className="logo-section">
+          <div className="container">
+            <div className="row middle-xs">
+              <div className="col-xs-12">
+              <h2 className="fadeIn text-center logo-headline">Samarbejdspartnere</h2>
+               <div className="logo-partners">
+               <img src={dNLogo} alt="Danmarks Naturfredningsforening" className="fadeIn"/>
+               <img src={vSLogo} alt="Verdens Skove logo" className="fadeIn"/>
+               <img src={dMLogo} alt="Dansk Magisterforening logo" className="fadeIn"/>
+               <img src={dofLogo} alt="Dansk ornotologisk forening logo" className="fadeIn logo-small"/>
+               <img src={Okoraad} alt="Det Økologoske Råd logo" className="fadeIn"/>
+               <img src={OLFlogo} alt="Økologosk Landsforening logo" className="fadeIn logo-small"/>
+               <img src={POlogo} alt="Landsforeningen Praktisk Økologi logo" className="fadeIn"/>
+                </div>
+              </div>
+            </div>
+          </div>
+         
+        </section>
+
+             {/* checkmark section */}
+             <section className="map-section">
           <div className="container-fluid wrap">
             <div className="row middle-sm">
             <div className="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-xs-12">
