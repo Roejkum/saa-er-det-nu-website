@@ -40,6 +40,7 @@ $flexboxgrid-breakpoints:
 .align-center {
     align-items: center;
 }
+
 .mt {
     margin-top: 2rem;
 }
@@ -58,4 +59,12 @@ $flexboxgrid-breakpoints:
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 40px;
+}
+
+.logo-partners {
+    margin: 0 0 6rem;
+}
+
+.logo-headline {
+    margin: 6rem 0 0;
 }
