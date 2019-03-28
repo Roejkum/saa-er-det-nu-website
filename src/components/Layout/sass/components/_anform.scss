@@ -26,16 +26,16 @@
             cursor: not-allowed;
 
             &:hover {
-                background-color: $grey-light;
-                transform: scale(1);
-                box-shadow: none;
+                background-color: $grey-light !important;
+                transform: scale(1)  !important;
+                box-shadow: none  !important;
             }
         }
 
         &:hover {
-            background-color: darken($signal, 10);
-            transform: scale(1.02);
-            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+            background-color: darken($signal, 10)  !important;
+            transform: scale(1.02)  !important;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15)  !important;
         }
     }
 }
