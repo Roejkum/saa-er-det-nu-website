@@ -67,4 +67,8 @@ $flexboxgrid-breakpoints:
 
 .logo-headline {
     margin: 6rem 0 0;
+    
+   @media screen and (max-width: 48rem) {
+           font-size: 1.7rem;
+    }
 }
