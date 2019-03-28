@@ -1,0 +1,42 @@
+#can-form-area-gor-valget-gront {
+    transition: height 0.4s ease;
+    
+    .entry-title, .action_description, #action_info {
+        display: none;
+    }
+    .action_sidebar>h4 {
+        display: none;
+    }
+    #can_embed_form input[type=submit] {
+        border: 0 !important;
+        border-radius: 0.3rem !important;
+        width:100% !important;
+        box-shadow: none !important;
+        background-color: $signal !important;
+        padding: 1rem 1.5rem !important;
+        color: $white !important;
+        font-weight: bold !important;
+        cursor: pointer !important;
+        transition: all 0.2s ease !important;
+        display: block !important;
+        text-transform: uppercase !important;
+        font-size: 1.2em !important;
+
+        &:disabled {
+            cursor: not-allowed;
+
+            &:hover {
+                background-color: $grey-light !important;
+                transform: scale(1)  !important;
+                box-shadow: none  !important;
+            }
+        }
+
+        &:hover {
+            background-color: darken($signal, 10)  !important;
+            transform: scale(1.02)  !important;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15)  !important;
+        }
+    }
+}
+

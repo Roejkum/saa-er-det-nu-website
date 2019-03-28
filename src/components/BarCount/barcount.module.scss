@@ -24,6 +24,9 @@
             transform: none;
             color: $red;
         }
+        &.dataLoading {
+            transform: none;
+        }
     }
 
     .barBackdrop {
