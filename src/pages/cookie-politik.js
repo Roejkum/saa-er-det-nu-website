@@ -73,8 +73,12 @@ const cookiePolicy = () => (
 
 
                   <h3>3.4 Indlejrede tjenester</h3>
-                  <p>Vi benytter en række tredjepartstjenester til at vise indlejret (embedded) indhold på hjemmesiden. Formålet er at gøre det muligt at se film, præsentationer, publikationer, m.m., der ligger på disse tjenester, uden først at forlade Så er det nu’s’ hjemmeside. Så er det nu benytter ikke selv annoncer på hjemmesiden, men nogle af vores indlejrede tjenester kan indeholder annoncer. Der bliver sat cookies af:
+                  <p>Vi benytter en række tredjepartstjenester til at vise indlejret (embedded) indhold på hjemmesiden. Formålet er at gøre det muligt at se film, præsentationer, publikationer, udfylde formularer m.m., der ligger på disse tjenester, uden først at forlade Så er det nu’s’ hjemmeside. Så er det nu benytter ikke selv annoncer på hjemmesiden, men nogle af vores indlejrede tjenester kan indeholder annoncer. Der bliver sat cookies af:
                   </p>
+
+                  <ul>
+                      <li>The Action Network - www.actionnetwork.org</li>
+                    </ul>
 
 
                   <h3>4. Sådan afviser eller sletter du dine cookies</h3>
