@@ -9,7 +9,7 @@ const events = () => (
       <Helmet>
       <title>'Så er det nu: Gør valget grønt’ - events</title>
     </Helmet>
-    <section className="section section-signup fullHeight">
+    <section className="section section-signup fullHeight events-page">
       <SunSvg/>
       <div className="container-fluid wrap">
         <div className="row">
