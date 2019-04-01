@@ -158,7 +158,7 @@ label {
     }
 }
 
-#can_sidebar {
+#can_sidebar, #can_main_col {
     @media screen and (max-width: 48rem) {
         min-width: 100%;
     }
