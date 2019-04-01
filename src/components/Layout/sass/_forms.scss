@@ -157,6 +157,13 @@ label {
         margin: 0;
     }
 }
+
+#can_sidebar {
+    @media screen and (max-width: 48rem) {
+        min-width: 100%;
+    }
+}
+
 .action_info, #action_info_inner {
   display: flex !important;
   flex-direction: column !important;
