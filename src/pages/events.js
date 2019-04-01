@@ -11,7 +11,7 @@ const events = () => (
     </Helmet>
     <section className="section section-signup fullHeight events-page">
       <SunSvg/>
-      <div className="container-fluid wrap">
+      <div className="container wrap">
         <div className="row">
           <div className="col-xs-12">
             <div className="container fade-in">
