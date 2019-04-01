@@ -93,9 +93,9 @@ section {
     flex-wrap: wrap;
 
     img {
-        width: 6.5rem;
+        width: 8rem;
         max-width: 100%;
-        margin: 0.5rem 1rem;
+        margin: 1.5rem 2rem;
 
         @media screen and (max-width: 48rem) {
             margin: 1rem;
@@ -103,7 +103,7 @@ section {
     }
 
     .logo-small {
-        width: 3rem;
+        width: 4rem;
     }
 }
 table {
