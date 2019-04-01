@@ -167,6 +167,10 @@ label {
     }
 }
 
+#action_info_inner, .events-page #can_sidebar, .white-box {
+  margin: 0;
+}
+
 .action_info, #action_info_inner {
   display: flex !important;
   flex-direction: column !important;
