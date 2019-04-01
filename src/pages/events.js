@@ -14,7 +14,7 @@ const events = () => (
       <div className="container-fluid wrap">
         <div className="row">
           <div className="col-xs-12">
-            <div className="container-fluid fade-in">
+            <div className="container fade-in">
               <div className="row">
                 <div className="col-xs-12">
                 <link href='https://actionnetwork.org/css/style-embed-whitelabel-v3.css' rel='stylesheet' type='text/css' />
