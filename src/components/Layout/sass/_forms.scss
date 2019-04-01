@@ -159,10 +159,10 @@ label {
 }
 
 #can_sidebar, #can_main_col {
-
-    @media screen and (max-width: 48rem) {
-        width: 100%;
-        padding: 15px 20px;
+  padding: 15px 20px;
+  
+  @media screen and (max-width: 48rem) {
+        width: 100%; 
     }
 }
 
