@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/Layout/Layout';
 import BarCount from '../components/BarCount/BarCount';
-import ContactForm from '../components/ContactForm/ContactForm';
+// import ContactForm from '../components/ContactForm/ContactForm';
 import Grass from '../components/Grass/Grass'
 import mosaik from "../../static/img//mosaik.jpg";
 import vSLogo from '../../static/img/Verdens-Skove-logo.png';
@@ -19,6 +19,8 @@ import twitter from "../../static/img/twitter.png";
 import SunSvg from '../components/SunSvg/SunSvg';
 import Trees from '../components/Trees/Trees';
 import { Link } from 'gatsby';
+import { Helmet } from 'react-helmet';
+
 
 export default class IndexPage extends React.Component {
   state = {
@@ -62,6 +64,11 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout>
+         <Helmet>
+          <meta http-equiv="Pragma" content="no-cache" />
+          <meta http-equiv="Expires" content="-1" />
+          <meta http-equiv="CACHE-CONTROL" content="NO-CACHE" />
+        </Helmet>
         <section className="section section-signup">
         <div id="scene">
           <SunSvg/>
