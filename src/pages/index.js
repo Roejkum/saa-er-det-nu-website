@@ -41,22 +41,22 @@ export default class IndexPage extends React.Component {
       })
       .catch((error) => console.log(error));
       
-      import('scrollreveal').then(({ default: ScrollReveal }) => {
+      // import('scrollreveal').then(({ default: ScrollReveal }) => {
         
-        ScrollReveal().reveal('.fadeIn', { delay: 300, distance: '-2rem', duration: 1000, interval: 200 });
+      //   ScrollReveal().reveal('.fadeIn', { delay: 300, distance: '-2rem', duration: 1000, interval: 200 });
       
-      const animate = () => {
-        this.setState({
-          mapVisible: true
-        });
-      }
+      // const animate = () => {
+      //   this.setState({
+      //     mapVisible: true
+      //   });
+      // }
 
-      ScrollReveal().reveal('.map', { afterReveal: animate, delay: 300, distance: '-2rem', duration: 1000 });
-      });
+      // ScrollReveal().reveal('.map', { afterReveal: animate, delay: 300, distance: '-2rem', duration: 1000 });
+      // });
 
-      const Parallax = require('parallax-js')
-        const scene = document.getElementById('scene');
-        const parallaxInstance = new Parallax(scene);
+      // const Parallax = require('parallax-js')
+      //   const scene = document.getElementById('scene');
+      //   const parallaxInstance = new Parallax(scene);
 
   }
 
@@ -64,11 +64,6 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout>
-         <Helmet>
-          <meta http-equiv="Pragma" content="no-cache" />
-          <meta http-equiv="Expires" content="-1" />
-          <meta http-equiv="CACHE-CONTROL" content="NO-CACHE" />
-        </Helmet>
         <section className="section section-signup">
         <div id="scene">
           <SunSvg/>
