@@ -12,5 +12,10 @@
 
 # A basic redirect rule
 [[redirects]]
-  from = "/valg-debat-kort"
+  from = "/valgdebatkort"
   to = "https://actionnetwork.org/event_campaigns/valgmodekortet-gor-valget-gront-ved-at-kortlaegge-og-deltage-i-valgmoder"
+
+  # A basic redirect rule
+[[redirects]]
+  from = "/finansministeriet"
+  to = "https://actionnetwork.org/forms/hjaelp-mig-gore-finansministeriet-gront-nu/"
