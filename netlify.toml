@@ -9,3 +9,13 @@
 [[redirects]]
   from = "/middag"
   to = "https://www.notion.so/Hold-din-egen-Gr-nne-Middag-5ac2d24fb8564df3907afc6f00c43270"
+
+# A basic redirect rule
+[[redirects]]
+  from = "/valgdebatkort"
+  to = "https://actionnetwork.org/event_campaigns/valgmodekortet-gor-valget-gront-ved-at-kortlaegge-og-deltage-i-valgmoder"
+
+  # A basic redirect rule
+[[redirects]]
+  from = "/finansministeriet"
+  to = "https://actionnetwork.org/forms/hjaelp-mig-gore-finansministeriet-gront-nu/"
