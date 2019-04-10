@@ -29,5 +29,5 @@ const valgDebatKort = () => (
     </section>
   </Layout>
 );
-
+ 
 export default valgDebatKort;
