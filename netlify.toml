@@ -19,3 +19,8 @@
 [[redirects]]
   from = "/finansministeriet"
   to = "https://actionnetwork.org/forms/hjaelp-mig-gore-finansministeriet-gront-nu/"
+
+  # A basic redirect rule
+[[redirects]]
+  from = "/indsamling"
+  to = "https://www.actionnetwork.org/fundraising/vaer-med-til-at-forpligte-politikerne-pa-at-handle-for-klima-natur-og-miljo/"
