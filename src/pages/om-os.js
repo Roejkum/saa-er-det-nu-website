@@ -34,6 +34,28 @@ const omOs = () => (
                    den sky hare og havørnens brede vingefang.
                   </p>
                   <br />
+                  <h3>Sådan skaber vi forandringen nu</h3>
+                  <p className="bold-text">Lægger målrettet pres på politikerne</p>
+                  <p>Vi arbejder målrettet for at sætte klima og natur øverst på den politiske dagsorden og sikre, at så mange af de kommende folketingsmedlemmer som muligt forpligter sig på at arbejde for kampagnens tre mål om klima, naturareal og drikkevand. Vi går efter klare og konkrete forpligtelser fra så mange Folketingsmedlemmer som muligt.
+                  </p>
+                  <br />
+                  <p className="bold-text">Er meget mere end en underskriftsindsamling</p>
+                  <p>Kampagnen er startet som en underskriftsindsamling for at samle så mange borgere, som muligt, der ønsker at gøre valget grønt. Men underskrifterne er blot begyndelsen. Med underskrifterne har vi en database på titusindvis af borgere, som vi kan engagere til at lægge yderligere pres på politikerne. Dels gennem en “prik-en-politiker”-hjemmeside, der tillader underskriverne at sende en hilsen til deres lokale politikere og bede dem forpligte sig på kampagnens mål. Dels ved at opfordre dem til at deltage i vælgermøder og forpligte politikerne ansigt til ansigt.</p>
+                  <br />
+                  <p className="bold-text">Er en bredt forankret grøn alliance</p>
+                  <p>"Så er det nu" er startet som et frivilligt borgerinitiativ. Men vi skal ikke være endnu en grøn forening, der konkurrerer med allerede etablerede organisationer og initiativer. Tværtimod er vores mål at skabe en bredt favnende platform, der kan samle borgere og organisationer til at arbejde sammen om at lægge fælles pres på Folketinget. Der er allerede mange grønne organisationer i Danmark, der hver især har deres tilgang til klima, miljø og natur. Med deres egne mærkesager, medlemsinteresser og arbejdsmetoder. 
+                    Nogle organisationer – som Danmarks Naturfredningsforening og Verdens Skove – har besluttet at gå fuldt og helt ind i kampagnen - med et større støttebeløb og aktiv kommunikation til både omverden og medlemmer. Andre vælger at deltage på andre måder:  
+                  </p>
+                  <img src="../img/trappe_web.png" className="max-width"></img>
+                  <p>Men fælles er, at alle organisationer, der bakker op om kampagnens mål, kan stå som medafsendere med deres logo og navn på hjemmesiden. Jo flere vi er, jo stærkere står vi.</p>
+                  <br />
+                  <p className="bold-text">Fortsætter efter valget</p>
+                  <p>Selvom kampagnen hedder “Gør valget grønt”, så slutter “Så er det nu” ikke når valget er overstået. Vores ambition er at bygge en bredt forankret grøn alliance og kampagneplatform, der kan stille den nye regering til ansvar og lægge et samlet pres på konkrete politik-indsatser for at sikre, at vores tre mål bliver indfriet. 
+                    Hvordan denne alliance skal opbygges organisatorisk være bygget op og hvordan de enkelte deltagende organisationer får indflydelse på udviklingen, er endnu ikke fastlagt. Som frivilligt borgerinitiativ lægger vi i høj grad skinnerne mens toget kører. 
+                  </p>
+
+
+                  <br />
                   <h3>Hvem er vi? ...altså ud over dig :)</h3>
                   <p>Så er det nu-initiativet drives af frivillig arbejdskraft som et åbent netværk og er ikke knyttet til noget politisk parti. 
                   Alle der kan bakke om initiativets mål er inviteret med til at tage del i vores aktiviteter. Hvis det der er dig, 
