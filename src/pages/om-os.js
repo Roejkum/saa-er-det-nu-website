@@ -56,7 +56,6 @@ const omOs = () => (
                   <br />
 
                   <h3>Kampagnens politiske grundlag og målsætninger</h3>
-                  <p className="bold-text">Kampagnens politiske grundlag og målsætninger</p>
                   <p>Nedenfor følger forklaringer og begrundelser for de tre mål for kampagnen:</p>
                   <p><b>Mål 1: <i>Gennemføre en grøn omstilling, som starter umiddelbart efter valget, og som sikrer, at det danske klimaaftryk halveres i 2030 og går i nul i 2040</i></b></p>
                   <p>Hvis vi skal nå Paris-aftalens målsætning om maksimalt 1,5 graders global opvarmning skal de globale klimagas-udledninger gå i nul i 2050 eller kort derefter.<br /><br />
