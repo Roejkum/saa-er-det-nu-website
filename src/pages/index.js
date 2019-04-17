@@ -200,3 +200,6 @@ export default class IndexPage extends React.Component {
     )
   }
 }
+
+//Branch valg added //
+
