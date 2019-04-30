@@ -41,6 +41,9 @@ $flexboxgrid-breakpoints:
     align-items: center;
 }
 
+.space-between {
+    justify-content: space-between;
+}
 .mt {
     margin-top: 2rem;
 }
