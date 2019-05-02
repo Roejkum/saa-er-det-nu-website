@@ -12,6 +12,7 @@ import checkmark from '../img/checkmark.svg';
 import logo from "../../static/img/logo.svg";
 import Okoraad from "../../static/img/Okoraad.png";
 import OLFlogo from "../../static/img/OLF-logo.png";
+import NoahLogo from "../../static/img/NOAH_logo.png";
 import POlogo from "../../static/img/PO_logo.png";
 import klimabevaegelsen from "../../static/img/350_klimabevaegelsen.jpg";
 import studenterbevægelse from "../../static/img/Den_gronne_studenterbevægelse.png";
@@ -129,6 +130,7 @@ export default class IndexPage extends React.Component {
                <img src={POlogo} alt="Landsforeningen Praktisk Økologi logo" className="fadeIn"/>
                <img src={klimabevaegelsen} alt="350 klimabevægelsen i Danmark logo" className="fadeIn"/>
                <img src={studenterbevægelse} alt="Den grønne studenterbevægelse logo" className="fadeIn"/>
+               <img src={NoahLogo} alt="Den grønne studenterbevægelse logo" className="fadeIn"/>
                 </div>
               </div>
             </div>
