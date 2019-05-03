@@ -35,7 +35,7 @@ export default class Navbar extends React.Component {
             <a href="http://valg.saaerdet.nu">Prik en politiker</a>
           </li>
           <li>
-          <a className="navbar-item" href="https://actionnetwork.org/event_campaigns/valgmodekortet-gor-valget-gront-ved-at-kortlaegge-og-deltage-i-valgmoder">
+          <a className="navbar-item" href="https://actionnetwork.org/event_campaigns/valgmodekortet-gor-valget-gront-ved-at-kortlaegge-og-deltage-i-valgmoder" target="_blank">
             Valgdebatkort
           </a>
           </li>
@@ -43,14 +43,14 @@ export default class Navbar extends React.Component {
             <a href="#">Engagér flere</a>
             <ul className="sub-menu">
               <li>
-                <a className="navbar-item" href="https://www.notion.so/goervalgetgroent/S-dan-kan-du-g-re-valget-gr-nt-154987ddec494ece84847a9febc527b8">
+                <a className="navbar-item" href="https://www.notion.so/goervalgetgroent/S-dan-kan-du-g-re-valget-gr-nt-154987ddec494ece84847a9febc527b8" target="_blank">
                   Sådan kan du gøre valget grønt
                 </a>
               </li>
               <li>
-                <Link className="navbar-item" to="/valgdebatguide" activeClassName="active">
+                <a className="navbar-item" href="https://www.notion.so/G-r-valgm-derne-gr-nne-94cdb4e31ca64d278b986e1c0f340c96/" target="_blank">
                   Gør valgdebatterne grønne
-                </Link>
+                </a>
               </li>
               <li>
                 <Link className="navbar-item" to="/middag" activeClassName="active">
@@ -58,7 +58,7 @@ export default class Navbar extends React.Component {
                 </Link>
               </li>
               <li>
-                <a className="navbar-item" href="https://www.notion.so/goervalgetgroent/Hold-et-gr-nt-v-rksted-67328447f2aa4a57ab17f2983e494101">
+                <a className="navbar-item" href="https://www.notion.so/goervalgetgroent/Hold-et-gr-nt-v-rksted-67328447f2aa4a57ab17f2983e494101" target="_blank">
                 Hold et Grønt Værksted
                 </a>
               </li>
@@ -68,12 +68,12 @@ export default class Navbar extends React.Component {
                 </Link>
               </li>
               <li>
-                <a href="https://actionnetwork.org/forms/hjaelp-mig-gore-finansministeriet-gront-nu">
+                <a href="https://actionnetwork.org/forms/hjaelp-mig-gore-finansministeriet-gront-nu" target="_blank">
                   Skriv under: Gør finansministeriet grønt
                 </a>
               </li>
               <li>
-                <a href="https://actionnetwork.org/forms/haab-ikke-had">
+                <a href="https://actionnetwork.org/forms/haab-ikke-had" target="_blank">
                   Skriv under: "Håb, ikke Had"
                 </a>
               </li>
