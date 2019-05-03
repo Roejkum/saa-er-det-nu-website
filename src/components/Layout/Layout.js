@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from "gatsby";
+import Navbar from '../Navbar';
 
 import './sass/main.scss';
 import CookieConsent from '../CookieConsent/CookieConsent';
@@ -63,7 +64,11 @@ class TemplateWrapper extends Component {
           </Helmet>
                     
           <CookieConsent acceptAnalytics={this.acceptAnalyticsHandler}/>
-          {this.props.children}
+          <Navbar/>
+          <div className="page-content">
+            {this.props.children}
+          </div>
+          
         </>
       )}
     />
