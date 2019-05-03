@@ -38,7 +38,7 @@ export default class IndexPage extends React.Component {
         return response.json();
       })
       .then((data) => {
-        this.setState({ totalSigners: data.msg.total_submissions + 20924})
+        this.setState({ totalSigners: data.msg.total_submissions + 20924 + 326})
       })
       .catch((error) => console.log(error));
       
