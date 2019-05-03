@@ -35,32 +35,47 @@ export default class Navbar extends React.Component {
             <a href="http://valg.saaerdet.nu">Prik en politiker</a>
           </li>
           <li>
-          <Link className="navbar-item" to="/events" activeClassName="active">
+          <a className="navbar-item" href="https://actionnetwork.org/event_campaigns/valgmodekortet-gor-valget-gront-ved-at-kortlaegge-og-deltage-i-valgmoder">
             Valgdebatkort
-          </Link>
+          </a>
           </li>
           <li className="menu-item has-children">
             <a href="#">Engagér flere</a>
             <ul className="sub-menu">
               <li>
-                <Link className="navbar-item" to="/middag" activeClassName="active">
-                  hold grøn middag
+                <a className="navbar-item" href="https://www.notion.so/goervalgetgroent/S-dan-kan-du-g-re-valget-gr-nt-154987ddec494ece84847a9febc527b8">
+                  Sådan kan du gøre valget grønt
+                </a>
+              </li>
+              <li>
+                <Link className="navbar-item" to="/valgdebatguide" activeClassName="active">
+                  Gør valgdebatterne grønne
                 </Link>
               </li>
               <li>
                 <Link className="navbar-item" to="/middag" activeClassName="active">
-                  hold et grønt værksted
+                  Hold en Grøn Middag
                 </Link>
               </li>
               <li>
-                <Link className="navbar-item" to="/middag" activeClassName="active">
-                  “underskriftsindsamling 1”
+                <a className="navbar-item" href="https://www.notion.so/goervalgetgroent/Hold-et-gr-nt-v-rksted-67328447f2aa4a57ab17f2983e494101">
+                Hold et Grønt Værksted
+                </a>
+              </li>
+              <li>
+                <Link to="/events" activeClassName="active">
+                  Deltag i en grøn middag eller værksted
                 </Link>
               </li>
               <li>
-                <Link className="navbar-item" to="/middag" activeClassName="active">
-                  “underskriftsindsamling 2”
-                </Link>
+                <a href="https://actionnetwork.org/forms/hjaelp-mig-gore-finansministeriet-gront-nu">
+                  Skriv under: Gør finansministeriet grønt
+                </a>
+              </li>
+              <li>
+                <a href="https://actionnetwork.org/forms/haab-ikke-had">
+                  Skriv under: "Håb, ikke Had"
+                </a>
               </li>
             </ul>
           </li>
@@ -72,18 +87,18 @@ export default class Navbar extends React.Component {
                   </Link>
               </li>
               <li>
-                  <Link className="navbar-item" to="/om-os" activeClassName="active">
-                    Hvem står bag “så er det nu”
+                  <Link className="navbar-item" to="/hvem-staar-bag" activeClassName="active">
+                  Hvem står bag?
                   </Link>
               </li>
               <li>
-                  <Link className="navbar-item" to="/middag" activeClassName="active">
-                    om vores tre krav
+                  <Link className="navbar-item" to="/vores-maal" activeClassName="active">
+                    Om vores tre krav
                   </Link>
               </li>
               <li>
                   <Link className="navbar-item" to="/kontakt" activeClassName="active">
-                    kontakt
+                    Kontakt
                   </Link>
               </li>
             </ul>
