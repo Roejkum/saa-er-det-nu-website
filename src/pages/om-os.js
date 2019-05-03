@@ -53,11 +53,7 @@ const omOs = () => (
                   <p>Selvom kampagnen hedder “Gør valget grønt”, så slutter “Så er det nu” ikke når valget er overstået. Vores ambition er at bygge en bredt forankret grøn alliance og kampagneplatform, der kan stille den nye regering til ansvar og lægge et samlet pres på konkrete politik-indsatser for at sikre, at vores tre mål bliver indfriet. 
                     Hvordan denne alliance skal opbygges organisatorisk være bygget op og hvordan de enkelte deltagende organisationer får indflydelse på udviklingen, er endnu ikke fastlagt. Som frivilligt borgerinitiativ lægger vi i høj grad skinnerne mens toget kører. 
                   </p>
-                  <br />
-
-                  
-
-                  
+                  <br />                 
                 </div>
               </div>
             </div>
