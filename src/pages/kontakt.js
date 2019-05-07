@@ -21,7 +21,7 @@ const kontakt = () => (
             <div className="container-fluid white-box fade-in">
               <div className="row">
                 <div className="col-xs-12">
-                <Link to="/">&larr; Til forsiden</Link>
+                <Link to="/goer-valget-groent">&larr; Til forsiden</Link>
                 <h2>Kontakt</h2>
                   <h3>Kontakt os på</h3>
                   <a href="mailto:info@saaerdet.nu">info@saaerdet.nu</a>

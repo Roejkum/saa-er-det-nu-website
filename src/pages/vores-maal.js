@@ -18,7 +18,7 @@ const voresMaal = () => (
             <div className="container-fluid white-box fade-in">
               <div className="row">
                 <div className="col-xs-12">
-                  <Link to="/">&larr; Til forsiden</Link>
+                  <Link to="/goer-valget-groent">&larr; Til forsiden</Link>
                   <h2>Sådan skaber vi forandringen nu</h2>
                   <h3>Kampagnens politiske grundlag og målsætninger</h3>
                   <p>Nedenfor følger forklaringer og begrundelser for de tre mål for kampagnen:</p>

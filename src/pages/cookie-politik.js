@@ -19,7 +19,7 @@ const cookiePolicy = () => (
             <div className="container-fluid white-box fade-in">
               <div className="row">
                 <div className="col-xs-12">
-                <Link to="/">&larr; Til forsiden</Link>
+                <Link to="/goer-valget-groent">&larr; Til forsiden</Link>
                   <h2>Cookie-politik for Så er det nu’s hjemmesider</h2>
                   <p className="small">11. Februar. 2019</p>
                   <p>Vi bruger cookies på Så er det nu’s hjemmesider. Cookies er nødvendige for at få hjemmesiden til at fungere, men de giver også information om, hvordan du bruger siden, så vi løbende kan forbedre den og vores øvrige arbejde. Cookies på Så er det nu’s hjemmesider bruges til optimering af indholdet, trafikmåling fra Google Analytics, og integration af sociale tjenester som Facebook og indlejrede tjenester.</p>

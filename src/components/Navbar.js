@@ -20,7 +20,7 @@ export default class Navbar extends React.Component {
   <header id="masthead" className="site-header">
     <div className="wrap container-fluid">
       <div className="site-branding">
-        <Link to="/" className="navbar-item" title="Logo">
+        <Link to="/goer-valget-groent" className="navbar-item" title="Logo">
           Så er det nu!
         </Link>
       </div>

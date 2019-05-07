@@ -18,7 +18,7 @@ const hvemStaarBag = () => (
             <div className="container-fluid white-box fade-in">
               <div className="row">
                 <div className="col-xs-12">
-                <Link to="/">&larr; Til forsiden</Link>
+                <Link to="/goer-valget-groent">&larr; Til forsiden</Link>
                 <h2>Hvem er vi? ...altså ud over dig :)</h2>
                   <p>Så er det nu-initiativet drives af frivillig arbejdskraft som et åbent netværk og er ikke knyttet til noget politisk parti. 
                   Alle der kan bakke om initiativets mål er inviteret med til at tage del i vores aktiviteter. Hvis det der er dig, 
