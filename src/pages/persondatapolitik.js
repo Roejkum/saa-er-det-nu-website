@@ -18,13 +18,13 @@ const PrivacyPolicy = () => (
             <div className="container-fluid white-box fade-in">
               <div className="row">
                 <div className="col-xs-12">
-                  <Link to="/">&larr; Til forsiden</Link>
+                  <Link to="/goer-valget-groent">&larr; Til forsiden</Link>
                   <h2>Persondatapolitik for “Så er det nu”</h2>
                   <p className="small">11. Februar. 2019</p>
                   <p>“Så er det nu” indsamler og anvender de personoplysninger, du efterlader dig, når du besøger “Så er det nu”’s hjemmeside, og interagerer med indholdet i vores nyhedsbreve og på sociale medier inklusiv i onlinefora som Slack.</p>
 
                   <h3>Kort om “Så er det nu”</h3>
-                  <p><Link to="/">www.saaerdet.nu</Link> ejes og drives af Foreningen ‘Så er det nu’, som er hjemhørende i Københavns Kommune.</p>
+                  <p><Link to="/goer-valget-groent">www.saaerdet.nu</Link> ejes og drives af Foreningen ‘Så er det nu’, som er hjemhørende i Københavns Kommune.</p>
                   <p>c/o Rune Baastrup, Hyrdevangen 63, 2400 Kbh Nv</p>
                   <p>Foreningens formål er præge samfundet til at sikre en hurtig og retfærdig omstilling, så produktion, transport og forbrug sker i fuld overensstemmelse med klima og naturgrundlag. Det prøver vi at opnå ved involverende og oplysende aktiviteter, der øger det folkeligt engagement i spørgsmålet.</p>
                   

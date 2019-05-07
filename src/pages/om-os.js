@@ -18,7 +18,7 @@ const omOs = () => (
             <div className="container-fluid white-box fade-in">
               <div className="row">
                 <div className="col-xs-12">
-                <Link to="/">&larr; Til forsiden</Link>
+                <Link to="/goer-valget-groent">&larr; Til forsiden</Link>
                   <h2>Om ‘Så er det nu: Gør valget grønt’</h2>
                   <p>Formålet med initiativet ‘Så er det nu: Gør valget grønt’ er at gøre det kommende folketingsvalg grønt. 
                   Sammen med alle de borgere der vil, vil vi sætte klima, natur og miljø øverst på den politiske dagsorden. <br /><br />
