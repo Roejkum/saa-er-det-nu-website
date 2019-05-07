@@ -30,9 +30,4 @@
   from = "/valgdebatguide"
   to = "https://www.notion.so/G-r-valgm-derne-gr-nne-94cdb4e31ca64d278b986e1c0f340c96/"
 
-  # A basic redirect rule
-[[redirects]]
-  from = "/"
-  to = "https://deltagerdanmarkpoke.azurewebsites.net/"
-
 
