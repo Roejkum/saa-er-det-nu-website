@@ -1,6 +1,0 @@
-# Redirect domain aliases to primary domain
-https://saaerdet.nu/* https://valg.saaerdet.nu/:splat 301!
-https://www.saaerdet.nu/* https://valg.saaerdet.nu/:splat 301!
-
-# Optional: Redirect default Netlify subdomain to primary domain
-https://saa-er-det-nu.netlify.com.netlify.com/* https://valg.saaerdet.nu/:splat 301!
