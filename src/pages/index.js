@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/Layout/Layout';
 import BarCount from '../components/BarCount/BarCount';
-import ContactForm from '../components/ContactForm/ContactForm';
+// import ContactForm from '../components/ContactForm/ContactForm';
 import Grass from '../components/Grass/Grass'
 import mosaik from "../../static/img//mosaik.jpg";
 import vSLogo from '../../static/img/Verdens-Skove-logo.png';
@@ -22,6 +22,8 @@ import twitter from "../../static/img/twitter.png";
 import SunSvg from '../components/SunSvg/SunSvg';
 import Trees from '../components/Trees/Trees';
 import { Link } from 'gatsby';
+import { Helmet } from 'react-helmet';
+
 
 export default class IndexPage extends React.Component {
   state = {
@@ -42,22 +44,22 @@ export default class IndexPage extends React.Component {
       })
       .catch((error) => console.log(error));
       
-      import('scrollreveal').then(({ default: ScrollReveal }) => {
+      // import('scrollreveal').then(({ default: ScrollReveal }) => {
         
-        ScrollReveal().reveal('.fadeIn', { delay: 300, distance: '-2rem', duration: 1000, interval: 200 });
+      //   ScrollReveal().reveal('.fadeIn', { delay: 300, distance: '-2rem', duration: 1000, interval: 200 });
       
-      const animate = () => {
-        this.setState({
-          mapVisible: true
-        });
-      }
+      // const animate = () => {
+      //   this.setState({
+      //     mapVisible: true
+      //   });
+      // }
 
-      ScrollReveal().reveal('.map', { afterReveal: animate, delay: 300, distance: '-2rem', duration: 1000 });
-      });
+      // ScrollReveal().reveal('.map', { afterReveal: animate, delay: 300, distance: '-2rem', duration: 1000 });
+      // });
 
-      const Parallax = require('parallax-js')
-        const scene = document.getElementById('scene');
-        const parallaxInstance = new Parallax(scene);
+      // const Parallax = require('parallax-js')
+      //   const scene = document.getElementById('scene');
+      //   const parallaxInstance = new Parallax(scene);
 
   }
 

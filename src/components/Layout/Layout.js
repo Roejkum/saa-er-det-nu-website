@@ -33,6 +33,10 @@ class TemplateWrapper extends Component {
       render={data => (
         <>
           <Helmet>
+            <meta http-equiv="Pragma" content="no-cache" />
+            <meta http-equiv="Expires" content="-1" />
+            <meta http-equiv="CACHE-CONTROL" content="NO-CACHE" />
+
             <html lang="da" />
             <title>{data.site.siteMetadata.title}</title>
             <meta name="description" content={data.site.siteMetadata.description} />
